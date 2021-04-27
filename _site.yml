@@ -1,0 +1,65 @@
+#name: "my-website"
+#navbar:
+#  title: "My Website"
+#  left:
+#    - text: "Home"
+#      href: index.html
+#    - text: "About"
+#      href: about.html
+
+name: "SuffolkEcon"
+output_dir: "." # need this for github hosting: https://garrettgman.github.io/rmarkdown/rmarkdown_websites.html
+output:
+  html_document:
+    theme: flatly
+    css: 'style.css'
+navbar:
+  title: "SuffolkEcon"
+  right:
+    - icon: fa-github
+      href: https://github.com/lrdegeest/stats
+    - icon: fa-university
+      href: https://www.suffolk.edu/cas/degrees-programs/economics
+  left:
+    - icon: fa-home
+      text: ""
+      href: index.html
+    - text: "Why R?" 
+      icon: fa-info-circle
+      href: why_r.html
+    - text: "Get started" 
+      icon: fa-gear
+      menu:
+        - text: "1. Installation"
+        - text: "1.1 Install R"
+          href: install_r.html
+        - text: "1.2 Install RStudio"
+          href: install_rstudio.html
+        - text: "1.3 Install Packages"
+          href: install_packages.html  
+        - text: "---------"
+        - text: "2. Documents"
+        - text: "2.1 R Scripts"
+          href: r_scripts.html
+        - text: "2.2. R Notebooks"
+          href: r_notebooks.html
+        - text: "---------"
+        - text: "3. Projects"
+        - text: "3.1 Stay organized with R projects"
+          href: r_projects.html
+      href: section.html
+    - text: "Code Checkpoints" 
+      icon: fa-code
+      menu:
+        - text: "R and tidyverse"
+          href: code_checkpoints.nb.html      
+        - text: "General Markdown"
+          href: markdown.nb.html          
+        - text: "Typesetting Math in Markdown"
+          href: typesetting_math.nb.html
+    - text: "The SuffolkEcon Package"
+      icon: fa-flask
+      href: suffolkecon_package.html
+    - text: "Other Resources"
+      icon: fa-laptop
+      href: other_resources.html      

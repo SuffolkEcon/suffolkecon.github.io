@@ -1,0 +1,43 @@
+---
+title: "Welcome!"
+output:
+  html_document:
+    number_sections: false
+    toc: true
+    toc_float: 
+      collapsed: yes
+---
+
+# The R Programming Language
+
+This is the Economics Department's informal website for [R, a popular and free statistical programming language](https://en.wikipedia.org/wiki/R_(programming_language)). Many of our statistics and econometrics classes use R. This site will help you get started installing and using this software. 
+
+This site (a work-in-progress) is maintained by [Lawrence De Geest](https://lrdegeest.github.io/). Drop me a line if you have any questions, find any bugs (bug spotters will be acknowledged!), or want to get involved with SuffolkEcon!
+
+# First steps
+
+Is this your first exposure to R? 
+
+If so, start off by going through these short online tutorials. The tutorials will give you a sense of how R works, and they will introduce to two key plug-ins or packages: [`dplyr`](https://dplyr.tidyverse.org/) for manipulating data, and [`ggplot2`](https://ggplot2.tidyverse.org/) for visualizing data. The tutorials run in the browser and require no installation. 
+
+1. [A Quick Introduction to R](https://lrdegeest.shinyapps.io/intro-r/)
+2. [Data with `dplyr`](https://lrdegeest.shinyapps.io/dplyr/)
+3. [Visualization with `ggplot2`](https://lrdegeest.shinyapps.io/ggplot2/)
+
+# Installation
+
+After you've done the tutorials, install R (the language) and R Studio (the app to use the language). Then install the [`tidyverse`](https://www.tidyverse.org/) -- a universe of packages that make R easier to use. `dplyr` and `ggplot2` are part of the tidyverse. Get started [here]() and work your way down.
+
+Why do we use the `tidyverse`? Two reasons.
+
+First, it makes it easier to work with data -- cleaning it, manipulating it, visualizing it, modeling it. 
+
+Second, and related to the first, the tidyverse is the future of R. About [50% of new developments](https://lrdegeest.github.io/blog/totalverse) in the R language are built on the tidyverse. It's ease of use and it's popularity is why the tidyverse is lingua franca in many industry roles like business analytics and data science. 
+
+## The `SuffolkEcon` package
+
+We also built a small package to help teach stats and econometrics. You can download it here and read demos here. 
+
+# Acknowledgements
+
+This website is part of a grant funded by the [Center for Teaching and Scholarly Excellence](https://www.suffolk.edu/academics/research-at-suffolk/center-for-teaching-scholarly-excellence) at Suffolk University.

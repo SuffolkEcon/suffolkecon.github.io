@@ -1,0 +1,180 @@
+---
+title: "Markdown"
+subtitle: "SuffolkEcon"
+author: ""
+output: 
+  html_notebook:
+    number_sections: true
+    theme: readable
+    highlight: pygments
+    toc: true
+    toc_float: 
+      collapsed: yes
+---
+
+
+<a href="https://lrdegeest.github.io/stats/code_checkpoints.nb.html" class="btn btn-warning">**Last updated:** `r Sys.time()` EST </a> 
+
+<a href="https://lrdegeest.github.io/stats/" class="btn btn-default">Go home</a>
+
+# Full overview 
+
+Below are some of the most common Markdown decorations. [Markdown](https://en.wikipedia.org/wiki/Markdown) is a way to write HTML without actually writing HTML. R Markdown uses Pandoc, a document coverter, to turn Markdown into HTML, Word, PowerPoint or PDF documents. (Heads up, you need a LaTeX distribution to make PDF documents. Learn more [here](https://bookdown.org/yihui/rmarkdown/pdf-document.html).)
+
+For a full overview of R Markdown read through the [official docs](https://rmarkdown.rstudio.com/lesson-1.html). They are useful if you are working on a large document (e.g., a paper or slideshow). Even better (and longer) is the [definitive guide](https://bookdown.org/yihui/rmarkdown/).
+
+# YAML
+
+This is the stuff at the top of an R Markdown document (between the `---`) that prints stuff like the title and author, and determines the overall design of the document. ([YAML](https://en.wikipedia.org/wiki/YAML#:~:text=YAML%20(a%20recursive%20acronym%20for,is%20being%20stored%20or%20transmitted.) is a recursive acronym for "YAML Ain't Markup Language").
+
+A generic YAML looks like this:
+
+```
+---
+title: "title"
+subtitle: "subtitle"
+author: "author"
+output: html_notebook
+---
+```
+
+Technically each field but `output` can be left blank, but don't leave them blank, because it's bad form.
+
+In `output` you can add lots of options to change the style of the document, though we recommend you keep things simple. The YAML for this document is:
+
+```
+---
+title: "Markdown"
+subtitle: "SuffolkEcon"
+author: ""
+output: 
+  html_notebook:
+    number_sections: true
+    theme: readable
+    highlight: pygments
+    toc: true
+    toc_float: 
+      collapsed: yes
+---
+```
+
+`theme` sets the [Boostrap theme](https://bootswatch.com/3/) that is built-in with R Markdown. `highlight` is the theme to [make code chunks pretty](https://bookdown.org/yihui/rmarkdown/appearance-and-style-1.html).
+
+# Sections
+
+Sections or headers are made with hastags `#`:
+
+
+```
+# Section 
+## Subsection
+### Subsubsection
+```
+
+
+# Text
+
+## Plain
+
+```
+Just write text with no decorations. 
+```
+
+Just write text with no decorations. 
+
+## Paragraphs
+
+Skip a line to write a paragraph. Write short paragraphs. 
+
+```
+Here is my first paragraph. 
+
+Here is my second paragraph. 
+```
+
+
+## Bold 
+
+Wrap with a double `**`.
+
+```
+**This is bold text.**
+```
+
+**This is bold text.**
+
+## Italics
+
+
+Wrap with a single `*` or `_`:
+
+```
+*This is italicized text.*
+```
+
+or
+
+```
+_This is italicized text._
+```
+
+_This is italicized text._
+
+## Strikethrough
+
+Wrap with a single `~`:
+
+```
+~I regret this text.~
+```
+
+## Quotes
+
+Use a single `>`:
+
+```
+> It was the best of times, it was the blurst of times.
+```
+
+> It was the best of times, it was the blurst of times.
+
+## Hyperlinks
+
+Use `[link description](the_actual_link)`
+
+For example:
+
+```
+[It was the best of times, it was the blurst of times.](https://www.youtube.com/watch?v=no_elVGGgW8&ab_channel=KhayeAyuban)
+```
+
+[It was the best of times, it was the blurst of times.](https://www.youtube.com/watch?v=no_elVGGgW8&ab_channel=KhayeAyuban)
+
+
+
+# Images
+
+Image must be PNG or JPEG.
+
+```
+![](image.png)
+```
+
+Control the size with `{width=}`:
+
+```
+![](image.png){width=75%}
+```
+
+# Code chunks
+
+R code goes inside chunks. Chunks have options you can switch on or off to adjust how the code or output are presented. See https://rmarkdown.rstudio.com/lesson-3.html. 
+
+````markdown
+`r ''````{r}
+print("hello, world!")
+```
+````
+
+
+

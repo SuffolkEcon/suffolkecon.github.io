@@ -1,0 +1,28 @@
+---
+title: "Scripts"
+output:
+  html_document:
+    number_sections: false
+    toc: true
+    toc_float: 
+      collapsed: no
+---
+
+# What is a script? 
+
+A file just with R code. You can write code, and you can write comments (they start with `#`). When you save the file, the code is still there when you open it again -- unlike code in the console, which disappears when you close R studio.
+
+# Creating a script
+
+Do"File -> New File -> R Script".
+
+[video showing HOW TO CREATE A NEW FILE]
+
+# Running a script
+
+You can execute each line of code standalone. Put your cursor on the line and click "Run". Or use the keyboard shortcut (`CMD + ENTER` for Mac/Linux, `CTRL + ENTER` on Windows).
+
+To run the entire script -- every single line of code -- click "Source". 
+
+[VIDEO demo]
+

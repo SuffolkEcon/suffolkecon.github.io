@@ -1,0 +1,79 @@
+---
+title: "Notebooks"
+output:
+  html_document:
+    number_sections: false
+    toc: true
+    toc_float: 
+      collapsed: no
+---
+
+# What is a notebook? 
+
+Scripts only let you write code and comments. Notebooks let you write code and text -- headers, paragraphs, etc. -- in the same document. By default they render into an easy-to-read HTML document. 
+
+Notebooks always have the `.Rmd` extension (e.g., `notebook.Rmd`.)
+
+# Creating a notebook
+
+Do"File -> New File -> R Notebook". A demo notebook will pop up. Delete the demo text and code and start writing/coding!
+
+[VIDEO where you open a new notebook]
+
+# Working in a notebook
+
+There are three parts to a notebook:
+
+1. YAML (formatting the document)
+2. Text (writing)
+3. Code chunks (coding)
+
+### YAML
+
+The stuff at the top in between the `---`. The default is:
+
+```
+---
+title: "R Notebook"
+output: html_notebook
+---
+```
+
+You can change the title and add an author:
+
+```
+---
+title: "My title"
+author: "First Last"
+output: html_notebook
+---
+```
+
+and that suffices for a basic notebook. For more options see [the Markdown checkpoint](link to markdown cheatsheet).
+
+
+### Text
+
+Just write plain text in [Markdown](link to markdown cheatsheet)
+
+[VIDEO where you write a section and then some text]
+
+### Code chunks
+
+# Rendering a notebook
+
+Click on "Preview notebook" to see the rendered HTML document. 
+
+Every time you change the file and save it, the document will re-render. 
+
+All notebooks are saved with `.Rmd` extension. After you render the notebook, in your files you will see a new file with the extension `.nb.html`. So iff your notebook is called `notebook.Rmd`, the rendered file is called `notebook.nb.html`.
+
+[VIDEO where you preview a notebook]
+
+# R Markdown
+
+R Notebooks are part of a much bigger document ecosystem driven by R Markdown. 
+
+R Markdown lets you turn the same document into a HTML, Microsoft Word, PowerPoint, or PDF. 
+
+Learn more at the [official R Markdown site](https://rmarkdown.rstudio.com/) and the [definitive guide](https://bookdown.org/yihui/rmarkdown/).

@@ -1,0 +1,11 @@
+---
+title: "The SuffolkEcon Package"
+output:
+  html_document:
+    number_sections: false
+    toc: false
+    toc_float: 
+      collapsed: no
+---
+
+Coming soon!

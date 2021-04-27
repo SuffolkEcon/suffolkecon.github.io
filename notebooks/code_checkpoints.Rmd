@@ -1,0 +1,560 @@
+---
+title: "R and tidyverse code checkpoints"
+subtitle: "SuffolkEcon"
+author: ""
+date: 
+output: 
+  html_notebook:
+    number_sections: true
+    theme: readable
+    highlight: pygments
+    toc: true
+    toc_float: 
+      collapsed: yes
+---
+
+
+<a href="https://lrdegeest.github.io/stats/code_checkpoints.nb.html" class="btn btn-warning">**Last updated:** `r Sys.time()` EST </a> 
+
+<a href="#table" class="btn btn-success">**Go to quick tables**</a>
+<a href="https://lrdegeest.github.io/stats/" class="btn btn-default">Go home</a>
+
+# Set-up {-}
+
+Load the tidyverse:
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse) 
+```
+
+The `tidyverse` provides the data `mpg` to demonstrate methods. `mpg` has the mileage (`cty` for city, `hwy` for highway) for a bunch of different cars:
+
+```{r load data}
+data("mpg") # load the data mpg
+
+# view the first 5 rows
+mpg %>% 
+  slice_head(n=5)
+```
+
+# Summarizing Data 
+
+## The pipe and `summarise()`
+
+All summarizing operations work like this: 
+
+```{r, eval=FALSE}
+data %>% # the pipe: "and then"
+  summarise() 
+```
+
+
+* the pipe (`%>%`, "and then")
+* [`summarise()`](https://dplyr.tidyverse.org/reference/summarise.html)
+
+Inside `summarise()` you can use functions like `mean()`, `median()` and so on.
+
+
+### mean
+
+`mean()`
+
+```{r mean}
+mpg %>% # take the data, THEN
+  summarise(mean(cty)) # summarize: mean
+```
+
+**Note.** `cty` is a numerical variable.
+
+### median
+
+`median()`
+
+```{r median}
+mpg %>% # take the data, THEN
+  summarise(median(cty)) # summarize: median
+```
+
+### standard deviation
+
+`sd()`
+
+```{r sd}
+mpg %>% # take the data, THEN
+  summarise(sd(cty)) # summarize: standard deviation
+```
+
+### counting observations
+
+[`n()` (counting)](https://dplyr.tidyverse.org/reference/n.html)
+
+
+```{r count}
+mpg %>% # take the data, THEN
+  summarise(n()) # summarize: count number of observations
+```
+
+**Why doesn't `n()` take an argument?** Because it counts the number of rows, not columns.
+
+### multiple summaries
+
+You can put as many functions as you want inside `summarise()`:
+
+```{r summarise}
+mpg %>% # take the data, THEN
+  summarise(mean(cty), median(cty), sd(cty), n()) # summarize: mean, median, standard deviation, count
+```
+
+### naming variables inside `summarise()`
+
+You can name variables inside `summarise()` using standard assignment:
+
+```{r name summarise}
+mpg %>% # take the data, THEN
+  summarise(avg_cty = mean(cty), median_cty = median(cty)) # summarize: mean, median
+```
+
+
+## Grouping (`group_by()`)  
+
+[`group_by()`](https://dplyr.tidyverse.org/reference/group_by.html):
+
+```{r group_by, message=FALSE}
+mpg %>% # take the data, THEN
+  group_by(class) %>% # group it by car class (e.g., compact, pickup) THEN
+  summarise(mean(cty), median(cty), sd(cty), n()) # summarize
+```
+
+**Note.** `class` is a categorical variable.
+
+# Manipulating data
+
+## Selecting columns
+
+`select()` certain columns
+
+```{r no select}
+mpg %>% # all the columns
+  slice_head(n=5) # view the first 5 rows
+```
+
+
+```{r yes select}
+mpg %>% # all the columns
+  select(manufacturer, model, hwy) %>% # select some of the columns
+  slice_head(n=5) # view the first 5 rows
+```
+
+## Slicing
+
+All slice operators begin with `slice_` and take an optional `n=` argument that specifies the number of rows you want to see. More [here](https://dplyr.tidyverse.org/reference/slice.html). 
+
+Subsets with `slice_head()`:
+
+```{r slice_head}
+mpg %>% 
+  slice_head(n=10) # view the first 10 rows
+```
+
+
+Maximums with `slice_max()`:
+
+```{r slice_max}
+mpg %>% 
+  slice_max(hwy, n=5) # the five highest highway miles per gallon. if there are ties they all get printed
+```
+
+Minimums with `slice_min()`:
+
+```{r slice_min}
+mpg %>% 
+  slice_min(hwy, n=2) # the two lowest highway miles per gallon. if there are ties they all get printed
+```
+
+Random samples with `slice_sample()`:
+
+```{r slice_sample}
+mpg %>% 
+  slice_sample(n=3) # pick three rows at random
+```
+
+### Slicing and grouping
+
+When you `group_by()` a data frame `slice_()` will return subsets of each group:
+
+```{r group_by and slice_}
+mpg %>% 
+  group_by(class) %>% # group by class 
+  slice_min(hwy, n=1) # bottom two hwy by class
+```
+
+If a data frame is already grouped then `slice_()` will always subset by group under the hood. If you want subsets not by group then you have to `ungroup()`. See below in the section on `mutate()`. This often happens when you group a data frame to create a new variable. 
+
+## Filtering
+
+[`filter()`](https://dplyr.tidyverse.org/reference/filter.html) with Boolean logic:
+
+* `==`: "equal to"
+* `!=`: "not equal to"
+* `>`: "greater than"
+* `>=`: "greater than or equal to"
+* `<`: "less than"
+* `<=`: "less than or equal to"
+* `&`: "and"
+* `|`: "or"
+
+Boolean logic is any test that returns true or false:
+
+```{r boolean equals to}
+2 == 3
+```
+
+```{r boolean not equals to}
+2 != 3
+```
+
+```{r boolean less than}
+2 < 3
+```
+
+Some examples:
+
+```{r filter equals to}
+mpg %>% 
+  filter(year == "1999") %>% # filter all cars made in 1999
+  slice_head(n=5) # view the first 5 rows
+```
+
+```{r filter greater than or equals to}
+mpg %>% 
+  filter(hwy >= 25) %>% # filter all cars with at least 25 mpg highway
+  slice_head(n=5) # view the first 5 rows
+```
+
+
+```{r filter many conditions}
+mpg %>% 
+  filter(year == "1999" & model != "a4" & hwy >= 25) %>% # filter cars made in 1999, that aren't a4's, and have at least 25 mgp highway
+  slice_head(n=5) # view the first 5 rows
+```
+
+
+## Mutating
+
+Create and modify variables (data frame columns) with [`mutate()`](https://dplyr.tidyverse.org/reference/mutate.html)
+
+### Create a new variable
+
+For example, create a column called `mean_hwy` that calculates average highway miles per gallon:
+
+```{r mutate dont add column}
+mpg %>% 
+  mutate(mean_hwy = mean(hwy)) %>% 
+  select(manufacturer, model, hwy, mean_hwy) %>% 
+  slice_head(n=5)
+```
+
+### Create a new variable and store it as a column
+
+To save the new variable you have to re-assign the data frame:
+
+```{r mutate yes add column}
+mpg = mpg %>% 
+  mutate(mean_hwy = mean(hwy)) 
+```
+
+Now `mpg` has a new column called `mean_hwy`.
+
+### Mutating while grouping
+
+When you create a new variable and save it to the data you re-assign the data. 
+
+When grouping with `group_by()` to create a new column, the re-assigned data will be grouped, which can affect the `slice_()` functions. 
+
+The solution is to `ungroup()` after `mutate()`. 
+
+For instance, add a column called "mean_hwy_class" that calculates average highway miles per gallon by class:
+
+```{r group_by and mutate, message=FALSE}
+# first create the variable
+mpg = mpg %>% # take the data, THEN
+  group_by(class) %>% # group by class, THEN
+  mutate(mean_hwy_class = mean(hwy)) %>% # create the new variable, THEN
+  ungroup() # ungroup the data
+```
+
+Why `ungroup()`? Because otherwise `slice_()` and other functions won't return the output you expect. So better safe than sorry. When grouping *to create a variable* make sure you ungroup at the end.
+
+Now we can slice in general:
+
+```{r view group_by mutate output}
+mpg %>% 
+  select(manufacturer, model, hwy, mean_hwy_class) %>% 
+  slice_head(n=2)
+```
+
+
+### Mutating and frequency tables
+
+Use `n()` to calculate frequency and then use `mutate()` to calculate relative frequency:
+
+```{r frequency and relative frequency, message=FALSE}
+mpg %>% 
+  group_by(class) %>% 
+  summarise(frequency = n()) %>% 
+  mutate(relative_frequency = frequency / sum(frequency))
+```
+
+# Visualizing data
+
+## Plotting distributions 
+
+### Histograms
+
+Histograms with `ggplot` and [`geom_histogram()`](https://ggplot2.tidyverse.org/reference/geom_histogram.html):
+
+```{r histogram}
+mpg %>% 
+  ggplot(aes(x = cty)) + # blank canvas: choose the data and the x-axis variable
+  geom_histogram() # add geom layer: distribution
+```
+
+Faceted histograms with [`facet_wrap()`](https://ggplot2.tidyverse.org/reference/facet_wrap.html):
+
+```{r facetted histogram}
+mpg %>% 
+  ggplot(aes(x = cty)) + # blank canvas: choose the data and the x-axis variable
+  geom_histogram() + # add geom layer:  distribution
+  facet_wrap(~class) # add facetting (note the "~" before the categorical variable)
+```
+
+### Cumulative distributions
+
+Percentiles and cumulative distributions with `ggplot` and [`stat_ecdf()`](https://ggplot2.tidyverse.org/reference/stat_ecdf.html):
+
+```{r percentile (cumulative distribution)}
+mpg %>% 
+  ggplot(aes(x=cty)) +  # blank canvas: choose the data and the x-axis variable
+  stat_ecdf() # add geom layer: cumulative distribution
+```
+
+You can add a vertical line with `geom_vline()` to make it easier to see a percentile. For instance, view percent of cars with less than 15 miles per gallon:
+
+```{r percentile (cumulative distribution) with vline}
+mpg %>% 
+  ggplot(aes(x=cty)) +  # blank canvas: choose the data and the x-axis variable
+  stat_ecdf() + # add geom layer: cumulative distribution
+  geom_vline(xintercept = 15, color="red") # verticle 
+```
+
+### Box plots
+
+[`geom_boxplot()`](https://ggplot2.tidyverse.org/reference/geom_boxplot.html)
+
+```{r box plot x continuous}
+mpg %>% 
+  ggplot(aes(x = hwy, y = class)) + # x is continuous, y is categorical
+  geom_boxplot() 
+```
+
+or: 
+
+```{r box plot x categorical}
+mpg %>% 
+  ggplot(aes(x = class, y = hwy)) + # x is categorical, y is continuous
+  geom_boxplot() 
+```
+
+
+## Scatterplot
+
+`geom_point()`:
+
+```{r geom_point}
+mpg %>% 
+  ggplot(aes(x = cty, y = hwy)) + 
+  geom_point() 
+```
+
+### Scatterplot with regression line
+
+[`geom_smooth(method = "lm")`](https://ggplot2.tidyverse.org/reference/geom_smooth.html):
+
+```{r geom_smooth}
+mpg %>% 
+  ggplot(aes(x = cty, y = hwy)) + 
+  geom_point() + # scatter-plot
+  geom_smooth(method = "lm") # regression line
+```
+
+# Correlation and regression
+
+## Covariance
+
+`cov()`:
+
+```{r cov}
+mpg %>% 
+  summarise(cov(x=cty, y=hwy))
+```
+
+## Correlation
+
+`cor()`:
+
+```{r cor}
+mpg %>% 
+  summarise(cor(x=cty, y=hwy))
+```
+
+
+## Regression
+
+`lm()`
+
+Simple linear regression (one $x$ variable):
+
+$$
+\begin{aligned}
+y &= f(x) \\
+  &= \beta_0 + \beta_1(x) + \epsilon
+\end{aligned}
+$$
+In `lm()` the $y$ and $x$ variables are separated by `~`:
+
+```{r lm1}
+mpg %>% 
+  lm(formula = cty ~ hwy, data = .) # the "." means "use the data from the pipe %>%"
+```
+
+Multiple linear regression (multiple $x$ variables):
+
+$$
+\begin{aligned}
+y &= f(\mathbf{X}) \\
+  &= f(x_1, x_2, \dots) \\
+  &= \beta_0 + \beta_1(x_1) + \beta_2(x_2) + \dots + \epsilon
+\end{aligned}
+$$
+In `lm()` the $x$ variables are separated by `+`:
+
+```{r lm2}
+mpg %>% 
+  lm(formula = cty ~ hwy + cyl + displ, data = .)
+```
+
+## `summary()`
+
+View hypothesis tests and regression diagnostics with `summary()`:
+
+```{r summary2}
+mpg %>% 
+  lm(formula = cty ~ hwy + cyl + displ, data = .) %>% 
+  summary()
+```
+
+## Plotting regression results
+
+Use the package `sJplot`. (If you forgot how to install package, see [here](https://lrdegeest.github.io/stats/r.html#3_Install_packages).)
+
+```{r library sjplot, message=FALSE}
+library(sjPlot)
+```
+
+The function you want is `plot_model`. The baseline plot shows the coefficients and standard errors:
+
+```{r sjPlot demo coefficients}
+mpg %>% 
+  lm(formula = cty ~ hwy + class, data = .) %>% 
+  plot_model(model = .)
+```
+
+To plot predicted values you can set `type = "pred"` and then choose which coefficient to plot by setting `terms`:
+
+```{r sjPlot demo predicted values}
+mpg %>% 
+  lm(formula = cty ~ hwy + class, data = .) %>% 
+  plot_model(model = ., type = "pred", terms = c("hwy"))
+```
+
+The `terms` argument accepts multiple terms:
+
+```{r sjPlot demo predicted values multiple terms}
+mpg %>% 
+  lm(formula = cty ~ hwy + class, data = .) %>% 
+  plot_model(model = ., type = "pred", terms = c("hwy", "class"))
+```
+
+This is useful when you have an interaction effect (e.g., `hwy*class`):
+
+```{r sjPlot demo predicted values interaction}
+mpg %>% 
+  lm(formula = cty ~ hwy + class + hwy*class, data = .) %>% 
+  plot_model(model = ., type = "pred", terms = c("hwy", "class"))
+```
+
+`sJplot` uses `ggplot` so you can add `ggplot` stuff to it, like a different theme and titles:
+
+```{r sjPlot demo predicted values interaction spiffy}
+mpg %>% 
+  lm(formula = cty ~ hwy + class + hwy*class, data = .) %>% 
+  plot_model(model = ., type = "pred", terms = c("hwy", "class")) + 
+  labs(x = "Highway miles per gallon", y = "Predicted city miles per gallon",
+       title = "A very interesting linear model", subtitle = "So interesting") + 
+  theme_minimal()
+```
+
+The package has tons of great features. Check out the [website!](https://strengejacke.github.io/sjPlot/)
+
+# Quick tables {#table .tabset}
+
+## R
+
+**Function**|**Description**
+-----|-----
+[<code>%>%</code>](https://magrittr.tidyverse.org/reference/pipe.html)|Pipe operator ("and then")
+[<code>summarise()</code>](https://dplyr.tidyverse.org/reference/summarise.html)|Summarize a vector or multiple vectors from a data frame
+[<code>mean()</code>](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean)|Calculate the mean of a vector
+[<code>median()</code>](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median)|Calculate the median of a vector
+[<code>sd()</code>](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/sd)|Calculate the standard deviation of a vector
+[<code>n()</code>](https://dplyr.tidyverse.org/reference/n.html)|Count the number of observations. Takes no argument.
+[<code>group\_by()</code>](https://dplyr.tidyverse.org/reference/group\_by.html)|Group observations by a categorical variable
+[<code>select()</code>](https://dplyr.tidyverse.org/reference/select.html)|Select certain columns
+[<code>slice\_()</code>](https://dplyr.tidyverse.org/reference/slice.html)|Slice rows from the data
+<code>slice\_head(n=5)</code>|View the head (first five rows) of the data. <code>n = </code> can be any number.
+<code>slice\_max(var, n=5)</code>|View the rows with the 5 highest values of column "var"
+<code>slice\_min(var, n=5)</code>|View the rows with the 5 lowest values of column "var"
+<code>slice\_sample(n=5)</code>|Draw 5 rows at random
+[<code>filter()</code>](https://dplyr.tidyverse.org/reference/filter.html)|Filter observations
+[<code>mutate()</code>](https://dplyr.tidyverse.org/reference/mutate.html)|Create a new vector
+[<code>cov()</code>](https://www.rdocumentation.org/packages/pbdDMAT/versions/0.5-1/topics/covariance)|Calculate the covariation between two variables
+[<code>cor()</code>](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/cor)|Calculate the correlation between two variables
+[<code>lm()</code>](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/lm)|Estimate a linear regression
+[<code>ifelse()</code>](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/ifelse)|Create a vector based on a "True/False" test
+[<code>ggplot()</code>](https://ggplot2.tidyverse.org/reference/ggplot.html)|Create a base plot
+[<code>geom\_histogram()</code>](https://ggplot2.tidyverse.org/reference/geom\_histogram.html)|Histogram
+[<code>stat\_ecdf()</code>](https://ggplot2.tidyverse.org/reference/stat\_ecdf.html)|Cumulative distribution plot
+[<code>geom\_boxplot()</code>](https://ggplot2.tidyverse.org/reference/geom\_boxplot.html)|Boxplot
+[<code>geom\_point()</code>](https://ggplot2.tidyverse.org/reference/geom\_point.html)|Scatter plot
+[<code>geom\_smooth(method = "lm")</code>](https://ggplot2.tidyverse.org/reference/geom\_smooth.html)|Regression line
+
+## Math
+
+**Term**|**Meaning**|**Pronunciation**|**Formula/Example**
+:-----:|-----|:-----:|:-----:
+$x_i$|data point $i$|"x i" | 
+$n$|sample size| | 
+$N$|population size| | 
+$\bar{x}$|the sample mean|"x bar"|$\frac{\sum_{i=1}^n x_i}{n}$
+$\mu$|the population mean|"mu"| 
+$s^2$|the sample variance| |$\frac{\sum (x_i - \bar{x})^2}{n-1}$
+$\sigma^2$|the population variance| | 
+$s$|the sample standard deviation| |$\sqrt{s^2}$
+$\sigma$|the population standard deviation|"sigma"| 
+$z_i$|z-score for observation $i$| |$z_i = \frac{x_i - \bar{x}}{s}$
+$\beta$|regression coefficient|"beta"|$y = \beta_0 + \beta_1 x + \epsilon$
+$\hat{\beta}$|estimated value of regression coefficient|"beta hat"| 
+$\epsilon$|regression error|"epsilon"| 
+$\sum$|summation operator|"sum"|$\sum_{i=1}^2 x_i  = x_1 + x_2$
+$s_{xy}$|covariation between two variables $x$ and $y$| |$\frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{n-1} \in [-\infty,\infty]$
+$r_{xy}$|correlation between two variables $x$ and $y$| |$\frac{s_{xy}}{s_x s_y} \in [-1,1]$

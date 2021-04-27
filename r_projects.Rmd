@@ -1,0 +1,57 @@
+---
+title: "Projects in R"
+output:
+  html_document:
+    number_sections: false
+    toc: true
+    toc_float: 
+      collapsed: no
+---
+
+# Organizing your workspace
+
+Good file management is crucial to data analysis, and computer skills in general.  
+
+We recommend a simple framework in which data and code (scripts and/or notebooks) are stored in subfolders of a general project or course folder. For instance, if you take STATS-250: Applied Statistics, your folder would like something like this: 
+
+```
+stats250
+  ├── data
+  ├── exams
+  ├── labs
+  ├── lectures
+  └── psets
+```
+
+`stats250` is the parent folder or "main directory" (e.g., on your desktop), and all the other folders are children of the parent folder (or "subdirectories").
+
+
+# R Projects
+
+Even better is to augment this file system by creating a formal project in R, because it makes it easy to work on your course or project in its own R Studio session. It also makes it easy to set your working directory, because by default the working directory is the project folder. A working directory is simply the path or directions to a file on your computer. 
+
+For more on R projects read the [official documents](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
+
+## Creating a project
+
+After you create your project your course folder will look something like this:
+
+```
+stats250
+  ├── data
+  ├── exams
+  ├── labs
+  ├── lectures
+  ├── psets
+  └── stats250.Rproj
+```
+
+[VIDEO where you open and close a project]
+
+## Opening and closing a project
+
+Now when we want to work on this course, **always** start by clicking on the `stats250.Rproj`. This will open a new session of R Studio and automatically set your working directory to the course folder. 
+
+When you are done for the day (or night!), close the project from the dropdown menu in the northeast corner of R Studio. 
+
+[VIDEO where you open and close a project]

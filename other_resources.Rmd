@@ -1,0 +1,31 @@
+---
+title: "Other R resources"
+output:
+  html_document:
+    number_sections: false
+    toc: true
+    toc_float: 
+      collapsed: no
+---
+
+# Websites
+
+The internet is filled with R resources. (Case in point, this website!) Here are two non-obvious and highly valuable resources:
+
+* [CRAN Task View: Econometrics](https://cran.r-project.org/web/views/Econometrics.html). An encyclopedia of R functions and packages for econometrics.
+* [Stack Overflow](https://stackoverflow.com/questions/tagged/r). A free Q&A website for coding questions. Possibly one of the most valuable public goods on the internet. 
+
+# Books
+
+* [R for Data Science](https://r4ds.had.co.nz/) is the standard introductory text to data science with R and the tidyverse. If you only work through one book, make it this one.
+* [Modern Dive](https://moderndive.netlify.app/index.html) is another (and longer) introduction to R and the tidyverse.
+* [Econometrics with R](https://www.econometrics-with-r.org/) is a great text for econometrics (though it does not use the tidyverse).
+* [Advanced R](https://adv-r.hadley.nz/). For advanced users who really want to hone their skills. 
+* [R Markdown Definitive Guide](https://bookdown.org/yihui/rmarkdown/). The definitive guide! 
+
+# Cheatsheets
+
+* [R Markdown](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+* [`dplyr`](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+* [`ggplot2`](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+* [More cheatsheets!](https://www.rstudio.com/resources/cheatsheets/)

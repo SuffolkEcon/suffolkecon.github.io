@@ -1,0 +1,64 @@
+---
+title: "Step 1: Install R"
+output:
+  html_document:
+    number_sections: false
+    toc: true
+    toc_float: 
+      collapsed: no
+---
+
+# Instructions
+
+1. Go to the [CRAN mirror](https://www.r-project.org/) -- the worldwide server on which R is stored -- and click "download R".
+2. "CRAN" means "Comprehensive R Archive Network". It's a network of servers around the world connected together to store the language. You need to choose a "mirror" or a server near you. We're in Boston, so we'll scroll down to "USA" and choose the page for "Statlib, Carnegie Mellon University, Pittsburgh, PA": http://lib.stat.cmu.edu/R/CRAN/.
+3. At the top of that page choose your operating system: Linux, Mac OS X, or Windows. Follow the download instructions. 
+
+<div class="alert alert-danger" role="alert">
+  <strong>⚠️ Install Local</strong>
+  <hr>
+  Do not install software like R on your Suffolk One Drive account or any other cloud service. Make sure you install on your computer's hard drive. 
+</div>
+
+<div class="alert alert-info" role="alert">
+  <strong> ℹ️ Stay up to date</strong>
+  <hr>
+  We recommend that you update your operating system to its latest version. Otherwise you may run into problems installing R or packages for R. 
+</div>
+
+## Mac OS X
+
+You should see this a page like in this picture. Click on the highlighted link:
+
+<br>
+<center>
+![](r-mac.png){width=75%}
+</center>
+<br>
+
+
+## Windows 
+
+You should this page below. Click on the link to "base":
+
+<br>
+<center>
+![](r-windows-1.png){width=75%}
+</center>
+<br>
+
+
+That will take you to the download page:
+
+<br>
+<center>
+![](r-windows-2.png){width=75%}
+</center>
+<br>
+
+
+
+## Video instructions
+
+Here are video instructions for Windows. The process is very similar for Mac. 
+

@@ -1,0 +1,46 @@
+---
+title: "Step 2: Install R Studio"
+output:
+  html_document:
+    number_sections: false
+    toc: true
+    toc_float: 
+      collapsed: no
+---
+
+# Why R Studio? 
+
+[R Studio](https://www.rstudio.com/) is an integrated development environment (IDE) that makes it a lot easier to use and manage R. You can write code to do everything from analyzing data to building apps and websites. (This website was built entirely in R Studio.) After you download the app, scroll down to see a demo. 
+
+<div class="alert alert-danger" role="alert">
+  <strong>⚠️ Is R installed?</strong>
+  <hr>
+  Before installing R Studio, you first need to install R.  
+</div>
+
+# Instructions
+
+1. Go to the [download page](https://www.rstudio.com/products/rstudio/download/#download).
+2. Choose the link for your operating system, then follow the download instructions. 
+
+<br>
+<center>
+![](r-studio-donwload.png){width=75%}
+</center>
+<br>
+
+
+<div class="alert alert-danger" role="alert">
+  <strong>⚠️ Install Local</strong>
+  <hr>
+  Do not install software like R on your Suffolk One Drive account or any other cloud service. Make sure you install on your computer's hard drive. 
+</div>
+
+<div class="alert alert-info" role="alert">
+  <strong> ℹ️ Stay up to date</strong>
+  <hr>
+  We recommend that you update your operating system to its latest version. Otherwise you may run into problems installing R or packages for R. 
+</div>
+
+
+# Navigating R Studio

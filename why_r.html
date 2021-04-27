@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Why R?</title>
+
+<script src="site_libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">SuffolkEcon</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    
+  </a>
+</li>
+<li>
+  <a href="why_r.html">
+    <span class="fa fa-info-circle"></span>
+     
+    Why R?
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-gear"></span>
+     
+    Get started
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">1. Installation</li>
+    <li>
+      <a href="install_r.html">1.1 Install R</a>
+    </li>
+    <li>
+      <a href="install_rstudio.html">1.2 Install RStudio</a>
+    </li>
+    <li>
+      <a href="install_packages.html">1.3 Install Packages</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">2. Documents</li>
+    <li>
+      <a href="r_scripts.html">2.1 R Scripts</a>
+    </li>
+    <li>
+      <a href="r_notebooks.html">2.2. R Notebooks</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">3. Projects</li>
+    <li>
+      <a href="r_projects.html">3.1 Stay organized with R projects</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-code"></span>
+     
+    Code Checkpoints
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="code_checkpoints.nb.html">R and tidyverse</a>
+    </li>
+    <li>
+      <a href="markdown.nb.html">General Markdown</a>
+    </li>
+    <li>
+      <a href="typesetting_math.nb.html">Typesetting Math in Markdown</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="suffolkecon_package.html">
+    <span class="fa fa-flask"></span>
+     
+    The SuffolkEcon Package
+  </a>
+</li>
+<li>
+  <a href="other_resources.html">
+    <span class="fa fa-laptop"></span>
+     
+    Other Resources
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/lrdegeest/stats">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.suffolk.edu/cas/degrees-programs/economics">
+    <span class="fa fa-university"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Why R?</h1>
+
+</div>
+
+
+<div id="what-is-r" class="section level1">
+<h1>What is R?</h1>
+<p>R is one of the <a href="https://stackoverflow.blog/2017/10/10/impressive-growth-r/">most popular programming languages</a> for economics and data science.</p>
+<p>R – and it’s integrated development environment (IDE) <a href="https://rstudio.com/">RStudio</a> – lets you easily:</p>
+<ul>
+<li>analyze data;</li>
+<li>create beautiful and insightful visualizations;</li>
+<li>write reproducible and interactive papers and slideshows that combine programming, stats and text;</li>
+<li>build websites;</li>
+<li>and <a href="https://rmarkdown.rstudio.com/gallery.html">more</a>!</li>
+</ul>
+</div>
+<div id="why-should-you-learn-r" class="section level1">
+<h1>Why should you learn R?</h1>
+<p>Here are five reasons:</p>
+<div id="its-free" class="section level2">
+<h2>1. It’s free</h2>
+<p>Unlike Excel or SPSS or Stata.</p>
+</div>
+<div id="it-makes-it-easier-to-do-science" class="section level2">
+<h2>2. It makes it easier to do science</h2>
+<p>Science is about learning from data.</p>
+<p>In R, you learn from data by writing <strong>programs</strong> with <strong>code</strong>.</p>
+<p><strong>A program is like a recipe</strong>. A recipe:</p>
+<ul>
+<li>tells you what are the ingredients;</li>
+<li>what to do with the ingredients;</li>
+<li>what you will get at the end.</li>
+</ul>
+<p>If you write down a recipe for an omelette, you can share it with someone so they can eat as well as you do.</p>
+<p>Same goes for a program. You can share them with others so they can learn what you learned. (A written program also helps you remind yourself what you did!)</p>
+<p>Contrast this to point-and-click software like Excel or SPSS, where you mostly have to navigate drop-down menus, and thus have no breadcrumbs to follow when you come back to a project.</p>
+</div>
+<div id="it-has-big-network-effects" class="section level2">
+<h2>3. It has big network effects</h2>
+<p>There is tons of software out there. You can’t learn them all. So how do you choose?</p>
+<p>A rule of thumb is to choose software that many others in your field of interest use. The benefits you get by learning a software with big community of users are called <strong>network effects</strong>.</p>
+<p>The network effects to R are huge. Data scientists in industry use R. Academics use R. The list goes on. Why is this important? Because that whatever problem you run into, <a href="https://stackoverflow.com/questions/tagged/r">somebody has probably found a solution</a>.</p>
+<p>Network effects also mean that other users invest into improving the software, making it a better experience for you.</p>
+</div>
+<div id="it-has-big-spillover-benefits" class="section level2">
+<h2>4. It has big spillover benefits</h2>
+<p>Just like learning Spanish makes it easier to learn French, learning one programming language – like R – will make it easier to learn another one – like Python.</p>
+<p>More generally, learning how to code will teach you a <strong>style of thinking</strong> that will help you <strong>abstract and problem-solve</strong>.</p>
+<p>(It’s one reason why <a href="https://refuses.github.io/preprints/writing.pdf">coding and creative writing</a> are closer to each other than you might think.)</p>
+</div>
+<div id="it-literally-pays-off" class="section level2">
+<h2>5. It literally pays off</h2>
+<p>R is widely used in business analytics and data science. The website <a href="https://www.levels.fyi/">levels.fyi</a> publishes salaries for different levels of these careers.</p>
+<p>According to GlassDoor, the average salary to an R programmer is nearly <a href="https://www.glassdoor.com/Salaries/r-programmer-salary-SRCH_KO0,12.htm">$100,000</a>.</p>
+<p>(<a href="https://www.datacamp.com/community/blog/comparing-r-programmer-wages-by-industry">Here</a> is some more salary data broken by field.)</p>
+</div>
+</div>
+<div id="why-not" class="section level1">
+<h1>Why not…</h1>
+<p>There is no one software to rule them all. We chose R because it is built for data analysis, it is free, and it is widely used in industry and academics.</p>
+<p>It is common for analysts to use multiple tools. We recommend you start with one, get good at it, and then branch out.</p>
+<div id="excel" class="section level2">
+<h2>…Excel?</h2>
+<p>Excel is great for lots of simple things. You should learn it, too. But R is better for almost any kind of data analysis.</p>
+</div>
+<div id="python" class="section level2">
+<h2>…Python?</h2>
+<p>Python is great. You should learn it, too. Especially if you plan on a career in data science. But it is easier to start with one language and then switch to another. (Heads up, <a href="https://blog.rstudio.com/2018/03/26/reticulate-r-interface-to-python/">you can use Python in R Studio</a>.) We prefer R because unlike Python, a general programming language, R was built specifically to analyze data and build models.</p>
+</div>
+<div id="stata" class="section level2">
+<h2>…Stata?</h2>
+<p>Stata is an incredible tool for econometrics. The problem is that it is built for academics, and thus is not widely used in industry.</p>
+</div>
+</div>
+<div id="how-do-you-learn-r" class="section level1">
+<h1>How do you learn R?</h1>
+<p>By doing it!</p>
+<p><strong>Everybody is bad at R in the beginning.</strong></p>
+<p>The more you use R, the better you will get at coding – and the more you will have fun doing science and learning about the world.</p>
+<div id="what-is-coding" class="section level2">
+<h2>What is coding?</h2>
+<p>Coding is like <strong>cooking.</strong></p>
+<p>Say you want to make an omelette.</p>
+<p>First you need <strong>inputs</strong>:</p>
+<ul>
+<li><strong>eggs</strong>;</li>
+<li>and some of other <strong>stuff</strong>.</li>
+</ul>
+<p>Then you need to <strong>act</strong> on those inputs:</p>
+<ul>
+<li><strong>whisk</strong> the eggs;</li>
+<li><strong>mix</strong> the other stuff;</li>
+<li><strong>pour</strong> into a pan;</li>
+<li><strong>cook</strong> the mixture;</li>
+<li>etc.</li>
+</ul>
+<p>“Whisk”, “mix”, “pour”, “cook” are verbs. They <em>act</em> on the nouns “eggs” and “stuff”. Specifically, they <strong>transform</strong> those inputs into an <strong>output</strong>: the omelette.</p>
+<p>So in a way, cooking is like:</p>
+<br>
+<center>
+<img src="eggs.png" style="width:75.0%" />
+</center>
+<p><br></p>
+</div>
+<div id="what-does-this-have-to-do-with-science" class="section level2">
+<h2>What does this have to do with science?</h2>
+<p>Say you have some data. That’s your <strong>input</strong>.</p>
+<p>Then you act on the data: summarize it, plot it, model it, learn from it.</p>
+<p>What is your <strong>output</strong>? A plot, a table, a model, etc. In other words, insight!</p>
+<br>
+<center>
+<img src="data.png" style="width:75.0%" />
+</center>
+<p><br></p>
+</div>
+<div id="what-is-the-takeaway" class="section level2">
+<h2>What is the takeaway?</h2>
+<p>Coding is about the <em>actions</em>.</p>
+<p>Just like you might tell your sous-chef to whisk the eggs, you tell a software – like R – to plot the data.</p>
+<p>That means you have to <em>speak</em> to R in a language it understands. You have to speak to R in computer code.</p>
+<p>And like learning any language, there is no secret formula. You just have to practice, practice, practice.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

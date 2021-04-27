@@ -1,0 +1,69 @@
+/* suffolk colors:
+https://www.suffolk.edu/-/media/suffolk/documents/about/directory/office-of-marketing-and-communication/suffolk-visual-guidelines_refreshfeb2019_pdfdsgn.pdf?la=en&hash=710AADFE15FBF4F1CB2F7A4611B872313AD57290
+*/
+
+/* bootstrap themes
+https://bootswatch.com/
+*/
+
+
+
+body {
+  color: #333;
+  font-size: 16px;
+}
+
+
+
+h1.title {
+  font-size: 34px;
+  padding-top: 0;
+  border-bottom: 0;
+  color: #2c3e50;
+}
+
+h1 {
+  padding-top: 26px !important;
+  padding-bottom: 5px !important;
+  margin: 0 !important;
+  margin-bottom: 10px !important;
+  font-size: 28px;
+  line-height: 1em;
+  font-weight: 700;
+  border-bottom: 1.25px solid #d3d3d3;
+  color: #2c3e50;
+}
+
+h2 {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-top: -55px !important;
+}
+h3 {
+  font-family:  -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-top: 10px;
+}
+
+h4.date {
+
+  font-size: 15px;
+  color: #778899;
+  padding-bottom: 5px;
+}
+
+.section  {
+  width: 85%;
+}
+.section .level2 {
+  width: 100%;
+}
+
+.section .level3 {
+  width: 110%;
+}
+@media (max-width: 768px){.section{width: 100%;}}

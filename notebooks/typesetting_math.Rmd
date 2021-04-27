@@ -15,7 +15,7 @@ output:
 
 <a href="https://lrdegeest.github.io/stats/code_checkpoints.nb.html" class="btn btn-warning">**Last updated:** `r Sys.time()` EST </a> 
 
-<a href="https://lrdegeest.github.io/stats/" class="btn btn-default">Go home</a>
+<a href="https://suffolkecon.github.io/" class="btn btn-default">Go home</a>
 
 # Overview
 

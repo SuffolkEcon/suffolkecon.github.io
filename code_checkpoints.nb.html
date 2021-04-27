@@ -3040,41 +3040,70 @@ div.tocify {
 
 
 <!-- rnb-text-begin -->
-<p><a href="https://lrdegeest.github.io/stats/code_checkpoints.nb.html" class="btn btn-warning"><strong>Last updated:</strong> 2021-04-27 11:05:08 EST </a></p>
-<p><a href="#table" class="btn btn-success"><strong>Go to quick tables</strong></a> <a href="https://lrdegeest.github.io/stats/" class="btn btn-default">Go home</a></p>
+<p><a href="https://lrdegeest.github.io/stats/code_checkpoints.nb.html" class="btn btn-warning"><strong>Last updated:</strong> 2021-04-27 16:36:02 EST </a></p>
+<p><a href="#table" class="btn btn-success"><strong>Go to quick tables</strong></a> <a href="https://suffolkecon.github.io/" class="btn btn-default">Go home</a></p>
 <div id="set-up" class="section level1 unnumbered">
 <h1 class="unnumbered">Set-up</h1>
 <p>Load the tidyverse:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpIFxuYGBgIn0= -->
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">library</span>(tidyverse) </span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>The <code>tidyverse</code> provides the data <code>mpg</code> to demonstrate methods. <code>mpg</code> has the mileage (<code>cty</code> for city, <code>hwy</code> for highway) for a bunch of different cars:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YShcIm1wZ1wiKSAjIGxvYWQgdGhlIGRhdGEgbXBnXG5cbiMgdmlldyB0aGUgZmlyc3QgNSByb3dzXG5tcGcgJT4lIFxuICBzbGljZV9oZWFkKG49NSlcbmBgYCJ9 -->
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">data</span>(<span class="st">&quot;mpg&quot;</span>) <span class="co"># load the data mpg</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="co"># view the first 5 rows</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_head</span>(<span class="dt">n=</span><span class="dv">5</span>)</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="summarizing-data" class="section level1" number="1">
-<h1 number="1"><span class="header-section-number">1</span> Summarizing Data</h1>
-<div id="the-pipe-and-summarise" class="section level2" number="1.1">
-<h2 number="1.1"><span class="header-section-number">1.1</span> The pipe and <code>summarise()</code></h2>
-<p>All summarizing operations work like this:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjpbImRhdGEgJT4lICMgdGhlIHBpcGU6IFwiYW5kIHRoZW5cIiIsIiAgc3VtbWFyaXNlKCkgIl19 -->
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>data <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># the pipe: &quot;and then&quot;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>() </span></code></pre></div>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeSh0aWR5dmVyc2UpIFxuYGBgXG5gYGAifQ== -->
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="st">```</span><span class="dt">r</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="dt">library(tidyverse) </span></span></code></pre></div>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+The `tidyverse` provides the data `mpg` to demonstrate methods. `mpg` has the mileage (`cty` for city, `hwy` for highway) for a bunch of different cars:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuZGF0YShcXG1wZ1xcKSAjIGxvYWQgdGhlIGRhdGEgbXBnXG5cbiMgdmlldyB0aGUgZmlyc3QgNSByb3dzXG5tcGcgJT4lIFxuICBzbGljZV9oZWFkKG49NSlcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+data(\mpg\) # load the data mpg
+
+# view the first 5 rows
+mpg %&gt;% 
+  slice_head(n=5)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+# Summarizing Data 
+
+## The pipe and `summarise()`
+
+All summarizing operations work like this: 
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjpbImRhdGEgJT4lICMgdGhlIHBpcGU6IFwiYW5kIHRoZW5cIiIsIiAgc3VtbWFyaXNlKCkgIl19 --&gt;
+
+```r
+data %&gt;% # the pipe: &quot;and then&quot;
+  summarise() </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -3083,560 +3112,1197 @@ div.tocify {
 <li><a href="https://dplyr.tidyverse.org/reference/summarise.html"><code>summarise()</code></a></li>
 </ul>
 <p>Inside <code>summarise()</code> you can use functions like <code>mean()</code>, <code>median()</code> and so on.</p>
-<div id="mean" class="section level3" number="1.1.1">
-<h3 number="1.1.1"><span class="header-section-number">1.1.1</span> mean</h3>
+<div id="mean" class="section level3" number="0.0.1">
+<h3 number="0.0.1"><span class="header-section-number">0.0.1</span> mean</h3>
 <p><code>mean()</code></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKG1lYW4oY3R5KSkgIyBzdW1tYXJpemU6IG1lYW5cbmBgYCJ9 -->
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># take the data, THEN</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="kw">mean</span>(cty)) <span class="co"># summarize: mean</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p><strong>Note.</strong> <code>cty</code> is a numerical variable.</p>
-</div>
-<div id="median" class="section level3" number="1.1.2">
-<h3 number="1.1.2"><span class="header-section-number">1.1.2</span> median</h3>
-<p><code>median()</code></p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKG1lZGlhbihjdHkpKSAjIHN1bW1hcml6ZTogbWVkaWFuXG5gYGAifQ== -->
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># take the data, THEN</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="kw">median</span>(cty)) <span class="co"># summarize: median</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="standard-deviation" class="section level3" number="1.1.3">
-<h3 number="1.1.3"><span class="header-section-number">1.1.3</span> standard deviation</h3>
-<p><code>sd()</code></p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKHNkKGN0eSkpICMgc3VtbWFyaXplOiBzdGFuZGFyZCBkZXZpYXRpb25cbmBgYCJ9 -->
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># take the data, THEN</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="kw">sd</span>(cty)) <span class="co"># summarize: standard deviation</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="counting-observations" class="section level3" number="1.1.4">
-<h3 number="1.1.4"><span class="header-section-number">1.1.4</span> counting observations</h3>
-<p><a href="https://dplyr.tidyverse.org/reference/n.html"><code>n()</code> (counting)</a></p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKG4oKSkgIyBzdW1tYXJpemU6IGNvdW50IG51bWJlciBvZiBvYnNlcnZhdGlvbnNcbmBgYCJ9 -->
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># take the data, THEN</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="kw">n</span>()) <span class="co"># summarize: count number of observations</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p><strong>Why doesn’t <code>n()</code> take an argument?</strong> Because it counts the number of rows, not columns.</p>
-</div>
-<div id="multiple-summaries" class="section level3" number="1.1.5">
-<h3 number="1.1.5"><span class="header-section-number">1.1.5</span> multiple summaries</h3>
-<p>You can put as many functions as you want inside <code>summarise()</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKG1lYW4oY3R5KSwgbWVkaWFuKGN0eSksIHNkKGN0eSksIG4oKSkgIyBzdW1tYXJpemU6IG1lYW4sIG1lZGlhbiwgc3RhbmRhcmQgZGV2aWF0aW9uLCBjb3VudFxuYGBgIn0= -->
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># take the data, THEN</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="kw">mean</span>(cty), <span class="kw">median</span>(cty), <span class="kw">sd</span>(cty), <span class="kw">n</span>()) <span class="co"># summarize: mean, median, standard deviation, count</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="naming-variables-inside-summarise" class="section level3" number="1.1.6">
-<h3 number="1.1.6"><span class="header-section-number">1.1.6</span> naming variables inside <code>summarise()</code></h3>
-<p>You can name variables inside <code>summarise()</code> using standard assignment:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKGF2Z19jdHkgPSBtZWFuKGN0eSksIG1lZGlhbl9jdHkgPSBtZWRpYW4oY3R5KSkgIyBzdW1tYXJpemU6IG1lYW4sIG1lZGlhblxuYGBgIn0= -->
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># take the data, THEN</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">avg_cty =</span> <span class="kw">mean</span>(cty), <span class="dt">median_cty =</span> <span class="kw">median</span>(cty)) <span class="co"># summarize: mean, median</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-</div>
-<div id="grouping-group_by" class="section level2" number="1.2">
-<h2 number="1.2"><span class="header-section-number">1.2</span> Grouping (<code>group_by()</code>)</h2>
-<p><a href="https://dplyr.tidyverse.org/reference/group_by.html"><code>group_by()</code></a>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgZ3JvdXBfYnkoY2xhc3MpICU+JSAjIGdyb3VwIGl0IGJ5IGNhciBjbGFzcyAoZS5nLiwgY29tcGFjdCwgcGlja3VwKSBUSEVOXG4gIHN1bW1hcmlzZShtZWFuKGN0eSksIG1lZGlhbihjdHkpLCBzZChjdHkpLCBuKCkpICMgc3VtbWFyaXplXG5gYGAifQ== -->
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># take the data, THEN</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(class) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># group it by car class (e.g., compact, pickup) THEN</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="kw">mean</span>(cty), <span class="kw">median</span>(cty), <span class="kw">sd</span>(cty), <span class="kw">n</span>()) <span class="co"># summarize</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p><strong>Note.</strong> <code>class</code> is a categorical variable.</p>
-</div>
-</div>
-<div id="manipulating-data" class="section level1" number="2">
-<h1 number="2"><span class="header-section-number">2</span> Manipulating data</h1>
-<div id="selecting-columns" class="section level2" number="2.1">
-<h2 number="2.1"><span class="header-section-number">2.1</span> Selecting columns</h2>
-<p><code>select()</code> certain columns</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSAjIGFsbCB0aGUgY29sdW1uc1xuICBzbGljZV9oZWFkKG49NSkgIyB2aWV3IHRoZSBmaXJzdCA1IHJvd3NcbmBgYCJ9 -->
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># all the columns</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_head</span>(<span class="dt">n=</span><span class="dv">5</span>) <span class="co"># view the first 5 rows</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSAjIGFsbCB0aGUgY29sdW1uc1xuICBzZWxlY3QobWFudWZhY3R1cmVyLCBtb2RlbCwgaHd5KSAlPiUgIyBzZWxlY3Qgc29tZSBvZiB0aGUgY29sdW1uc1xuICBzbGljZV9oZWFkKG49NSkgIyB2aWV3IHRoZSBmaXJzdCA1IHJvd3NcbmBgYCJ9 -->
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># all the columns</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(manufacturer, model, hwy) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># select some of the columns</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_head</span>(<span class="dt">n=</span><span class="dv">5</span>) <span class="co"># view the first 5 rows</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="slicing" class="section level2" number="2.2">
-<h2 number="2.2"><span class="header-section-number">2.2</span> Slicing</h2>
-<p>All slice operators begin with <code>slice_</code> and take an optional <code>n=</code> argument that specifies the number of rows you want to see. More <a href="https://dplyr.tidyverse.org/reference/slice.html">here</a>.</p>
-<p>Subsets with <code>slice_head()</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgc2xpY2VfaGVhZChuPTEwKSAjIHZpZXcgdGhlIGZpcnN0IDEwIHJvd3NcbmBgYCJ9 -->
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_head</span>(<span class="dt">n=</span><span class="dv">10</span>) <span class="co"># view the first 10 rows</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Maximums with <code>slice_max()</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgc2xpY2VfbWF4KGh3eSwgbj01KSAjIHRoZSBmaXZlIGhpZ2hlc3QgaGlnaHdheSBtaWxlcyBwZXIgZ2FsbG9uLiBpZiB0aGVyZSBhcmUgdGllcyB0aGV5IGFsbCBnZXQgcHJpbnRlZFxuYGBgIn0= -->
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_max</span>(hwy, <span class="dt">n=</span><span class="dv">5</span>) <span class="co"># the five highest highway miles per gallon. if there are ties they all get printed</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Minimums with <code>slice_min()</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgc2xpY2VfbWluKGh3eSwgbj0yKSAjIHRoZSB0d28gbG93ZXN0IGhpZ2h3YXkgbWlsZXMgcGVyIGdhbGxvbi4gaWYgdGhlcmUgYXJlIHRpZXMgdGhleSBhbGwgZ2V0IHByaW50ZWRcbmBgYCJ9 -->
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_min</span>(hwy, <span class="dt">n=</span><span class="dv">2</span>) <span class="co"># the two lowest highway miles per gallon. if there are ties they all get printed</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Random samples with <code>slice_sample()</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgc2xpY2Vfc2FtcGxlKG49MykgIyBwaWNrIHRocmVlIHJvd3MgYXQgcmFuZG9tXG5gYGAifQ== -->
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_sample</span>(<span class="dt">n=</span><span class="dv">3</span>) <span class="co"># pick three rows at random</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<div id="slicing-and-grouping" class="section level3" number="2.2.1">
-<h3 number="2.2.1"><span class="header-section-number">2.2.1</span> Slicing and grouping</h3>
-<p>When you <code>group_by()</code> a data frame <code>slice_()</code> will return subsets of each group:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZ3JvdXBfYnkoY2xhc3MpICU+JSAjIGdyb3VwIGJ5IGNsYXNzIFxuICBzbGljZV9taW4oaHd5LCBuPTEpICMgYm90dG9tIHR3byBod3kgYnkgY2xhc3NcbmBgYCJ9 -->
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(class) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># group by class </span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_min</span>(hwy, <span class="dt">n=</span><span class="dv">1</span>) <span class="co"># bottom two hwy by class</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>If a data frame is already grouped then <code>slice_()</code> will always subset by group under the hood. If you want subsets not by group then you have to <code>ungroup()</code>. See below in the section on <code>mutate()</code>. This often happens when you group a data frame to create a new variable.</p>
-</div>
-</div>
-<div id="filtering" class="section level2" number="2.3">
-<h2 number="2.3"><span class="header-section-number">2.3</span> Filtering</h2>
-<p><a href="https://dplyr.tidyverse.org/reference/filter.html"><code>filter()</code></a> with Boolean logic:</p>
-<ul>
-<li><code>==</code>: “equal to”</li>
-<li><code>!=</code>: “not equal to”</li>
-<li><code>&gt;</code>: “greater than”</li>
-<li><code>&gt;=</code>: “greater than or equal to”</li>
-<li><code>&lt;</code>: “less than”</li>
-<li><code>&lt;=</code>: “less than or equal to”</li>
-<li><code>&amp;</code>: “and”</li>
-<li><code>|</code>: “or”</li>
-</ul>
-<p>Boolean logic is any test that returns true or false:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMiA9PSAzXG5gYGAifQ== -->
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true"></a><span class="dv">2</span> <span class="op">==</span><span class="st"> </span><span class="dv">3</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMiAhPSAzXG5gYGAifQ== -->
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true"></a><span class="dv">2</span> <span class="op">!=</span><span class="st"> </span><span class="dv">3</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMiA8IDNcbmBgYCJ9 -->
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true"></a><span class="dv">2</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">3</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Some examples:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZmlsdGVyKHllYXIgPT0gXCIxOTk5XCIpICU+JSAjIGZpbHRlciBhbGwgY2FycyBtYWRlIGluIDE5OTlcbiAgc2xpY2VfaGVhZChuPTUpICMgdmlldyB0aGUgZmlyc3QgNSByb3dzXG5gYGAifQ== -->
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> &quot;1999&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># filter all cars made in 1999</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_head</span>(<span class="dt">n=</span><span class="dv">5</span>) <span class="co"># view the first 5 rows</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZmlsdGVyKGh3eSA+PSAyNSkgJT4lICMgZmlsdGVyIGFsbCBjYXJzIHdpdGggYXQgbGVhc3QgMjUgbXBnIGhpZ2h3YXlcbiAgc2xpY2VfaGVhZChuPTUpICMgdmlldyB0aGUgZmlyc3QgNSByb3dzXG5gYGAifQ== -->
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(hwy <span class="op">&gt;=</span><span class="st"> </span><span class="dv">25</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># filter all cars with at least 25 mpg highway</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_head</span>(<span class="dt">n=</span><span class="dv">5</span>) <span class="co"># view the first 5 rows</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZmlsdGVyKHllYXIgPT0gXCIxOTk5XCIgJiBtb2RlbCAhPSBcImE0XCIgJiBod3kgPj0gMjUpICU+JSAjIGZpbHRlciBjYXJzIG1hZGUgaW4gMTk5OSwgdGhhdCBhcmVuJ3QgYTQncywgYW5kIGhhdmUgYXQgbGVhc3QgMjUgbWdwIGhpZ2h3YXlcbiAgc2xpY2VfaGVhZChuPTUpICMgdmlldyB0aGUgZmlyc3QgNSByb3dzXG5gYGAifQ== -->
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> &quot;1999&quot;</span> <span class="op">&amp;</span><span class="st"> </span>model <span class="op">!=</span><span class="st"> &quot;a4&quot;</span> <span class="op">&amp;</span><span class="st"> </span>hwy <span class="op">&gt;=</span><span class="st"> </span><span class="dv">25</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># filter cars made in 1999, that aren&#39;t a4&#39;s, and have at least 25 mgp highway</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_head</span>(<span class="dt">n=</span><span class="dv">5</span>) <span class="co"># view the first 5 rows</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="mutating" class="section level2" number="2.4">
-<h2 number="2.4"><span class="header-section-number">2.4</span> Mutating</h2>
-<p>Create and modify variables (data frame columns) with <a href="https://dplyr.tidyverse.org/reference/mutate.html"><code>mutate()</code></a></p>
-<div id="create-a-new-variable" class="section level3" number="2.4.1">
-<h3 number="2.4.1"><span class="header-section-number">2.4.1</span> Create a new variable</h3>
-<p>For example, create a column called <code>mean_hwy</code> that calculates average highway miles per gallon:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgbXV0YXRlKG1lYW5faHd5ID0gbWVhbihod3kpKSAlPiUgXG4gIHNlbGVjdChtYW51ZmFjdHVyZXIsIG1vZGVsLCBod3ksIG1lYW5faHd5KSAlPiUgXG4gIHNsaWNlX2hlYWQobj01KVxuYGBgIn0= -->
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_hwy =</span> <span class="kw">mean</span>(hwy)) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(manufacturer, model, hwy, mean_hwy) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_head</span>(<span class="dt">n=</span><span class="dv">5</span>)</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="create-a-new-variable-and-store-it-as-a-column" class="section level3" number="2.4.2">
-<h3 number="2.4.2"><span class="header-section-number">2.4.2</span> Create a new variable and store it as a column</h3>
-<p>To save the new variable you have to re-assign the data frame:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnID0gbXBnICU+JSBcbiAgbXV0YXRlKG1lYW5faHd5ID0gbWVhbihod3kpKSBcbmBgYCJ9 -->
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true"></a>mpg =<span class="st"> </span>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_hwy =</span> <span class="kw">mean</span>(hwy)) </span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Now <code>mpg</code> has a new column called <code>mean_hwy</code>.</p>
-</div>
-<div id="mutating-while-grouping" class="section level3" number="2.4.3">
-<h3 number="2.4.3"><span class="header-section-number">2.4.3</span> Mutating while grouping</h3>
-<p>When you create a new variable and save it to the data you re-assign the data.</p>
-<p>When grouping with <code>group_by()</code> to create a new column, the re-assigned data will be grouped, which can affect the <code>slice_()</code> functions.</p>
-<p>The solution is to <code>ungroup()</code> after <code>mutate()</code>.</p>
-<p>For instance, add a column called “mean_hwy_class” that calculates average highway miles per gallon by class:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBmaXJzdCBjcmVhdGUgdGhlIHZhcmlhYmxlXG5tcGcgPSBtcGcgJT4lICMgdGFrZSB0aGUgZGF0YSwgVEhFTlxuICBncm91cF9ieShjbGFzcykgJT4lICMgZ3JvdXAgYnkgY2xhc3MsIFRIRU5cbiAgbXV0YXRlKG1lYW5faHd5X2NsYXNzID0gbWVhbihod3kpKSAlPiUgIyBjcmVhdGUgdGhlIG5ldyB2YXJpYWJsZSwgVEhFTlxuICB1bmdyb3VwKCkgIyB1bmdyb3VwIHRoZSBkYXRhXG5gYGAifQ== -->
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true"></a><span class="co"># first create the variable</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true"></a>mpg =<span class="st"> </span>mpg <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># take the data, THEN</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(class) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># group by class, THEN</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">mean_hwy_class =</span> <span class="kw">mean</span>(hwy)) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># create the new variable, THEN</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">ungroup</span>() <span class="co"># ungroup the data</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Why <code>ungroup()</code>? Because otherwise <code>slice_()</code> and other functions won’t return the output you expect. So better safe than sorry. When grouping <em>to create a variable</em> make sure you ungroup at the end.</p>
-<p>Now we can slice in general:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgc2VsZWN0KG1hbnVmYWN0dXJlciwgbW9kZWwsIGh3eSwgbWVhbl9od3lfY2xhc3MpICU+JSBcbiAgc2xpY2VfaGVhZChuPTIpXG5gYGAifQ== -->
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(manufacturer, model, hwy, mean_hwy_class) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">slice_head</span>(<span class="dt">n=</span><span class="dv">2</span>)</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="mutating-and-frequency-tables" class="section level3" number="2.4.4">
-<h3 number="2.4.4"><span class="header-section-number">2.4.4</span> Mutating and frequency tables</h3>
-<p>Use <code>n()</code> to calculate frequency and then use <code>mutate()</code> to calculate relative frequency:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZ3JvdXBfYnkoY2xhc3MpICU+JSBcbiAgc3VtbWFyaXNlKGZyZXF1ZW5jeSA9IG4oKSkgJT4lIFxuICBtdXRhdGUocmVsYXRpdmVfZnJlcXVlbmN5ID0gZnJlcXVlbmN5IC8gc3VtKGZyZXF1ZW5jeSkpXG5gYGAifQ== -->
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(class) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">frequency =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">relative_frequency =</span> frequency <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(frequency))</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-</div>
-</div>
-<div id="visualizing-data" class="section level1" number="3">
-<h1 number="3"><span class="header-section-number">3</span> Visualizing data</h1>
-<div id="plotting-distributions" class="section level2" number="3.1">
-<h2 number="3.1"><span class="header-section-number">3.1</span> Plotting distributions</h2>
-<div id="histograms" class="section level3" number="3.1.1">
-<h3 number="3.1.1"><span class="header-section-number">3.1.1</span> Histograms</h3>
-<p>Histograms with <code>ggplot</code> and <a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html"><code>geom_histogram()</code></a>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gY3R5KSkgKyAjIGJsYW5rIGNhbnZhczogY2hvb3NlIHRoZSBkYXRhIGFuZCB0aGUgeC1heGlzIHZhcmlhYmxlXG4gIGdlb21faGlzdG9ncmFtKCkgIyBhZGQgZ2VvbSBsYXllcjogZGlzdHJpYnV0aW9uXG5gYGAifQ== -->
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> cty)) <span class="op">+</span><span class="st"> </span><span class="co"># blank canvas: choose the data and the x-axis variable</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_histogram</span>() <span class="co"># add geom layer: distribution</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Faceted histograms with <a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html"><code>facet_wrap()</code></a>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gY3R5KSkgKyAjIGJsYW5rIGNhbnZhczogY2hvb3NlIHRoZSBkYXRhIGFuZCB0aGUgeC1heGlzIHZhcmlhYmxlXG4gIGdlb21faGlzdG9ncmFtKCkgKyAjIGFkZCBnZW9tIGxheWVyOiAgZGlzdHJpYnV0aW9uXG4gIGZhY2V0X3dyYXAofmNsYXNzKSAjIGFkZCBmYWNldHRpbmcgKG5vdGUgdGhlIFwiflwiIGJlZm9yZSB0aGUgY2F0ZWdvcmljYWwgdmFyaWFibGUpXG5gYGAifQ== -->
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> cty)) <span class="op">+</span><span class="st"> </span><span class="co"># blank canvas: choose the data and the x-axis variable</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_histogram</span>() <span class="op">+</span><span class="st"> </span><span class="co"># add geom layer:  distribution</span></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>class) <span class="co"># add facetting (note the &quot;~&quot; before the categorical variable)</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="cumulative-distributions" class="section level3" number="3.1.2">
-<h3 number="3.1.2"><span class="header-section-number">3.1.2</span> Cumulative distributions</h3>
-<p>Percentiles and cumulative distributions with <code>ggplot</code> and <a href="https://ggplot2.tidyverse.org/reference/stat_ecdf.html"><code>stat_ecdf()</code></a>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4PWN0eSkpICsgICMgYmxhbmsgY2FudmFzOiBjaG9vc2UgdGhlIGRhdGEgYW5kIHRoZSB4LWF4aXMgdmFyaWFibGVcbiAgc3RhdF9lY2RmKCkgIyBhZGQgZ2VvbSBsYXllcjogY3VtdWxhdGl2ZSBkaXN0cmlidXRpb25cbmBgYCJ9 -->
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>cty)) <span class="op">+</span><span class="st">  </span><span class="co"># blank canvas: choose the data and the x-axis variable</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">stat_ecdf</span>() <span class="co"># add geom layer: cumulative distribution</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>You can add a vertical line with <code>geom_vline()</code> to make it easier to see a percentile. For instance, view percent of cars with less than 15 miles per gallon:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4PWN0eSkpICsgICMgYmxhbmsgY2FudmFzOiBjaG9vc2UgdGhlIGRhdGEgYW5kIHRoZSB4LWF4aXMgdmFyaWFibGVcbiAgc3RhdF9lY2RmKCkgKyAjIGFkZCBnZW9tIGxheWVyOiBjdW11bGF0aXZlIGRpc3RyaWJ1dGlvblxuICBnZW9tX3ZsaW5lKHhpbnRlcmNlcHQgPSAxNSwgY29sb3I9XCJyZWRcIikgIyB2ZXJ0aWNsZSBcbmBgYCJ9 -->
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>cty)) <span class="op">+</span><span class="st">  </span><span class="co"># blank canvas: choose the data and the x-axis variable</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">stat_ecdf</span>() <span class="op">+</span><span class="st"> </span><span class="co"># add geom layer: cumulative distribution</span></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">15</span>, <span class="dt">color=</span><span class="st">&quot;red&quot;</span>) <span class="co"># verticle </span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="box-plots" class="section level3" number="3.1.3">
-<h3 number="3.1.3"><span class="header-section-number">3.1.3</span> Box plots</h3>
-<p><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html"><code>geom_boxplot()</code></a></p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gaHd5LCB5ID0gY2xhc3MpKSArICMgeCBpcyBjb250aW51b3VzLCB5IGlzIGNhdGVnb3JpY2FsXG4gIGdlb21fYm94cGxvdCgpIFxuYGBgIn0= -->
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> hwy, <span class="dt">y =</span> class)) <span class="op">+</span><span class="st"> </span><span class="co"># x is continuous, y is categorical</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() </span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>or:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gY2xhc3MsIHkgPSBod3kpKSArICMgeCBpcyBjYXRlZ29yaWNhbCwgeSBpcyBjb250aW51b3VzXG4gIGdlb21fYm94cGxvdCgpIFxuYGBgIn0= -->
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> class, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="co"># x is categorical, y is continuous</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_boxplot</span>() </span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-</div>
-<div id="scatterplot" class="section level2" number="3.2">
-<h2 number="3.2"><span class="header-section-number">3.2</span> Scatterplot</h2>
-<p><code>geom_point()</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gY3R5LCB5ID0gaHd5KSkgKyBcbiAgZ2VvbV9wb2ludCgpIFxuYGBgIn0= -->
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> cty, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>() </span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<div id="scatterplot-with-regression-line" class="section level3" number="3.2.1">
-<h3 number="3.2.1"><span class="header-section-number">3.2.1</span> Scatterplot with regression line</h3>
-<p><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html"><code>geom_smooth(method = &quot;lm&quot;)</code></a>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gY3R5LCB5ID0gaHd5KSkgKyBcbiAgZ2VvbV9wb2ludCgpICsgIyBzY2F0dGVyLXBsb3RcbiAgZ2VvbV9zbW9vdGgobWV0aG9kID0gXCJsbVwiKSAjIHJlZ3Jlc3Npb24gbGluZVxuYGBgIn0= -->
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> cty, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="co"># scatter-plot</span></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>) <span class="co"># regression line</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-</div>
-</div>
-<div id="correlation-and-regression" class="section level1" number="4">
-<h1 number="4"><span class="header-section-number">4</span> Correlation and regression</h1>
-<div id="covariance" class="section level2" number="4.1">
-<h2 number="4.1"><span class="header-section-number">4.1</span> Covariance</h2>
-<p><code>cov()</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgc3VtbWFyaXNlKGNvdih4PWN0eSwgeT1od3kpKVxuYGBgIn0= -->
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="kw">cov</span>(<span class="dt">x=</span>cty, <span class="dt">y=</span>hwy))</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="correlation" class="section level2" number="4.2">
-<h2 number="4.2"><span class="header-section-number">4.2</span> Correlation</h2>
-<p><code>cor()</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgc3VtbWFyaXNlKGNvcih4PWN0eSwgeT1od3kpKVxuYGBgIn0= -->
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="kw">cor</span>(<span class="dt">x=</span>cty, <span class="dt">y=</span>hwy))</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="regression" class="section level2" number="4.3">
-<h2 number="4.3"><span class="header-section-number">4.3</span> Regression</h2>
-<p><code>lm()</code></p>
-<p>Simple linear regression (one <span class="math inline">\(x\)</span> variable):</p>
-<p><span class="math display">\[
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKG1lYW4oY3R5KSkgIyBzdW1tYXJpemU6IG1lYW5cbmBgYFxuYGBgIn0= -->
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="st">```</span><span class="dt">r</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a><span class="dt">mpg %&gt;% # take the data, THEN</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a><span class="dt">  summarise(mean(cty)) # summarize: mean</span></span></code></pre></div>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+**Note.** `cty` is a numerical variable.
+
+### median
+
+`median()`
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKG1lZGlhbihjdHkpKSAjIHN1bW1hcml6ZTogbWVkaWFuXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% # take the data, THEN
+  summarise(median(cty)) # summarize: median</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+### standard deviation
+
+`sd()`
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKHNkKGN0eSkpICMgc3VtbWFyaXplOiBzdGFuZGFyZCBkZXZpYXRpb25cbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% # take the data, THEN
+  summarise(sd(cty)) # summarize: standard deviation</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+### counting observations
+
+[`n()` (counting)](https://dplyr.tidyverse.org/reference/n.html)
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKG4oKSkgIyBzdW1tYXJpemU6IGNvdW50IG51bWJlciBvZiBvYnNlcnZhdGlvbnNcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% # take the data, THEN
+  summarise(n()) # summarize: count number of observations</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+**Why doesn&#39;t `n()` take an argument?** Because it counts the number of rows, not columns.
+
+### multiple summaries
+
+You can put as many functions as you want inside `summarise()`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKG1lYW4oY3R5KSwgbWVkaWFuKGN0eSksIHNkKGN0eSksIG4oKSkgIyBzdW1tYXJpemU6IG1lYW4sIG1lZGlhbiwgc3RhbmRhcmQgZGV2aWF0aW9uLCBjb3VudFxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+mpg %&gt;% # take the data, THEN
+  summarise(mean(cty), median(cty), sd(cty), n()) # summarize: mean, median, standard deviation, count</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+### naming variables inside `summarise()`
+
+You can name variables inside `summarise()` using standard assignment:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgc3VtbWFyaXNlKGF2Z19jdHkgPSBtZWFuKGN0eSksIG1lZGlhbl9jdHkgPSBtZWRpYW4oY3R5KSkgIyBzdW1tYXJpemU6IG1lYW4sIG1lZGlhblxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+mpg %&gt;% # take the data, THEN
+  summarise(avg_cty = mean(cty), median_cty = median(cty)) # summarize: mean, median</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+## Grouping (`group_by()`)  
+
+[`group_by()`](https://dplyr.tidyverse.org/reference/group_by.html):
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU5cbiAgZ3JvdXBfYnkoY2xhc3MpICU+JSAjIGdyb3VwIGl0IGJ5IGNhciBjbGFzcyAoZS5nLiwgY29tcGFjdCwgcGlja3VwKSBUSEVOXG4gIHN1bW1hcmlzZShtZWFuKGN0eSksIG1lZGlhbihjdHkpLCBzZChjdHkpLCBuKCkpICMgc3VtbWFyaXplXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% # take the data, THEN
+  group_by(class) %&gt;% # group it by car class (e.g., compact, pickup) THEN
+  summarise(mean(cty), median(cty), sd(cty), n()) # summarize</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+**Note.** `class` is a categorical variable.
+
+# Manipulating data
+
+## Selecting columns
+
+`select()` certain columns
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSAjIGFsbCB0aGUgY29sdW1uc1xuICBzbGljZV9oZWFkKG49NSkgIyB2aWV3IHRoZSBmaXJzdCA1IHJvd3NcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% # all the columns
+  slice_head(n=5) # view the first 5 rows</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSAjIGFsbCB0aGUgY29sdW1uc1xuICBzZWxlY3QobWFudWZhY3R1cmVyLCBtb2RlbCwgaHd5KSAlPiUgIyBzZWxlY3Qgc29tZSBvZiB0aGUgY29sdW1uc1xuICBzbGljZV9oZWFkKG49NSkgIyB2aWV3IHRoZSBmaXJzdCA1IHJvd3NcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% # all the columns
+  select(manufacturer, model, hwy) %&gt;% # select some of the columns
+  slice_head(n=5) # view the first 5 rows</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+## Slicing
+
+All slice operators begin with `slice_` and take an optional `n=` argument that specifies the number of rows you want to see. More [here](https://dplyr.tidyverse.org/reference/slice.html). 
+
+Subsets with `slice_head()`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgc2xpY2VfaGVhZChuPTEwKSAjIHZpZXcgdGhlIGZpcnN0IDEwIHJvd3NcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  slice_head(n=10) # view the first 10 rows</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+Maximums with `slice_max()`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgc2xpY2VfbWF4KGh3eSwgbj01KSAjIHRoZSBmaXZlIGhpZ2hlc3QgaGlnaHdheSBtaWxlcyBwZXIgZ2FsbG9uLiBpZiB0aGVyZSBhcmUgdGllcyB0aGV5IGFsbCBnZXQgcHJpbnRlZFxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  slice_max(hwy, n=5) # the five highest highway miles per gallon. if there are ties they all get printed</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Minimums with `slice_min()`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgc2xpY2VfbWluKGh3eSwgbj0yKSAjIHRoZSB0d28gbG93ZXN0IGhpZ2h3YXkgbWlsZXMgcGVyIGdhbGxvbi4gaWYgdGhlcmUgYXJlIHRpZXMgdGhleSBhbGwgZ2V0IHByaW50ZWRcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  slice_min(hwy, n=2) # the two lowest highway miles per gallon. if there are ties they all get printed</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Random samples with `slice_sample()`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgc2xpY2Vfc2FtcGxlKG49MykgIyBwaWNrIHRocmVlIHJvd3MgYXQgcmFuZG9tXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  slice_sample(n=3) # pick three rows at random</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+### Slicing and grouping
+
+When you `group_by()` a data frame `slice_()` will return subsets of each group:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZ3JvdXBfYnkoY2xhc3MpICU+JSAjIGdyb3VwIGJ5IGNsYXNzIFxuICBzbGljZV9taW4oaHd5LCBuPTEpICMgYm90dG9tIHR3byBod3kgYnkgY2xhc3NcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  group_by(class) %&gt;% # group by class 
+  slice_min(hwy, n=1) # bottom two hwy by class</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+If a data frame is already grouped then `slice_()` will always subset by group under the hood. If you want subsets not by group then you have to `ungroup()`. See below in the section on `mutate()`. This often happens when you group a data frame to create a new variable. 
+
+## Filtering
+
+[`filter()`](https://dplyr.tidyverse.org/reference/filter.html) with Boolean logic:
+
+* `==`: &quot;equal to&quot;
+* `!=`: &quot;not equal to&quot;
+* `&gt;`: &quot;greater than&quot;
+* `&gt;=`: &quot;greater than or equal to&quot;
+* `&lt;`: &quot;less than&quot;
+* `&lt;=`: &quot;less than or equal to&quot;
+* `&amp;`: &quot;and&quot;
+* `|`: &quot;or&quot;
+
+Boolean logic is any test that returns true or false:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuMiA9PSAzXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+2 == 3</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuMiAhPSAzXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+2 != 3</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuMiA8IDNcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+2 &lt; 3</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Some examples:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZmlsdGVyKHllYXIgPT0gXFwxOTk5XFwpICU+JSAjIGZpbHRlciBhbGwgY2FycyBtYWRlIGluIDE5OTlcbiAgc2xpY2VfaGVhZChuPTUpICMgdmlldyB0aGUgZmlyc3QgNSByb3dzXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  filter(year == \1999\) %&gt;% # filter all cars made in 1999
+  slice_head(n=5) # view the first 5 rows</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZmlsdGVyKGh3eSA+PSAyNSkgJT4lICMgZmlsdGVyIGFsbCBjYXJzIHdpdGggYXQgbGVhc3QgMjUgbXBnIGhpZ2h3YXlcbiAgc2xpY2VfaGVhZChuPTUpICMgdmlldyB0aGUgZmlyc3QgNSByb3dzXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  filter(hwy &gt;= 25) %&gt;% # filter all cars with at least 25 mpg highway
+  slice_head(n=5) # view the first 5 rows</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZmlsdGVyKHllYXIgPT0gXFwxOTk5XFwgJiBtb2RlbCAhPSBcXGE0XFwgJiBod3kgPj0gMjUpICU+JSAjIGZpbHRlciBjYXJzIG1hZGUgaW4gMTk5OSwgdGhhdCBhcmVuJ3QgYTQncywgYW5kIGhhdmUgYXQgbGVhc3QgMjUgbWdwIGhpZ2h3YXlcbiAgc2xpY2VfaGVhZChuPTUpICMgdmlldyB0aGUgZmlyc3QgNSByb3dzXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  filter(year == \1999\ &amp; model != \a4\ &amp; hwy &gt;= 25) %&gt;% # filter cars made in 1999, that aren&#39;t a4&#39;s, and have at least 25 mgp highway
+  slice_head(n=5) # view the first 5 rows</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+## Mutating
+
+Create and modify variables (data frame columns) with [`mutate()`](https://dplyr.tidyverse.org/reference/mutate.html)
+
+### Create a new variable
+
+For example, create a column called `mean_hwy` that calculates average highway miles per gallon:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgbXV0YXRlKG1lYW5faHd5ID0gbWVhbihod3kpKSAlPiUgXG4gIHNlbGVjdChtYW51ZmFjdHVyZXIsIG1vZGVsLCBod3ksIG1lYW5faHd5KSAlPiUgXG4gIHNsaWNlX2hlYWQobj01KVxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  mutate(mean_hwy = mean(hwy)) %&gt;% 
+  select(manufacturer, model, hwy, mean_hwy) %&gt;% 
+  slice_head(n=5)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+### Create a new variable and store it as a column
+
+To save the new variable you have to re-assign the data frame:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnID0gbXBnICU+JSBcbiAgbXV0YXRlKG1lYW5faHd5ID0gbWVhbihod3kpKSBcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg = mpg %&gt;% 
+  mutate(mean_hwy = mean(hwy)) </code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Now `mpg` has a new column called `mean_hwy`.
+
+### Mutating while grouping
+
+When you create a new variable and save it to the data you re-assign the data. 
+
+When grouping with `group_by()` to create a new column, the re-assigned data will be grouped, which can affect the `slice_()` functions. 
+
+The solution is to `ungroup()` after `mutate()`. 
+
+For instance, add a column called &quot;mean_hwy_class&quot; that calculates average highway miles per gallon by class:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBmaXJzdCBjcmVhdGUgdGhlIHZhcmlhYmxlXG5tcGcgPSBtcGcgJT4lICMgdGFrZSB0aGUgZGF0YSwgVEhFTlxuICBncm91cF9ieShjbGFzcykgJT4lICMgZ3JvdXAgYnkgY2xhc3MsIFRIRU5cbiAgbXV0YXRlKG1lYW5faHd5X2NsYXNzID0gbWVhbihod3kpKSAlPiUgIyBjcmVhdGUgdGhlIG5ldyB2YXJpYWJsZSwgVEhFTlxuICB1bmdyb3VwKCkgIyB1bmdyb3VwIHRoZSBkYXRhXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+# first create the variable
+mpg = mpg %&gt;% # take the data, THEN
+  group_by(class) %&gt;% # group by class, THEN
+  mutate(mean_hwy_class = mean(hwy)) %&gt;% # create the new variable, THEN
+  ungroup() # ungroup the data</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Why `ungroup()`? Because otherwise `slice_()` and other functions won&#39;t return the output you expect. So better safe than sorry. When grouping *to create a variable* make sure you ungroup at the end.
+
+Now we can slice in general:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgc2VsZWN0KG1hbnVmYWN0dXJlciwgbW9kZWwsIGh3eSwgbWVhbl9od3lfY2xhc3MpICU+JSBcbiAgc2xpY2VfaGVhZChuPTIpXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  select(manufacturer, model, hwy, mean_hwy_class) %&gt;% 
+  slice_head(n=2)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+### Mutating and frequency tables
+
+Use `n()` to calculate frequency and then use `mutate()` to calculate relative frequency:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZ3JvdXBfYnkoY2xhc3MpICU+JSBcbiAgc3VtbWFyaXNlKGZyZXF1ZW5jeSA9IG4oKSkgJT4lIFxuICBtdXRhdGUocmVsYXRpdmVfZnJlcXVlbmN5ID0gZnJlcXVlbmN5IC8gc3VtKGZyZXF1ZW5jeSkpXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  group_by(class) %&gt;% 
+  summarise(frequency = n()) %&gt;% 
+  mutate(relative_frequency = frequency / sum(frequency))</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+# Visualizing data
+
+## Plotting distributions 
+
+### Histograms
+
+Histograms with `ggplot` and [`geom_histogram()`](https://ggplot2.tidyverse.org/reference/geom_histogram.html):
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gY3R5KSkgKyAjIGJsYW5rIGNhbnZhczogY2hvb3NlIHRoZSBkYXRhIGFuZCB0aGUgeC1heGlzIHZhcmlhYmxlXG4gIGdlb21faGlzdG9ncmFtKCkgIyBhZGQgZ2VvbSBsYXllcjogZGlzdHJpYnV0aW9uXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  ggplot(aes(x = cty)) + # blank canvas: choose the data and the x-axis variable
+  geom_histogram() # add geom layer: distribution</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Faceted histograms with [`facet_wrap()`](https://ggplot2.tidyverse.org/reference/facet_wrap.html):
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gY3R5KSkgKyAjIGJsYW5rIGNhbnZhczogY2hvb3NlIHRoZSBkYXRhIGFuZCB0aGUgeC1heGlzIHZhcmlhYmxlXG4gIGdlb21faGlzdG9ncmFtKCkgKyAjIGFkZCBnZW9tIGxheWVyOiAgZGlzdHJpYnV0aW9uXG4gIGZhY2V0X3dyYXAofmNsYXNzKSAjIGFkZCBmYWNldHRpbmcgKG5vdGUgdGhlIFxcflxcIGJlZm9yZSB0aGUgY2F0ZWdvcmljYWwgdmFyaWFibGUpXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  ggplot(aes(x = cty)) + # blank canvas: choose the data and the x-axis variable
+  geom_histogram() + # add geom layer:  distribution
+  facet_wrap(~class) # add facetting (note the \~\ before the categorical variable)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+### Cumulative distributions
+
+Percentiles and cumulative distributions with `ggplot` and [`stat_ecdf()`](https://ggplot2.tidyverse.org/reference/stat_ecdf.html):
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4PWN0eSkpICsgICMgYmxhbmsgY2FudmFzOiBjaG9vc2UgdGhlIGRhdGEgYW5kIHRoZSB4LWF4aXMgdmFyaWFibGVcbiAgc3RhdF9lY2RmKCkgIyBhZGQgZ2VvbSBsYXllcjogY3VtdWxhdGl2ZSBkaXN0cmlidXRpb25cbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  ggplot(aes(x=cty)) +  # blank canvas: choose the data and the x-axis variable
+  stat_ecdf() # add geom layer: cumulative distribution</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+You can add a vertical line with `geom_vline()` to make it easier to see a percentile. For instance, view percent of cars with less than 15 miles per gallon:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4PWN0eSkpICsgICMgYmxhbmsgY2FudmFzOiBjaG9vc2UgdGhlIGRhdGEgYW5kIHRoZSB4LWF4aXMgdmFyaWFibGVcbiAgc3RhdF9lY2RmKCkgKyAjIGFkZCBnZW9tIGxheWVyOiBjdW11bGF0aXZlIGRpc3RyaWJ1dGlvblxuICBnZW9tX3ZsaW5lKHhpbnRlcmNlcHQgPSAxNSwgY29sb3I9XFxyZWRcXCkgIyB2ZXJ0aWNsZSBcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  ggplot(aes(x=cty)) +  # blank canvas: choose the data and the x-axis variable
+  stat_ecdf() + # add geom layer: cumulative distribution
+  geom_vline(xintercept = 15, color=\red\) # verticle </code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+### Box plots
+
+[`geom_boxplot()`](https://ggplot2.tidyverse.org/reference/geom_boxplot.html)
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gaHd5LCB5ID0gY2xhc3MpKSArICMgeCBpcyBjb250aW51b3VzLCB5IGlzIGNhdGVnb3JpY2FsXG4gIGdlb21fYm94cGxvdCgpIFxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  ggplot(aes(x = hwy, y = class)) + # x is continuous, y is categorical
+  geom_boxplot() </code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+or: 
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gY2xhc3MsIHkgPSBod3kpKSArICMgeCBpcyBjYXRlZ29yaWNhbCwgeSBpcyBjb250aW51b3VzXG4gIGdlb21fYm94cGxvdCgpIFxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  ggplot(aes(x = class, y = hwy)) + # x is categorical, y is continuous
+  geom_boxplot() </code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+## Scatterplot
+
+`geom_point()`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gY3R5LCB5ID0gaHd5KSkgKyBcbiAgZ2VvbV9wb2ludCgpIFxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  ggplot(aes(x = cty, y = hwy)) + 
+  geom_point() </code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+### Scatterplot with regression line
+
+[`geom_smooth(method = &quot;lm&quot;)`](https://ggplot2.tidyverse.org/reference/geom_smooth.html):
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgZ2dwbG90KGFlcyh4ID0gY3R5LCB5ID0gaHd5KSkgKyBcbiAgZ2VvbV9wb2ludCgpICsgIyBzY2F0dGVyLXBsb3RcbiAgZ2VvbV9zbW9vdGgobWV0aG9kID0gXFxsbVxcKSAjIHJlZ3Jlc3Npb24gbGluZVxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  ggplot(aes(x = cty, y = hwy)) + 
+  geom_point() + # scatter-plot
+  geom_smooth(method = \lm\) # regression line</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+# Correlation and regression
+
+## Covariance
+
+`cov()`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgc3VtbWFyaXNlKGNvdih4PWN0eSwgeT1od3kpKVxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  summarise(cov(x=cty, y=hwy))</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+## Correlation
+
+`cor()`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgc3VtbWFyaXNlKGNvcih4PWN0eSwgeT1od3kpKVxuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  summarise(cor(x=cty, y=hwy))</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+
+## Regression
+
+`lm()`
+
+Simple linear regression (one $x$ variable):
+
+$$
 \begin{aligned}
 y &amp;= f(x) \\
   &amp;= \beta_0 + \beta_1(x) + \epsilon
 \end{aligned}
-\]</span> In <code>lm()</code> the <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> variables are separated by <code>~</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSwgZGF0YSA9IC4pICMgdGhlIFwiLlwiIG1lYW5zIFwidXNlIHRoZSBkYXRhIGZyb20gdGhlIHBpcGUgJT4lXCJcbmBgYCJ9 -->
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">lm</span>(<span class="dt">formula =</span> cty <span class="op">~</span><span class="st"> </span>hwy, <span class="dt">data =</span> .) <span class="co"># the &quot;.&quot; means &quot;use the data from the pipe %&gt;%&quot;</span></span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Multiple linear regression (multiple <span class="math inline">\(x\)</span> variables):</p>
-<p><span class="math display">\[
+$$
+In `lm()` the $y$ and $x$ variables are separated by `~`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSwgZGF0YSA9IC4pICMgdGhlIFxcLlxcIG1lYW5zIFxcdXNlIHRoZSBkYXRhIGZyb20gdGhlIHBpcGUgJT4lXFxcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  lm(formula = cty ~ hwy, data = .) # the \.\ means \use the data from the pipe %&gt;%\</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+Multiple linear regression (multiple $x$ variables):
+
+$$
 \begin{aligned}
 y &amp;= f(\mathbf{X}) \\
   &amp;= f(x_1, x_2, \dots) \\
   &amp;= \beta_0 + \beta_1(x_1) + \beta_2(x_2) + \dots + \epsilon
 \end{aligned}
-\]</span> In <code>lm()</code> the <span class="math inline">\(x\)</span> variables are separated by <code>+</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGN5bCArIGRpc3BsLCBkYXRhID0gLilcbmBgYCJ9 -->
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">lm</span>(<span class="dt">formula =</span> cty <span class="op">~</span><span class="st"> </span>hwy <span class="op">+</span><span class="st"> </span>cyl <span class="op">+</span><span class="st"> </span>displ, <span class="dt">data =</span> .)</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="summary" class="section level2" number="4.4">
-<h2 number="4.4"><span class="header-section-number">4.4</span> <code>summary()</code></h2>
-<p>View hypothesis tests and regression diagnostics with <code>summary()</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGN5bCArIGRpc3BsLCBkYXRhID0gLikgJT4lIFxuICBzdW1tYXJ5KClcbmBgYCJ9 -->
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">lm</span>(<span class="dt">formula =</span> cty <span class="op">~</span><span class="st"> </span>hwy <span class="op">+</span><span class="st"> </span>cyl <span class="op">+</span><span class="st"> </span>displ, <span class="dt">data =</span> .) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">summary</span>()</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="plotting-regression-results" class="section level2" number="4.5">
-<h2 number="4.5"><span class="header-section-number">4.5</span> Plotting regression results</h2>
-<p>Use the package <code>sJplot</code>. (If you forgot how to install package, see <a href="https://lrdegeest.github.io/stats/r.html#3_Install_packages">here</a>.)</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShzalBsb3QpXG5gYGAifQ== -->
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true"></a><span class="kw">library</span>(sjPlot)</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>The function you want is <code>plot_model</code>. The baseline plot shows the coefficients and standard errors:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzLCBkYXRhID0gLikgJT4lIFxuICBwbG90X21vZGVsKG1vZGVsID0gLilcbmBgYCJ9 -->
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">lm</span>(<span class="dt">formula =</span> cty <span class="op">~</span><span class="st"> </span>hwy <span class="op">+</span><span class="st"> </span>class, <span class="dt">data =</span> .) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">plot_model</span>(<span class="dt">model =</span> .)</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>To plot predicted values you can set <code>type = &quot;pred&quot;</code> and then choose which coefficient to plot by setting <code>terms</code>:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzLCBkYXRhID0gLikgJT4lIFxuICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9IFwicHJlZFwiLCB0ZXJtcyA9IGMoXCJod3lcIikpXG5gYGAifQ== -->
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">lm</span>(<span class="dt">formula =</span> cty <span class="op">~</span><span class="st"> </span>hwy <span class="op">+</span><span class="st"> </span>class, <span class="dt">data =</span> .) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">plot_model</span>(<span class="dt">model =</span> ., <span class="dt">type =</span> <span class="st">&quot;pred&quot;</span>, <span class="dt">terms =</span> <span class="kw">c</span>(<span class="st">&quot;hwy&quot;</span>))</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>The <code>terms</code> argument accepts multiple terms:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzLCBkYXRhID0gLikgJT4lIFxuICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9IFwicHJlZFwiLCB0ZXJtcyA9IGMoXCJod3lcIiwgXCJjbGFzc1wiKSlcbmBgYCJ9 -->
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">lm</span>(<span class="dt">formula =</span> cty <span class="op">~</span><span class="st"> </span>hwy <span class="op">+</span><span class="st"> </span>class, <span class="dt">data =</span> .) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">plot_model</span>(<span class="dt">model =</span> ., <span class="dt">type =</span> <span class="st">&quot;pred&quot;</span>, <span class="dt">terms =</span> <span class="kw">c</span>(<span class="st">&quot;hwy&quot;</span>, <span class="st">&quot;class&quot;</span>))</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>This is useful when you have an interaction effect (e.g., <code>hwy*class</code>):</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzICsgaHd5KmNsYXNzLCBkYXRhID0gLikgJT4lIFxuICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9IFwicHJlZFwiLCB0ZXJtcyA9IGMoXCJod3lcIiwgXCJjbGFzc1wiKSlcbmBgYCJ9 -->
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">lm</span>(<span class="dt">formula =</span> cty <span class="op">~</span><span class="st"> </span>hwy <span class="op">+</span><span class="st"> </span>class <span class="op">+</span><span class="st"> </span>hwy<span class="op">*</span>class, <span class="dt">data =</span> .) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">plot_model</span>(<span class="dt">model =</span> ., <span class="dt">type =</span> <span class="st">&quot;pred&quot;</span>, <span class="dt">terms =</span> <span class="kw">c</span>(<span class="st">&quot;hwy&quot;</span>, <span class="st">&quot;class&quot;</span>))</span></code></pre></div>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p><code>sJplot</code> uses <code>ggplot</code> so you can add <code>ggplot</code> stuff to it, like a different theme and titles:</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzICsgaHd5KmNsYXNzLCBkYXRhID0gLikgJT4lIFxuICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9IFwicHJlZFwiLCB0ZXJtcyA9IGMoXCJod3lcIiwgXCJjbGFzc1wiKSkgKyBcbiAgbGFicyh4ID0gXCJIaWdod2F5IG1pbGVzIHBlciBnYWxsb25cIiwgeSA9IFwiUHJlZGljdGVkIGNpdHkgbWlsZXMgcGVyIGdhbGxvblwiLFxuICAgICAgIHRpdGxlID0gXCJBIHZlcnkgaW50ZXJlc3RpbmcgbGluZWFyIG1vZGVsXCIsIHN1YnRpdGxlID0gXCJTbyBpbnRlcmVzdGluZ1wiKSArIFxuICB0aGVtZV9taW5pbWFsKClcbmBgYCJ9 -->
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true"></a>mpg <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">lm</span>(<span class="dt">formula =</span> cty <span class="op">~</span><span class="st"> </span>hwy <span class="op">+</span><span class="st"> </span>class <span class="op">+</span><span class="st"> </span>hwy<span class="op">*</span>class, <span class="dt">data =</span> .) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">plot_model</span>(<span class="dt">model =</span> ., <span class="dt">type =</span> <span class="st">&quot;pred&quot;</span>, <span class="dt">terms =</span> <span class="kw">c</span>(<span class="st">&quot;hwy&quot;</span>, <span class="st">&quot;class&quot;</span>)) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Highway miles per gallon&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Predicted city miles per gallon&quot;</span>,</span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true"></a>       <span class="dt">title =</span> <span class="st">&quot;A very interesting linear model&quot;</span>, <span class="dt">subtitle =</span> <span class="st">&quot;So interesting&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">theme_minimal</span>()</span></code></pre></div>
+$$
+In `lm()` the $x$ variables are separated by `+`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGN5bCArIGRpc3BsLCBkYXRhID0gLilcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  lm(formula = cty ~ hwy + cyl + displ, data = .)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+## `summary()`
+
+View hypothesis tests and regression diagnostics with `summary()`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGN5bCArIGRpc3BsLCBkYXRhID0gLikgJT4lIFxuICBzdW1tYXJ5KClcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  lm(formula = cty ~ hwy + cyl + displ, data = .) %&gt;% 
+  summary()</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+## Plotting regression results
+
+Use the package `sJplot`. (If you forgot how to install package, see [here](https://lrdegeest.github.io/stats/r.html#3_Install_packages).)
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeShzalBsb3QpXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+library(sjPlot)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+The function you want is `plot_model`. The baseline plot shows the coefficients and standard errors:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzLCBkYXRhID0gLikgJT4lIFxuICBwbG90X21vZGVsKG1vZGVsID0gLilcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  lm(formula = cty ~ hwy + class, data = .) %&gt;% 
+  plot_model(model = .)</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+To plot predicted values you can set `type = &quot;pred&quot;` and then choose which coefficient to plot by setting `terms`:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzLCBkYXRhID0gLikgJT4lIFxuICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9IFxccHJlZFxcLCB0ZXJtcyA9IGMoXFxod3lcXCkpXG5gYGBcbmBgYCJ9 --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  lm(formula = cty ~ hwy + class, data = .) %&gt;% 
+  plot_model(model = ., type = \pred\, terms = c(\hwy\))</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+The `terms` argument accepts multiple terms:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzLCBkYXRhID0gLikgJT4lIFxuICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9IFxccHJlZFxcLCB0ZXJtcyA9IGMoXFxod3lcXCwgXFxjbGFzc1xcKSlcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  lm(formula = cty ~ hwy + class, data = .) %&gt;% 
+  plot_model(model = ., type = \pred\, terms = c(\hwy\, \class\))</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+This is useful when you have an interaction effect (e.g., `hwy*class`):
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzICsgaHd5KmNsYXNzLCBkYXRhID0gLikgJT4lIFxuICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9IFxccHJlZFxcLCB0ZXJtcyA9IGMoXFxod3lcXCwgXFxjbGFzc1xcKSlcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  lm(formula = cty ~ hwy + class + hwy*class, data = .) %&gt;% 
+  plot_model(model = ., type = \pred\, terms = c(\hwy\, \class\))</code></pre>
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+`sJplot` uses `ggplot` so you can add `ggplot` stuff to it, like a different theme and titles:
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubXBnICU+JSBcbiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzICsgaHd5KmNsYXNzLCBkYXRhID0gLikgJT4lIFxuICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9IFxccHJlZFxcLCB0ZXJtcyA9IGMoXFxod3lcXCwgXFxjbGFzc1xcKSkgKyBcbiAgbGFicyh4ID0gXFxIaWdod2F5IG1pbGVzIHBlciBnYWxsb25cXCwgeSA9IFxcUHJlZGljdGVkIGNpdHkgbWlsZXMgcGVyIGdhbGxvblxcLFxuICAgICAgIHRpdGxlID0gXFxBIHZlcnkgaW50ZXJlc3RpbmcgbGluZWFyIG1vZGVsXFwsIHN1YnRpdGxlID0gXFxTbyBpbnRlcmVzdGluZ1xcKSArIFxuICB0aGVtZV9taW5pbWFsKClcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+mpg %&gt;% 
+  lm(formula = cty ~ hwy + class + hwy*class, data = .) %&gt;% 
+  plot_model(model = ., type = \pred\, terms = c(\hwy\, \class\)) + 
+  labs(x = \Highway miles per gallon\, y = \Predicted city miles per gallon\,
+       title = \A very interesting linear model\, subtitle = \So interesting\) + 
+  theme_minimal()</code></pre>
+<p>```</p>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>The package has tons of great features. Check out the <a href="https://strengejacke.github.io/sjPlot/">website!</a></p>
 </div>
 </div>
-<div id="table" class="section level1 tabset" number="5">
-<h1 class="tabset" number="5"><span class="header-section-number">5</span> Quick tables</h1>
-<div id="r" class="section level2" number="5.1">
-<h2 number="5.1"><span class="header-section-number">5.1</span> R</h2>
+<div id="table" class="section level1 tabset" number="1">
+<h1 class="tabset" number="1"><span class="header-section-number">1</span> Quick tables</h1>
+<div id="r" class="section level2" number="1.1">
+<h2 number="1.1"><span class="header-section-number">1.1</span> R</h2>
 <table>
 <colgroup>
 <col width="50%" />
@@ -3752,8 +4418,8 @@ y &amp;= f(\mathbf{X}) \\
 </tbody>
 </table>
 </div>
-<div id="math" class="section level2" number="5.2">
-<h2 number="5.2"><span class="header-section-number">5.2</span> Math</h2>
+<div id="math" class="section level2" number="1.2">
+<h2 number="1.2"><span class="header-section-number">1.2</span> Math</h2>
 <table>
 <colgroup>
 <col width="26%" />
@@ -3872,7 +4538,7 @@ y &amp;= f(\mathbf{X}) \\
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBhbmQgdGlkeXZlcnNlIGNvZGUgY2hlY2twb2ludHMiCnN1YnRpdGxlOiAiU3VmZm9sa0Vjb24iCmF1dGhvcjogIiIKZGF0ZTogCm91dHB1dDogCiAgaHRtbF9ub3RlYm9vazoKICAgIG51bWJlcl9zZWN0aW9uczogdHJ1ZQogICAgdGhlbWU6IHJlYWRhYmxlCiAgICBoaWdobGlnaHQ6IHB5Z21lbnRzCiAgICB0b2M6IHRydWUKICAgIHRvY19mbG9hdDogCiAgICAgIGNvbGxhcHNlZDogeWVzCi0tLQoKCjxhIGhyZWY9Imh0dHBzOi8vbHJkZWdlZXN0LmdpdGh1Yi5pby9zdGF0cy9jb2RlX2NoZWNrcG9pbnRzLm5iLmh0bWwiIGNsYXNzPSJidG4gYnRuLXdhcm5pbmciPioqTGFzdCB1cGRhdGVkOioqIGByIFN5cy50aW1lKClgIEVTVCA8L2E+IAoKPGEgaHJlZj0iI3RhYmxlIiBjbGFzcz0iYnRuIGJ0bi1zdWNjZXNzIj4qKkdvIHRvIHF1aWNrIHRhYmxlcyoqPC9hPgo8YSBocmVmPSJodHRwczovL2xyZGVnZWVzdC5naXRodWIuaW8vc3RhdHMvIiBjbGFzcz0iYnRuIGJ0bi1kZWZhdWx0Ij5HbyBob21lPC9hPgoKIyBTZXQtdXAgey19CgpMb2FkIHRoZSB0aWR5dmVyc2U6CgpgYGB7ciBzZXR1cCwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRX0KbGlicmFyeSh0aWR5dmVyc2UpIApgYGAKClRoZSBgdGlkeXZlcnNlYCBwcm92aWRlcyB0aGUgZGF0YSBgbXBnYCB0byBkZW1vbnN0cmF0ZSBtZXRob2RzLiBgbXBnYCBoYXMgdGhlIG1pbGVhZ2UgKGBjdHlgIGZvciBjaXR5LCBgaHd5YCBmb3IgaGlnaHdheSkgZm9yIGEgYnVuY2ggb2YgZGlmZmVyZW50IGNhcnM6CgpgYGB7ciBsb2FkIGRhdGF9CmRhdGEoIm1wZyIpICMgbG9hZCB0aGUgZGF0YSBtcGcKCiMgdmlldyB0aGUgZmlyc3QgNSByb3dzCm1wZyAlPiUgCiAgc2xpY2VfaGVhZChuPTUpCmBgYAoKIyBTdW1tYXJpemluZyBEYXRhIAoKIyMgVGhlIHBpcGUgYW5kIGBzdW1tYXJpc2UoKWAKCkFsbCBzdW1tYXJpemluZyBvcGVyYXRpb25zIHdvcmsgbGlrZSB0aGlzOiAKCmBgYHtyLCBldmFsPUZBTFNFfQpkYXRhICU+JSAjIHRoZSBwaXBlOiAiYW5kIHRoZW4iCiAgc3VtbWFyaXNlKCkgCmBgYAoKCiogdGhlIHBpcGUgKGAlPiVgLCAiYW5kIHRoZW4iKQoqIFtgc3VtbWFyaXNlKClgXShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL3N1bW1hcmlzZS5odG1sKQoKSW5zaWRlIGBzdW1tYXJpc2UoKWAgeW91IGNhbiB1c2UgZnVuY3Rpb25zIGxpa2UgYG1lYW4oKWAsIGBtZWRpYW4oKWAgYW5kIHNvIG9uLgoKCiMjIyBtZWFuCgpgbWVhbigpYAoKYGBge3IgbWVhbn0KbXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU4KICBzdW1tYXJpc2UobWVhbihjdHkpKSAjIHN1bW1hcml6ZTogbWVhbgpgYGAKCioqTm90ZS4qKiBgY3R5YCBpcyBhIG51bWVyaWNhbCB2YXJpYWJsZS4KCiMjIyBtZWRpYW4KCmBtZWRpYW4oKWAKCmBgYHtyIG1lZGlhbn0KbXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU4KICBzdW1tYXJpc2UobWVkaWFuKGN0eSkpICMgc3VtbWFyaXplOiBtZWRpYW4KYGBgCgojIyMgc3RhbmRhcmQgZGV2aWF0aW9uCgpgc2QoKWAKCmBgYHtyIHNkfQptcGcgJT4lICMgdGFrZSB0aGUgZGF0YSwgVEhFTgogIHN1bW1hcmlzZShzZChjdHkpKSAjIHN1bW1hcml6ZTogc3RhbmRhcmQgZGV2aWF0aW9uCmBgYAoKIyMjIGNvdW50aW5nIG9ic2VydmF0aW9ucwoKW2BuKClgIChjb3VudGluZyldKGh0dHBzOi8vZHBseXIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2Uvbi5odG1sKQoKCmBgYHtyIGNvdW50fQptcGcgJT4lICMgdGFrZSB0aGUgZGF0YSwgVEhFTgogIHN1bW1hcmlzZShuKCkpICMgc3VtbWFyaXplOiBjb3VudCBudW1iZXIgb2Ygb2JzZXJ2YXRpb25zCmBgYAoKKipXaHkgZG9lc24ndCBgbigpYCB0YWtlIGFuIGFyZ3VtZW50PyoqIEJlY2F1c2UgaXQgY291bnRzIHRoZSBudW1iZXIgb2Ygcm93cywgbm90IGNvbHVtbnMuCgojIyMgbXVsdGlwbGUgc3VtbWFyaWVzCgpZb3UgY2FuIHB1dCBhcyBtYW55IGZ1bmN0aW9ucyBhcyB5b3Ugd2FudCBpbnNpZGUgYHN1bW1hcmlzZSgpYDoKCmBgYHtyIHN1bW1hcmlzZX0KbXBnICU+JSAjIHRha2UgdGhlIGRhdGEsIFRIRU4KICBzdW1tYXJpc2UobWVhbihjdHkpLCBtZWRpYW4oY3R5KSwgc2QoY3R5KSwgbigpKSAjIHN1bW1hcml6ZTogbWVhbiwgbWVkaWFuLCBzdGFuZGFyZCBkZXZpYXRpb24sIGNvdW50CmBgYAoKIyMjIG5hbWluZyB2YXJpYWJsZXMgaW5zaWRlIGBzdW1tYXJpc2UoKWAKCllvdSBjYW4gbmFtZSB2YXJpYWJsZXMgaW5zaWRlIGBzdW1tYXJpc2UoKWAgdXNpbmcgc3RhbmRhcmQgYXNzaWdubWVudDoKCmBgYHtyIG5hbWUgc3VtbWFyaXNlfQptcGcgJT4lICMgdGFrZSB0aGUgZGF0YSwgVEhFTgogIHN1bW1hcmlzZShhdmdfY3R5ID0gbWVhbihjdHkpLCBtZWRpYW5fY3R5ID0gbWVkaWFuKGN0eSkpICMgc3VtbWFyaXplOiBtZWFuLCBtZWRpYW4KYGBgCgoKIyMgR3JvdXBpbmcgKGBncm91cF9ieSgpYCkgIAoKW2Bncm91cF9ieSgpYF0oaHR0cHM6Ly9kcGx5ci50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9ncm91cF9ieS5odG1sKToKCmBgYHtyIGdyb3VwX2J5LCBtZXNzYWdlPUZBTFNFfQptcGcgJT4lICMgdGFrZSB0aGUgZGF0YSwgVEhFTgogIGdyb3VwX2J5KGNsYXNzKSAlPiUgIyBncm91cCBpdCBieSBjYXIgY2xhc3MgKGUuZy4sIGNvbXBhY3QsIHBpY2t1cCkgVEhFTgogIHN1bW1hcmlzZShtZWFuKGN0eSksIG1lZGlhbihjdHkpLCBzZChjdHkpLCBuKCkpICMgc3VtbWFyaXplCmBgYAoKKipOb3RlLioqIGBjbGFzc2AgaXMgYSBjYXRlZ29yaWNhbCB2YXJpYWJsZS4KCiMgTWFuaXB1bGF0aW5nIGRhdGEKCiMjIFNlbGVjdGluZyBjb2x1bW5zCgpgc2VsZWN0KClgIGNlcnRhaW4gY29sdW1ucwoKYGBge3Igbm8gc2VsZWN0fQptcGcgJT4lICMgYWxsIHRoZSBjb2x1bW5zCiAgc2xpY2VfaGVhZChuPTUpICMgdmlldyB0aGUgZmlyc3QgNSByb3dzCmBgYAoKCmBgYHtyIHllcyBzZWxlY3R9Cm1wZyAlPiUgIyBhbGwgdGhlIGNvbHVtbnMKICBzZWxlY3QobWFudWZhY3R1cmVyLCBtb2RlbCwgaHd5KSAlPiUgIyBzZWxlY3Qgc29tZSBvZiB0aGUgY29sdW1ucwogIHNsaWNlX2hlYWQobj01KSAjIHZpZXcgdGhlIGZpcnN0IDUgcm93cwpgYGAKCiMjIFNsaWNpbmcKCkFsbCBzbGljZSBvcGVyYXRvcnMgYmVnaW4gd2l0aCBgc2xpY2VfYCBhbmQgdGFrZSBhbiBvcHRpb25hbCBgbj1gIGFyZ3VtZW50IHRoYXQgc3BlY2lmaWVzIHRoZSBudW1iZXIgb2Ygcm93cyB5b3Ugd2FudCB0byBzZWUuIE1vcmUgW2hlcmVdKGh0dHBzOi8vZHBseXIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2Uvc2xpY2UuaHRtbCkuIAoKU3Vic2V0cyB3aXRoIGBzbGljZV9oZWFkKClgOgoKYGBge3Igc2xpY2VfaGVhZH0KbXBnICU+JSAKICBzbGljZV9oZWFkKG49MTApICMgdmlldyB0aGUgZmlyc3QgMTAgcm93cwpgYGAKCgpNYXhpbXVtcyB3aXRoIGBzbGljZV9tYXgoKWA6CgpgYGB7ciBzbGljZV9tYXh9Cm1wZyAlPiUgCiAgc2xpY2VfbWF4KGh3eSwgbj01KSAjIHRoZSBmaXZlIGhpZ2hlc3QgaGlnaHdheSBtaWxlcyBwZXIgZ2FsbG9uLiBpZiB0aGVyZSBhcmUgdGllcyB0aGV5IGFsbCBnZXQgcHJpbnRlZApgYGAKCk1pbmltdW1zIHdpdGggYHNsaWNlX21pbigpYDoKCmBgYHtyIHNsaWNlX21pbn0KbXBnICU+JSAKICBzbGljZV9taW4oaHd5LCBuPTIpICMgdGhlIHR3byBsb3dlc3QgaGlnaHdheSBtaWxlcyBwZXIgZ2FsbG9uLiBpZiB0aGVyZSBhcmUgdGllcyB0aGV5IGFsbCBnZXQgcHJpbnRlZApgYGAKClJhbmRvbSBzYW1wbGVzIHdpdGggYHNsaWNlX3NhbXBsZSgpYDoKCmBgYHtyIHNsaWNlX3NhbXBsZX0KbXBnICU+JSAKICBzbGljZV9zYW1wbGUobj0zKSAjIHBpY2sgdGhyZWUgcm93cyBhdCByYW5kb20KYGBgCgojIyMgU2xpY2luZyBhbmQgZ3JvdXBpbmcKCldoZW4geW91IGBncm91cF9ieSgpYCBhIGRhdGEgZnJhbWUgYHNsaWNlXygpYCB3aWxsIHJldHVybiBzdWJzZXRzIG9mIGVhY2ggZ3JvdXA6CgpgYGB7ciBncm91cF9ieSBhbmQgc2xpY2VffQptcGcgJT4lIAogIGdyb3VwX2J5KGNsYXNzKSAlPiUgIyBncm91cCBieSBjbGFzcyAKICBzbGljZV9taW4oaHd5LCBuPTEpICMgYm90dG9tIHR3byBod3kgYnkgY2xhc3MKYGBgCgpJZiBhIGRhdGEgZnJhbWUgaXMgYWxyZWFkeSBncm91cGVkIHRoZW4gYHNsaWNlXygpYCB3aWxsIGFsd2F5cyBzdWJzZXQgYnkgZ3JvdXAgdW5kZXIgdGhlIGhvb2QuIElmIHlvdSB3YW50IHN1YnNldHMgbm90IGJ5IGdyb3VwIHRoZW4geW91IGhhdmUgdG8gYHVuZ3JvdXAoKWAuIFNlZSBiZWxvdyBpbiB0aGUgc2VjdGlvbiBvbiBgbXV0YXRlKClgLiBUaGlzIG9mdGVuIGhhcHBlbnMgd2hlbiB5b3UgZ3JvdXAgYSBkYXRhIGZyYW1lIHRvIGNyZWF0ZSBhIG5ldyB2YXJpYWJsZS4gCgojIyBGaWx0ZXJpbmcKCltgZmlsdGVyKClgXShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL2ZpbHRlci5odG1sKSB3aXRoIEJvb2xlYW4gbG9naWM6CgoqIGA9PWA6ICJlcXVhbCB0byIKKiBgIT1gOiAibm90IGVxdWFsIHRvIgoqIGA+YDogImdyZWF0ZXIgdGhhbiIKKiBgPj1gOiAiZ3JlYXRlciB0aGFuIG9yIGVxdWFsIHRvIgoqIGA8YDogImxlc3MgdGhhbiIKKiBgPD1gOiAibGVzcyB0aGFuIG9yIGVxdWFsIHRvIgoqIGAmYDogImFuZCIKKiBgfGA6ICJvciIKCkJvb2xlYW4gbG9naWMgaXMgYW55IHRlc3QgdGhhdCByZXR1cm5zIHRydWUgb3IgZmFsc2U6CgpgYGB7ciBib29sZWFuIGVxdWFscyB0b30KMiA9PSAzCmBgYAoKYGBge3IgYm9vbGVhbiBub3QgZXF1YWxzIHRvfQoyICE9IDMKYGBgCgpgYGB7ciBib29sZWFuIGxlc3MgdGhhbn0KMiA8IDMKYGBgCgpTb21lIGV4YW1wbGVzOgoKYGBge3IgZmlsdGVyIGVxdWFscyB0b30KbXBnICU+JSAKICBmaWx0ZXIoeWVhciA9PSAiMTk5OSIpICU+JSAjIGZpbHRlciBhbGwgY2FycyBtYWRlIGluIDE5OTkKICBzbGljZV9oZWFkKG49NSkgIyB2aWV3IHRoZSBmaXJzdCA1IHJvd3MKYGBgCgpgYGB7ciBmaWx0ZXIgZ3JlYXRlciB0aGFuIG9yIGVxdWFscyB0b30KbXBnICU+JSAKICBmaWx0ZXIoaHd5ID49IDI1KSAlPiUgIyBmaWx0ZXIgYWxsIGNhcnMgd2l0aCBhdCBsZWFzdCAyNSBtcGcgaGlnaHdheQogIHNsaWNlX2hlYWQobj01KSAjIHZpZXcgdGhlIGZpcnN0IDUgcm93cwpgYGAKCgpgYGB7ciBmaWx0ZXIgbWFueSBjb25kaXRpb25zfQptcGcgJT4lIAogIGZpbHRlcih5ZWFyID09ICIxOTk5IiAmIG1vZGVsICE9ICJhNCIgJiBod3kgPj0gMjUpICU+JSAjIGZpbHRlciBjYXJzIG1hZGUgaW4gMTk5OSwgdGhhdCBhcmVuJ3QgYTQncywgYW5kIGhhdmUgYXQgbGVhc3QgMjUgbWdwIGhpZ2h3YXkKICBzbGljZV9oZWFkKG49NSkgIyB2aWV3IHRoZSBmaXJzdCA1IHJvd3MKYGBgCgoKIyMgTXV0YXRpbmcKCkNyZWF0ZSBhbmQgbW9kaWZ5IHZhcmlhYmxlcyAoZGF0YSBmcmFtZSBjb2x1bW5zKSB3aXRoIFtgbXV0YXRlKClgXShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL211dGF0ZS5odG1sKQoKIyMjIENyZWF0ZSBhIG5ldyB2YXJpYWJsZQoKRm9yIGV4YW1wbGUsIGNyZWF0ZSBhIGNvbHVtbiBjYWxsZWQgYG1lYW5faHd5YCB0aGF0IGNhbGN1bGF0ZXMgYXZlcmFnZSBoaWdod2F5IG1pbGVzIHBlciBnYWxsb246CgpgYGB7ciBtdXRhdGUgZG9udCBhZGQgY29sdW1ufQptcGcgJT4lIAogIG11dGF0ZShtZWFuX2h3eSA9IG1lYW4oaHd5KSkgJT4lIAogIHNlbGVjdChtYW51ZmFjdHVyZXIsIG1vZGVsLCBod3ksIG1lYW5faHd5KSAlPiUgCiAgc2xpY2VfaGVhZChuPTUpCmBgYAoKIyMjIENyZWF0ZSBhIG5ldyB2YXJpYWJsZSBhbmQgc3RvcmUgaXQgYXMgYSBjb2x1bW4KClRvIHNhdmUgdGhlIG5ldyB2YXJpYWJsZSB5b3UgaGF2ZSB0byByZS1hc3NpZ24gdGhlIGRhdGEgZnJhbWU6CgpgYGB7ciBtdXRhdGUgeWVzIGFkZCBjb2x1bW59Cm1wZyA9IG1wZyAlPiUgCiAgbXV0YXRlKG1lYW5faHd5ID0gbWVhbihod3kpKSAKYGBgCgpOb3cgYG1wZ2AgaGFzIGEgbmV3IGNvbHVtbiBjYWxsZWQgYG1lYW5faHd5YC4KCiMjIyBNdXRhdGluZyB3aGlsZSBncm91cGluZwoKV2hlbiB5b3UgY3JlYXRlIGEgbmV3IHZhcmlhYmxlIGFuZCBzYXZlIGl0IHRvIHRoZSBkYXRhIHlvdSByZS1hc3NpZ24gdGhlIGRhdGEuIAoKV2hlbiBncm91cGluZyB3aXRoIGBncm91cF9ieSgpYCB0byBjcmVhdGUgYSBuZXcgY29sdW1uLCB0aGUgcmUtYXNzaWduZWQgZGF0YSB3aWxsIGJlIGdyb3VwZWQsIHdoaWNoIGNhbiBhZmZlY3QgdGhlIGBzbGljZV8oKWAgZnVuY3Rpb25zLiAKClRoZSBzb2x1dGlvbiBpcyB0byBgdW5ncm91cCgpYCBhZnRlciBgbXV0YXRlKClgLiAKCkZvciBpbnN0YW5jZSwgYWRkIGEgY29sdW1uIGNhbGxlZCAibWVhbl9od3lfY2xhc3MiIHRoYXQgY2FsY3VsYXRlcyBhdmVyYWdlIGhpZ2h3YXkgbWlsZXMgcGVyIGdhbGxvbiBieSBjbGFzczoKCmBgYHtyIGdyb3VwX2J5IGFuZCBtdXRhdGUsIG1lc3NhZ2U9RkFMU0V9CiMgZmlyc3QgY3JlYXRlIHRoZSB2YXJpYWJsZQptcGcgPSBtcGcgJT4lICMgdGFrZSB0aGUgZGF0YSwgVEhFTgogIGdyb3VwX2J5KGNsYXNzKSAlPiUgIyBncm91cCBieSBjbGFzcywgVEhFTgogIG11dGF0ZShtZWFuX2h3eV9jbGFzcyA9IG1lYW4oaHd5KSkgJT4lICMgY3JlYXRlIHRoZSBuZXcgdmFyaWFibGUsIFRIRU4KICB1bmdyb3VwKCkgIyB1bmdyb3VwIHRoZSBkYXRhCmBgYAoKV2h5IGB1bmdyb3VwKClgPyBCZWNhdXNlIG90aGVyd2lzZSBgc2xpY2VfKClgIGFuZCBvdGhlciBmdW5jdGlvbnMgd29uJ3QgcmV0dXJuIHRoZSBvdXRwdXQgeW91IGV4cGVjdC4gU28gYmV0dGVyIHNhZmUgdGhhbiBzb3JyeS4gV2hlbiBncm91cGluZyAqdG8gY3JlYXRlIGEgdmFyaWFibGUqIG1ha2Ugc3VyZSB5b3UgdW5ncm91cCBhdCB0aGUgZW5kLgoKTm93IHdlIGNhbiBzbGljZSBpbiBnZW5lcmFsOgoKYGBge3IgdmlldyBncm91cF9ieSBtdXRhdGUgb3V0cHV0fQptcGcgJT4lIAogIHNlbGVjdChtYW51ZmFjdHVyZXIsIG1vZGVsLCBod3ksIG1lYW5faHd5X2NsYXNzKSAlPiUgCiAgc2xpY2VfaGVhZChuPTIpCmBgYAoKCiMjIyBNdXRhdGluZyBhbmQgZnJlcXVlbmN5IHRhYmxlcwoKVXNlIGBuKClgIHRvIGNhbGN1bGF0ZSBmcmVxdWVuY3kgYW5kIHRoZW4gdXNlIGBtdXRhdGUoKWAgdG8gY2FsY3VsYXRlIHJlbGF0aXZlIGZyZXF1ZW5jeToKCmBgYHtyIGZyZXF1ZW5jeSBhbmQgcmVsYXRpdmUgZnJlcXVlbmN5LCBtZXNzYWdlPUZBTFNFfQptcGcgJT4lIAogIGdyb3VwX2J5KGNsYXNzKSAlPiUgCiAgc3VtbWFyaXNlKGZyZXF1ZW5jeSA9IG4oKSkgJT4lIAogIG11dGF0ZShyZWxhdGl2ZV9mcmVxdWVuY3kgPSBmcmVxdWVuY3kgLyBzdW0oZnJlcXVlbmN5KSkKYGBgCgojIFZpc3VhbGl6aW5nIGRhdGEKCiMjIFBsb3R0aW5nIGRpc3RyaWJ1dGlvbnMgCgojIyMgSGlzdG9ncmFtcwoKSGlzdG9ncmFtcyB3aXRoIGBnZ3Bsb3RgIGFuZCBbYGdlb21faGlzdG9ncmFtKClgXShodHRwczovL2dncGxvdDIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2UvZ2VvbV9oaXN0b2dyYW0uaHRtbCk6CgpgYGB7ciBoaXN0b2dyYW19Cm1wZyAlPiUgCiAgZ2dwbG90KGFlcyh4ID0gY3R5KSkgKyAjIGJsYW5rIGNhbnZhczogY2hvb3NlIHRoZSBkYXRhIGFuZCB0aGUgeC1heGlzIHZhcmlhYmxlCiAgZ2VvbV9oaXN0b2dyYW0oKSAjIGFkZCBnZW9tIGxheWVyOiBkaXN0cmlidXRpb24KYGBgCgpGYWNldGVkIGhpc3RvZ3JhbXMgd2l0aCBbYGZhY2V0X3dyYXAoKWBdKGh0dHBzOi8vZ2dwbG90Mi50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9mYWNldF93cmFwLmh0bWwpOgoKYGBge3IgZmFjZXR0ZWQgaGlzdG9ncmFtfQptcGcgJT4lIAogIGdncGxvdChhZXMoeCA9IGN0eSkpICsgIyBibGFuayBjYW52YXM6IGNob29zZSB0aGUgZGF0YSBhbmQgdGhlIHgtYXhpcyB2YXJpYWJsZQogIGdlb21faGlzdG9ncmFtKCkgKyAjIGFkZCBnZW9tIGxheWVyOiAgZGlzdHJpYnV0aW9uCiAgZmFjZXRfd3JhcCh+Y2xhc3MpICMgYWRkIGZhY2V0dGluZyAobm90ZSB0aGUgIn4iIGJlZm9yZSB0aGUgY2F0ZWdvcmljYWwgdmFyaWFibGUpCmBgYAoKIyMjIEN1bXVsYXRpdmUgZGlzdHJpYnV0aW9ucwoKUGVyY2VudGlsZXMgYW5kIGN1bXVsYXRpdmUgZGlzdHJpYnV0aW9ucyB3aXRoIGBnZ3Bsb3RgIGFuZCBbYHN0YXRfZWNkZigpYF0oaHR0cHM6Ly9nZ3Bsb3QyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL3N0YXRfZWNkZi5odG1sKToKCmBgYHtyIHBlcmNlbnRpbGUgKGN1bXVsYXRpdmUgZGlzdHJpYnV0aW9uKX0KbXBnICU+JSAKICBnZ3Bsb3QoYWVzKHg9Y3R5KSkgKyAgIyBibGFuayBjYW52YXM6IGNob29zZSB0aGUgZGF0YSBhbmQgdGhlIHgtYXhpcyB2YXJpYWJsZQogIHN0YXRfZWNkZigpICMgYWRkIGdlb20gbGF5ZXI6IGN1bXVsYXRpdmUgZGlzdHJpYnV0aW9uCmBgYAoKWW91IGNhbiBhZGQgYSB2ZXJ0aWNhbCBsaW5lIHdpdGggYGdlb21fdmxpbmUoKWAgdG8gbWFrZSBpdCBlYXNpZXIgdG8gc2VlIGEgcGVyY2VudGlsZS4gRm9yIGluc3RhbmNlLCB2aWV3IHBlcmNlbnQgb2YgY2FycyB3aXRoIGxlc3MgdGhhbiAxNSBtaWxlcyBwZXIgZ2FsbG9uOgoKYGBge3IgcGVyY2VudGlsZSAoY3VtdWxhdGl2ZSBkaXN0cmlidXRpb24pIHdpdGggdmxpbmV9Cm1wZyAlPiUgCiAgZ2dwbG90KGFlcyh4PWN0eSkpICsgICMgYmxhbmsgY2FudmFzOiBjaG9vc2UgdGhlIGRhdGEgYW5kIHRoZSB4LWF4aXMgdmFyaWFibGUKICBzdGF0X2VjZGYoKSArICMgYWRkIGdlb20gbGF5ZXI6IGN1bXVsYXRpdmUgZGlzdHJpYnV0aW9uCiAgZ2VvbV92bGluZSh4aW50ZXJjZXB0ID0gMTUsIGNvbG9yPSJyZWQiKSAjIHZlcnRpY2xlIApgYGAKCiMjIyBCb3ggcGxvdHMKCltgZ2VvbV9ib3hwbG90KClgXShodHRwczovL2dncGxvdDIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2UvZ2VvbV9ib3hwbG90Lmh0bWwpCgpgYGB7ciBib3ggcGxvdCB4IGNvbnRpbnVvdXN9Cm1wZyAlPiUgCiAgZ2dwbG90KGFlcyh4ID0gaHd5LCB5ID0gY2xhc3MpKSArICMgeCBpcyBjb250aW51b3VzLCB5IGlzIGNhdGVnb3JpY2FsCiAgZ2VvbV9ib3hwbG90KCkgCmBgYAoKb3I6IAoKYGBge3IgYm94IHBsb3QgeCBjYXRlZ29yaWNhbH0KbXBnICU+JSAKICBnZ3Bsb3QoYWVzKHggPSBjbGFzcywgeSA9IGh3eSkpICsgIyB4IGlzIGNhdGVnb3JpY2FsLCB5IGlzIGNvbnRpbnVvdXMKICBnZW9tX2JveHBsb3QoKSAKYGBgCgoKIyMgU2NhdHRlcnBsb3QKCmBnZW9tX3BvaW50KClgOgoKYGBge3IgZ2VvbV9wb2ludH0KbXBnICU+JSAKICBnZ3Bsb3QoYWVzKHggPSBjdHksIHkgPSBod3kpKSArIAogIGdlb21fcG9pbnQoKSAKYGBgCgojIyMgU2NhdHRlcnBsb3Qgd2l0aCByZWdyZXNzaW9uIGxpbmUKCltgZ2VvbV9zbW9vdGgobWV0aG9kID0gImxtIilgXShodHRwczovL2dncGxvdDIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2UvZ2VvbV9zbW9vdGguaHRtbCk6CgpgYGB7ciBnZW9tX3Ntb290aH0KbXBnICU+JSAKICBnZ3Bsb3QoYWVzKHggPSBjdHksIHkgPSBod3kpKSArIAogIGdlb21fcG9pbnQoKSArICMgc2NhdHRlci1wbG90CiAgZ2VvbV9zbW9vdGgobWV0aG9kID0gImxtIikgIyByZWdyZXNzaW9uIGxpbmUKYGBgCgojIENvcnJlbGF0aW9uIGFuZCByZWdyZXNzaW9uCgojIyBDb3ZhcmlhbmNlCgpgY292KClgOgoKYGBge3IgY292fQptcGcgJT4lIAogIHN1bW1hcmlzZShjb3YoeD1jdHksIHk9aHd5KSkKYGBgCgojIyBDb3JyZWxhdGlvbgoKYGNvcigpYDoKCmBgYHtyIGNvcn0KbXBnICU+JSAKICBzdW1tYXJpc2UoY29yKHg9Y3R5LCB5PWh3eSkpCmBgYAoKCiMjIFJlZ3Jlc3Npb24KCmBsbSgpYAoKU2ltcGxlIGxpbmVhciByZWdyZXNzaW9uIChvbmUgJHgkIHZhcmlhYmxlKToKCiQkClxiZWdpbnthbGlnbmVkfQp5ICY9IGYoeCkgXFwKICAmPSBcYmV0YV8wICsgXGJldGFfMSh4KSArIFxlcHNpbG9uClxlbmR7YWxpZ25lZH0KJCQKSW4gYGxtKClgIHRoZSAkeSQgYW5kICR4JCB2YXJpYWJsZXMgYXJlIHNlcGFyYXRlZCBieSBgfmA6CgpgYGB7ciBsbTF9Cm1wZyAlPiUgCiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSwgZGF0YSA9IC4pICMgdGhlICIuIiBtZWFucyAidXNlIHRoZSBkYXRhIGZyb20gdGhlIHBpcGUgJT4lIgpgYGAKCk11bHRpcGxlIGxpbmVhciByZWdyZXNzaW9uIChtdWx0aXBsZSAkeCQgdmFyaWFibGVzKToKCiQkClxiZWdpbnthbGlnbmVkfQp5ICY9IGYoXG1hdGhiZntYfSkgXFwKICAmPSBmKHhfMSwgeF8yLCBcZG90cykgXFwKICAmPSBcYmV0YV8wICsgXGJldGFfMSh4XzEpICsgXGJldGFfMih4XzIpICsgXGRvdHMgKyBcZXBzaWxvbgpcZW5ke2FsaWduZWR9CiQkCkluIGBsbSgpYCB0aGUgJHgkIHZhcmlhYmxlcyBhcmUgc2VwYXJhdGVkIGJ5IGArYDoKCmBgYHtyIGxtMn0KbXBnICU+JSAKICBsbShmb3JtdWxhID0gY3R5IH4gaHd5ICsgY3lsICsgZGlzcGwsIGRhdGEgPSAuKQpgYGAKCiMjIGBzdW1tYXJ5KClgCgpWaWV3IGh5cG90aGVzaXMgdGVzdHMgYW5kIHJlZ3Jlc3Npb24gZGlhZ25vc3RpY3Mgd2l0aCBgc3VtbWFyeSgpYDoKCmBgYHtyIHN1bW1hcnkyfQptcGcgJT4lIAogIGxtKGZvcm11bGEgPSBjdHkgfiBod3kgKyBjeWwgKyBkaXNwbCwgZGF0YSA9IC4pICU+JSAKICBzdW1tYXJ5KCkKYGBgCgojIyBQbG90dGluZyByZWdyZXNzaW9uIHJlc3VsdHMKClVzZSB0aGUgcGFja2FnZSBgc0pwbG90YC4gKElmIHlvdSBmb3Jnb3QgaG93IHRvIGluc3RhbGwgcGFja2FnZSwgc2VlIFtoZXJlXShodHRwczovL2xyZGVnZWVzdC5naXRodWIuaW8vc3RhdHMvci5odG1sIzNfSW5zdGFsbF9wYWNrYWdlcykuKQoKYGBge3IgbGlicmFyeSBzanBsb3QsIG1lc3NhZ2U9RkFMU0V9CmxpYnJhcnkoc2pQbG90KQpgYGAKClRoZSBmdW5jdGlvbiB5b3Ugd2FudCBpcyBgcGxvdF9tb2RlbGAuIFRoZSBiYXNlbGluZSBwbG90IHNob3dzIHRoZSBjb2VmZmljaWVudHMgYW5kIHN0YW5kYXJkIGVycm9yczoKCmBgYHtyIHNqUGxvdCBkZW1vIGNvZWZmaWNpZW50c30KbXBnICU+JSAKICBsbShmb3JtdWxhID0gY3R5IH4gaHd5ICsgY2xhc3MsIGRhdGEgPSAuKSAlPiUgCiAgcGxvdF9tb2RlbChtb2RlbCA9IC4pCmBgYAoKVG8gcGxvdCBwcmVkaWN0ZWQgdmFsdWVzIHlvdSBjYW4gc2V0IGB0eXBlID0gInByZWQiYCBhbmQgdGhlbiBjaG9vc2Ugd2hpY2ggY29lZmZpY2llbnQgdG8gcGxvdCBieSBzZXR0aW5nIGB0ZXJtc2A6CgpgYGB7ciBzalBsb3QgZGVtbyBwcmVkaWN0ZWQgdmFsdWVzfQptcGcgJT4lIAogIGxtKGZvcm11bGEgPSBjdHkgfiBod3kgKyBjbGFzcywgZGF0YSA9IC4pICU+JSAKICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9ICJwcmVkIiwgdGVybXMgPSBjKCJod3kiKSkKYGBgCgpUaGUgYHRlcm1zYCBhcmd1bWVudCBhY2NlcHRzIG11bHRpcGxlIHRlcm1zOgoKYGBge3Igc2pQbG90IGRlbW8gcHJlZGljdGVkIHZhbHVlcyBtdWx0aXBsZSB0ZXJtc30KbXBnICU+JSAKICBsbShmb3JtdWxhID0gY3R5IH4gaHd5ICsgY2xhc3MsIGRhdGEgPSAuKSAlPiUgCiAgcGxvdF9tb2RlbChtb2RlbCA9IC4sIHR5cGUgPSAicHJlZCIsIHRlcm1zID0gYygiaHd5IiwgImNsYXNzIikpCmBgYAoKVGhpcyBpcyB1c2VmdWwgd2hlbiB5b3UgaGF2ZSBhbiBpbnRlcmFjdGlvbiBlZmZlY3QgKGUuZy4sIGBod3kqY2xhc3NgKToKCmBgYHtyIHNqUGxvdCBkZW1vIHByZWRpY3RlZCB2YWx1ZXMgaW50ZXJhY3Rpb259Cm1wZyAlPiUgCiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzICsgaHd5KmNsYXNzLCBkYXRhID0gLikgJT4lIAogIHBsb3RfbW9kZWwobW9kZWwgPSAuLCB0eXBlID0gInByZWQiLCB0ZXJtcyA9IGMoImh3eSIsICJjbGFzcyIpKQpgYGAKCmBzSnBsb3RgIHVzZXMgYGdncGxvdGAgc28geW91IGNhbiBhZGQgYGdncGxvdGAgc3R1ZmYgdG8gaXQsIGxpa2UgYSBkaWZmZXJlbnQgdGhlbWUgYW5kIHRpdGxlczoKCmBgYHtyIHNqUGxvdCBkZW1vIHByZWRpY3RlZCB2YWx1ZXMgaW50ZXJhY3Rpb24gc3BpZmZ5fQptcGcgJT4lIAogIGxtKGZvcm11bGEgPSBjdHkgfiBod3kgKyBjbGFzcyArIGh3eSpjbGFzcywgZGF0YSA9IC4pICU+JSAKICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9ICJwcmVkIiwgdGVybXMgPSBjKCJod3kiLCAiY2xhc3MiKSkgKyAKICBsYWJzKHggPSAiSGlnaHdheSBtaWxlcyBwZXIgZ2FsbG9uIiwgeSA9ICJQcmVkaWN0ZWQgY2l0eSBtaWxlcyBwZXIgZ2FsbG9uIiwKICAgICAgIHRpdGxlID0gIkEgdmVyeSBpbnRlcmVzdGluZyBsaW5lYXIgbW9kZWwiLCBzdWJ0aXRsZSA9ICJTbyBpbnRlcmVzdGluZyIpICsgCiAgdGhlbWVfbWluaW1hbCgpCmBgYAoKVGhlIHBhY2thZ2UgaGFzIHRvbnMgb2YgZ3JlYXQgZmVhdHVyZXMuIENoZWNrIG91dCB0aGUgW3dlYnNpdGUhXShodHRwczovL3N0cmVuZ2VqYWNrZS5naXRodWIuaW8vc2pQbG90LykKCiMgUXVpY2sgdGFibGVzIHsjdGFibGUgLnRhYnNldH0KCiMjIFIKCioqRnVuY3Rpb24qKnwqKkRlc2NyaXB0aW9uKioKLS0tLS18LS0tLS0KWzxjb2RlPiU+JTwvY29kZT5dKGh0dHBzOi8vbWFncml0dHIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2UvcGlwZS5odG1sKXxQaXBlIG9wZXJhdG9yICgiYW5kIHRoZW4iKQpbPGNvZGU+c3VtbWFyaXNlKCk8L2NvZGU+XShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL3N1bW1hcmlzZS5odG1sKXxTdW1tYXJpemUgYSB2ZWN0b3Igb3IgbXVsdGlwbGUgdmVjdG9ycyBmcm9tIGEgZGF0YSBmcmFtZQpbPGNvZGU+bWVhbigpPC9jb2RlPl0oaHR0cHM6Ly93d3cucmRvY3VtZW50YXRpb24ub3JnL3BhY2thZ2VzL2Jhc2UvdmVyc2lvbnMvMy42LjIvdG9waWNzL21lYW4pfENhbGN1bGF0ZSB0aGUgbWVhbiBvZiBhIHZlY3RvcgpbPGNvZGU+bWVkaWFuKCk8L2NvZGU+XShodHRwczovL3d3dy5yZG9jdW1lbnRhdGlvbi5vcmcvcGFja2FnZXMvc3RhdHMvdmVyc2lvbnMvMy42LjIvdG9waWNzL21lZGlhbil8Q2FsY3VsYXRlIHRoZSBtZWRpYW4gb2YgYSB2ZWN0b3IKWzxjb2RlPnNkKCk8L2NvZGU+XShodHRwczovL3d3dy5yZG9jdW1lbnRhdGlvbi5vcmcvcGFja2FnZXMvc3RhdHMvdmVyc2lvbnMvMy42LjIvdG9waWNzL3NkKXxDYWxjdWxhdGUgdGhlIHN0YW5kYXJkIGRldmlhdGlvbiBvZiBhIHZlY3RvcgpbPGNvZGU+bigpPC9jb2RlPl0oaHR0cHM6Ly9kcGx5ci50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9uLmh0bWwpfENvdW50IHRoZSBudW1iZXIgb2Ygb2JzZXJ2YXRpb25zLiBUYWtlcyBubyBhcmd1bWVudC4KWzxjb2RlPmdyb3VwXF9ieSgpPC9jb2RlPl0oaHR0cHM6Ly9kcGx5ci50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9ncm91cFxfYnkuaHRtbCl8R3JvdXAgb2JzZXJ2YXRpb25zIGJ5IGEgY2F0ZWdvcmljYWwgdmFyaWFibGUKWzxjb2RlPnNlbGVjdCgpPC9jb2RlPl0oaHR0cHM6Ly9kcGx5ci50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9zZWxlY3QuaHRtbCl8U2VsZWN0IGNlcnRhaW4gY29sdW1ucwpbPGNvZGU+c2xpY2VcXygpPC9jb2RlPl0oaHR0cHM6Ly9kcGx5ci50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9zbGljZS5odG1sKXxTbGljZSByb3dzIGZyb20gdGhlIGRhdGEKPGNvZGU+c2xpY2VcX2hlYWQobj01KTwvY29kZT58VmlldyB0aGUgaGVhZCAoZmlyc3QgZml2ZSByb3dzKSBvZiB0aGUgZGF0YS4gPGNvZGU+biA9IDwvY29kZT4gY2FuIGJlIGFueSBudW1iZXIuCjxjb2RlPnNsaWNlXF9tYXgodmFyLCBuPTUpPC9jb2RlPnxWaWV3IHRoZSByb3dzIHdpdGggdGhlIDUgaGlnaGVzdCB2YWx1ZXMgb2YgY29sdW1uICJ2YXIiCjxjb2RlPnNsaWNlXF9taW4odmFyLCBuPTUpPC9jb2RlPnxWaWV3IHRoZSByb3dzIHdpdGggdGhlIDUgbG93ZXN0IHZhbHVlcyBvZiBjb2x1bW4gInZhciIKPGNvZGU+c2xpY2VcX3NhbXBsZShuPTUpPC9jb2RlPnxEcmF3IDUgcm93cyBhdCByYW5kb20KWzxjb2RlPmZpbHRlcigpPC9jb2RlPl0oaHR0cHM6Ly9kcGx5ci50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9maWx0ZXIuaHRtbCl8RmlsdGVyIG9ic2VydmF0aW9ucwpbPGNvZGU+bXV0YXRlKCk8L2NvZGU+XShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL211dGF0ZS5odG1sKXxDcmVhdGUgYSBuZXcgdmVjdG9yCls8Y29kZT5jb3YoKTwvY29kZT5dKGh0dHBzOi8vd3d3LnJkb2N1bWVudGF0aW9uLm9yZy9wYWNrYWdlcy9wYmRETUFUL3ZlcnNpb25zLzAuNS0xL3RvcGljcy9jb3ZhcmlhbmNlKXxDYWxjdWxhdGUgdGhlIGNvdmFyaWF0aW9uIGJldHdlZW4gdHdvIHZhcmlhYmxlcwpbPGNvZGU+Y29yKCk8L2NvZGU+XShodHRwczovL3d3dy5yZG9jdW1lbnRhdGlvbi5vcmcvcGFja2FnZXMvc3RhdHMvdmVyc2lvbnMvMy42LjIvdG9waWNzL2Nvcil8Q2FsY3VsYXRlIHRoZSBjb3JyZWxhdGlvbiBiZXR3ZWVuIHR3byB2YXJpYWJsZXMKWzxjb2RlPmxtKCk8L2NvZGU+XShodHRwczovL3d3dy5yZG9jdW1lbnRhdGlvbi5vcmcvcGFja2FnZXMvc3RhdHMvdmVyc2lvbnMvMy42LjIvdG9waWNzL2xtKXxFc3RpbWF0ZSBhIGxpbmVhciByZWdyZXNzaW9uCls8Y29kZT5pZmVsc2UoKTwvY29kZT5dKGh0dHBzOi8vd3d3LnJkb2N1bWVudGF0aW9uLm9yZy9wYWNrYWdlcy9iYXNlL3ZlcnNpb25zLzMuNi4yL3RvcGljcy9pZmVsc2UpfENyZWF0ZSBhIHZlY3RvciBiYXNlZCBvbiBhICJUcnVlL0ZhbHNlIiB0ZXN0Cls8Y29kZT5nZ3Bsb3QoKTwvY29kZT5dKGh0dHBzOi8vZ2dwbG90Mi50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9nZ3Bsb3QuaHRtbCl8Q3JlYXRlIGEgYmFzZSBwbG90Cls8Y29kZT5nZW9tXF9oaXN0b2dyYW0oKTwvY29kZT5dKGh0dHBzOi8vZ2dwbG90Mi50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9nZW9tXF9oaXN0b2dyYW0uaHRtbCl8SGlzdG9ncmFtCls8Y29kZT5zdGF0XF9lY2RmKCk8L2NvZGU+XShodHRwczovL2dncGxvdDIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2Uvc3RhdFxfZWNkZi5odG1sKXxDdW11bGF0aXZlIGRpc3RyaWJ1dGlvbiBwbG90Cls8Y29kZT5nZW9tXF9ib3hwbG90KCk8L2NvZGU+XShodHRwczovL2dncGxvdDIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2UvZ2VvbVxfYm94cGxvdC5odG1sKXxCb3hwbG90Cls8Y29kZT5nZW9tXF9wb2ludCgpPC9jb2RlPl0oaHR0cHM6Ly9nZ3Bsb3QyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL2dlb21cX3BvaW50Lmh0bWwpfFNjYXR0ZXIgcGxvdApbPGNvZGU+Z2VvbVxfc21vb3RoKG1ldGhvZCA9ICJsbSIpPC9jb2RlPl0oaHR0cHM6Ly9nZ3Bsb3QyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL2dlb21cX3Ntb290aC5odG1sKXxSZWdyZXNzaW9uIGxpbmUKCiMjIE1hdGgKCioqVGVybSoqfCoqTWVhbmluZyoqfCoqUHJvbnVuY2lhdGlvbioqfCoqRm9ybXVsYS9FeGFtcGxlKioKOi0tLS0tOnwtLS0tLXw6LS0tLS06fDotLS0tLToKJHhfaSR8ZGF0YSBwb2ludCAkaSR8InggaSIgfCAKJG4kfHNhbXBsZSBzaXplfCB8IAokTiR8cG9wdWxhdGlvbiBzaXplfCB8IAokXGJhcnt4fSR8dGhlIHNhbXBsZSBtZWFufCJ4IGJhciJ8JFxmcmFje1xzdW1fe2k9MX1ebiB4X2l9e259JAokXG11JHx0aGUgcG9wdWxhdGlvbiBtZWFufCJtdSJ8IAokc14yJHx0aGUgc2FtcGxlIHZhcmlhbmNlfCB8JFxmcmFje1xzdW0gKHhfaSAtIFxiYXJ7eH0pXjJ9e24tMX0kCiRcc2lnbWFeMiR8dGhlIHBvcHVsYXRpb24gdmFyaWFuY2V8IHwgCiRzJHx0aGUgc2FtcGxlIHN0YW5kYXJkIGRldmlhdGlvbnwgfCRcc3FydHtzXjJ9JAokXHNpZ21hJHx0aGUgcG9wdWxhdGlvbiBzdGFuZGFyZCBkZXZpYXRpb258InNpZ21hInwgCiR6X2kkfHotc2NvcmUgZm9yIG9ic2VydmF0aW9uICRpJHwgfCR6X2kgPSBcZnJhY3t4X2kgLSBcYmFye3h9fXtzfSQKJFxiZXRhJHxyZWdyZXNzaW9uIGNvZWZmaWNpZW50fCJiZXRhInwkeSA9IFxiZXRhXzAgKyBcYmV0YV8xIHggKyBcZXBzaWxvbiQKJFxoYXR7XGJldGF9JHxlc3RpbWF0ZWQgdmFsdWUgb2YgcmVncmVzc2lvbiBjb2VmZmljaWVudHwiYmV0YSBoYXQifCAKJFxlcHNpbG9uJHxyZWdyZXNzaW9uIGVycm9yfCJlcHNpbG9uInwgCiRcc3VtJHxzdW1tYXRpb24gb3BlcmF0b3J8InN1bSJ8JFxzdW1fe2k9MX1eMiB4X2kgID0geF8xICsgeF8yJAokc197eHl9JHxjb3ZhcmlhdGlvbiBiZXR3ZWVuIHR3byB2YXJpYWJsZXMgJHgkIGFuZCAkeSR8IHwkXGZyYWN7XHN1bSAoeF9pIC0gXGJhcnt4fSkoeV9pIC0gXGJhcnt5fSl9e24tMX0gXGluIFstXGluZnR5LFxpbmZ0eV0kCiRyX3t4eX0kfGNvcnJlbGF0aW9uIGJldHdlZW4gdHdvIHZhcmlhYmxlcyAkeCQgYW5kICR5JHwgfCRcZnJhY3tzX3t4eX19e3NfeCBzX3l9IFxpbiBbLTEsMV0k</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBhbmQgdGlkeXZlcnNlIGNvZGUgY2hlY2twb2ludHMiCnN1YnRpdGxlOiAiU3VmZm9sa0Vjb24iCmF1dGhvcjogIiIKZGF0ZTogCm91dHB1dDogCiAgaHRtbF9ub3RlYm9vazoKICAgIG51bWJlcl9zZWN0aW9uczogdHJ1ZQogICAgdGhlbWU6IHJlYWRhYmxlCiAgICBoaWdobGlnaHQ6IHB5Z21lbnRzCiAgICB0b2M6IHRydWUKICAgIHRvY19mbG9hdDogCiAgICAgIGNvbGxhcHNlZDogeWVzCi0tLQoKCjxhIGhyZWY9Imh0dHBzOi8vbHJkZWdlZXN0LmdpdGh1Yi5pby9zdGF0cy9jb2RlX2NoZWNrcG9pbnRzLm5iLmh0bWwiIGNsYXNzPSJidG4gYnRuLXdhcm5pbmciPioqTGFzdCB1cGRhdGVkOioqIGByIFN5cy50aW1lKClgIEVTVCA8L2E+IAoKPGEgaHJlZj0iI3RhYmxlIiBjbGFzcz0iYnRuIGJ0bi1zdWNjZXNzIj4qKkdvIHRvIHF1aWNrIHRhYmxlcyoqPC9hPgo8YSBocmVmPSJodHRwczovL3N1ZmZvbGtlY29uLmdpdGh1Yi5pby8iIGNsYXNzPSJidG4gYnRuLWRlZmF1bHQiPkdvIGhvbWU8L2E+CgojIFNldC11cCB7LX0KCkxvYWQgdGhlIHRpZHl2ZXJzZToKCmBgYHtyIHNldHVwLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpsaWJyYXJ5KHRpZHl2ZXJzZSkgCmBgYAoKVGhlIGB0aWR5dmVyc2VgIHByb3ZpZGVzIHRoZSBkYXRhIGBtcGdgIHRvIGRlbW9uc3RyYXRlIG1ldGhvZHMuIGBtcGdgIGhhcyB0aGUgbWlsZWFnZSAoYGN0eWAgZm9yIGNpdHksIGBod3lgIGZvciBoaWdod2F5KSBmb3IgYSBidW5jaCBvZiBkaWZmZXJlbnQgY2FyczoKCmBgYHtyIGxvYWQgZGF0YX0KZGF0YSgibXBnIikgIyBsb2FkIHRoZSBkYXRhIG1wZwoKIyB2aWV3IHRoZSBmaXJzdCA1IHJvd3MKbXBnICU+JSAKICBzbGljZV9oZWFkKG49NSkKYGBgCgojIFN1bW1hcml6aW5nIERhdGEgCgojIyBUaGUgcGlwZSBhbmQgYHN1bW1hcmlzZSgpYAoKQWxsIHN1bW1hcml6aW5nIG9wZXJhdGlvbnMgd29yayBsaWtlIHRoaXM6IAoKYGBge3IsIGV2YWw9RkFMU0V9CmRhdGEgJT4lICMgdGhlIHBpcGU6ICJhbmQgdGhlbiIKICBzdW1tYXJpc2UoKSAKYGBgCgoKKiB0aGUgcGlwZSAoYCU+JWAsICJhbmQgdGhlbiIpCiogW2BzdW1tYXJpc2UoKWBdKGh0dHBzOi8vZHBseXIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2Uvc3VtbWFyaXNlLmh0bWwpCgpJbnNpZGUgYHN1bW1hcmlzZSgpYCB5b3UgY2FuIHVzZSBmdW5jdGlvbnMgbGlrZSBgbWVhbigpYCwgYG1lZGlhbigpYCBhbmQgc28gb24uCgoKIyMjIG1lYW4KCmBtZWFuKClgCgpgYGB7ciBtZWFufQptcGcgJT4lICMgdGFrZSB0aGUgZGF0YSwgVEhFTgogIHN1bW1hcmlzZShtZWFuKGN0eSkpICMgc3VtbWFyaXplOiBtZWFuCmBgYAoKKipOb3RlLioqIGBjdHlgIGlzIGEgbnVtZXJpY2FsIHZhcmlhYmxlLgoKIyMjIG1lZGlhbgoKYG1lZGlhbigpYAoKYGBge3IgbWVkaWFufQptcGcgJT4lICMgdGFrZSB0aGUgZGF0YSwgVEhFTgogIHN1bW1hcmlzZShtZWRpYW4oY3R5KSkgIyBzdW1tYXJpemU6IG1lZGlhbgpgYGAKCiMjIyBzdGFuZGFyZCBkZXZpYXRpb24KCmBzZCgpYAoKYGBge3Igc2R9Cm1wZyAlPiUgIyB0YWtlIHRoZSBkYXRhLCBUSEVOCiAgc3VtbWFyaXNlKHNkKGN0eSkpICMgc3VtbWFyaXplOiBzdGFuZGFyZCBkZXZpYXRpb24KYGBgCgojIyMgY291bnRpbmcgb2JzZXJ2YXRpb25zCgpbYG4oKWAgKGNvdW50aW5nKV0oaHR0cHM6Ly9kcGx5ci50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9uLmh0bWwpCgoKYGBge3IgY291bnR9Cm1wZyAlPiUgIyB0YWtlIHRoZSBkYXRhLCBUSEVOCiAgc3VtbWFyaXNlKG4oKSkgIyBzdW1tYXJpemU6IGNvdW50IG51bWJlciBvZiBvYnNlcnZhdGlvbnMKYGBgCgoqKldoeSBkb2Vzbid0IGBuKClgIHRha2UgYW4gYXJndW1lbnQ/KiogQmVjYXVzZSBpdCBjb3VudHMgdGhlIG51bWJlciBvZiByb3dzLCBub3QgY29sdW1ucy4KCiMjIyBtdWx0aXBsZSBzdW1tYXJpZXMKCllvdSBjYW4gcHV0IGFzIG1hbnkgZnVuY3Rpb25zIGFzIHlvdSB3YW50IGluc2lkZSBgc3VtbWFyaXNlKClgOgoKYGBge3Igc3VtbWFyaXNlfQptcGcgJT4lICMgdGFrZSB0aGUgZGF0YSwgVEhFTgogIHN1bW1hcmlzZShtZWFuKGN0eSksIG1lZGlhbihjdHkpLCBzZChjdHkpLCBuKCkpICMgc3VtbWFyaXplOiBtZWFuLCBtZWRpYW4sIHN0YW5kYXJkIGRldmlhdGlvbiwgY291bnQKYGBgCgojIyMgbmFtaW5nIHZhcmlhYmxlcyBpbnNpZGUgYHN1bW1hcmlzZSgpYAoKWW91IGNhbiBuYW1lIHZhcmlhYmxlcyBpbnNpZGUgYHN1bW1hcmlzZSgpYCB1c2luZyBzdGFuZGFyZCBhc3NpZ25tZW50OgoKYGBge3IgbmFtZSBzdW1tYXJpc2V9Cm1wZyAlPiUgIyB0YWtlIHRoZSBkYXRhLCBUSEVOCiAgc3VtbWFyaXNlKGF2Z19jdHkgPSBtZWFuKGN0eSksIG1lZGlhbl9jdHkgPSBtZWRpYW4oY3R5KSkgIyBzdW1tYXJpemU6IG1lYW4sIG1lZGlhbgpgYGAKCgojIyBHcm91cGluZyAoYGdyb3VwX2J5KClgKSAgCgpbYGdyb3VwX2J5KClgXShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL2dyb3VwX2J5Lmh0bWwpOgoKYGBge3IgZ3JvdXBfYnksIG1lc3NhZ2U9RkFMU0V9Cm1wZyAlPiUgIyB0YWtlIHRoZSBkYXRhLCBUSEVOCiAgZ3JvdXBfYnkoY2xhc3MpICU+JSAjIGdyb3VwIGl0IGJ5IGNhciBjbGFzcyAoZS5nLiwgY29tcGFjdCwgcGlja3VwKSBUSEVOCiAgc3VtbWFyaXNlKG1lYW4oY3R5KSwgbWVkaWFuKGN0eSksIHNkKGN0eSksIG4oKSkgIyBzdW1tYXJpemUKYGBgCgoqKk5vdGUuKiogYGNsYXNzYCBpcyBhIGNhdGVnb3JpY2FsIHZhcmlhYmxlLgoKIyBNYW5pcHVsYXRpbmcgZGF0YQoKIyMgU2VsZWN0aW5nIGNvbHVtbnMKCmBzZWxlY3QoKWAgY2VydGFpbiBjb2x1bW5zCgpgYGB7ciBubyBzZWxlY3R9Cm1wZyAlPiUgIyBhbGwgdGhlIGNvbHVtbnMKICBzbGljZV9oZWFkKG49NSkgIyB2aWV3IHRoZSBmaXJzdCA1IHJvd3MKYGBgCgoKYGBge3IgeWVzIHNlbGVjdH0KbXBnICU+JSAjIGFsbCB0aGUgY29sdW1ucwogIHNlbGVjdChtYW51ZmFjdHVyZXIsIG1vZGVsLCBod3kpICU+JSAjIHNlbGVjdCBzb21lIG9mIHRoZSBjb2x1bW5zCiAgc2xpY2VfaGVhZChuPTUpICMgdmlldyB0aGUgZmlyc3QgNSByb3dzCmBgYAoKIyMgU2xpY2luZwoKQWxsIHNsaWNlIG9wZXJhdG9ycyBiZWdpbiB3aXRoIGBzbGljZV9gIGFuZCB0YWtlIGFuIG9wdGlvbmFsIGBuPWAgYXJndW1lbnQgdGhhdCBzcGVjaWZpZXMgdGhlIG51bWJlciBvZiByb3dzIHlvdSB3YW50IHRvIHNlZS4gTW9yZSBbaGVyZV0oaHR0cHM6Ly9kcGx5ci50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9zbGljZS5odG1sKS4gCgpTdWJzZXRzIHdpdGggYHNsaWNlX2hlYWQoKWA6CgpgYGB7ciBzbGljZV9oZWFkfQptcGcgJT4lIAogIHNsaWNlX2hlYWQobj0xMCkgIyB2aWV3IHRoZSBmaXJzdCAxMCByb3dzCmBgYAoKCk1heGltdW1zIHdpdGggYHNsaWNlX21heCgpYDoKCmBgYHtyIHNsaWNlX21heH0KbXBnICU+JSAKICBzbGljZV9tYXgoaHd5LCBuPTUpICMgdGhlIGZpdmUgaGlnaGVzdCBoaWdod2F5IG1pbGVzIHBlciBnYWxsb24uIGlmIHRoZXJlIGFyZSB0aWVzIHRoZXkgYWxsIGdldCBwcmludGVkCmBgYAoKTWluaW11bXMgd2l0aCBgc2xpY2VfbWluKClgOgoKYGBge3Igc2xpY2VfbWlufQptcGcgJT4lIAogIHNsaWNlX21pbihod3ksIG49MikgIyB0aGUgdHdvIGxvd2VzdCBoaWdod2F5IG1pbGVzIHBlciBnYWxsb24uIGlmIHRoZXJlIGFyZSB0aWVzIHRoZXkgYWxsIGdldCBwcmludGVkCmBgYAoKUmFuZG9tIHNhbXBsZXMgd2l0aCBgc2xpY2Vfc2FtcGxlKClgOgoKYGBge3Igc2xpY2Vfc2FtcGxlfQptcGcgJT4lIAogIHNsaWNlX3NhbXBsZShuPTMpICMgcGljayB0aHJlZSByb3dzIGF0IHJhbmRvbQpgYGAKCiMjIyBTbGljaW5nIGFuZCBncm91cGluZwoKV2hlbiB5b3UgYGdyb3VwX2J5KClgIGEgZGF0YSBmcmFtZSBgc2xpY2VfKClgIHdpbGwgcmV0dXJuIHN1YnNldHMgb2YgZWFjaCBncm91cDoKCmBgYHtyIGdyb3VwX2J5IGFuZCBzbGljZV99Cm1wZyAlPiUgCiAgZ3JvdXBfYnkoY2xhc3MpICU+JSAjIGdyb3VwIGJ5IGNsYXNzIAogIHNsaWNlX21pbihod3ksIG49MSkgIyBib3R0b20gdHdvIGh3eSBieSBjbGFzcwpgYGAKCklmIGEgZGF0YSBmcmFtZSBpcyBhbHJlYWR5IGdyb3VwZWQgdGhlbiBgc2xpY2VfKClgIHdpbGwgYWx3YXlzIHN1YnNldCBieSBncm91cCB1bmRlciB0aGUgaG9vZC4gSWYgeW91IHdhbnQgc3Vic2V0cyBub3QgYnkgZ3JvdXAgdGhlbiB5b3UgaGF2ZSB0byBgdW5ncm91cCgpYC4gU2VlIGJlbG93IGluIHRoZSBzZWN0aW9uIG9uIGBtdXRhdGUoKWAuIFRoaXMgb2Z0ZW4gaGFwcGVucyB3aGVuIHlvdSBncm91cCBhIGRhdGEgZnJhbWUgdG8gY3JlYXRlIGEgbmV3IHZhcmlhYmxlLiAKCiMjIEZpbHRlcmluZwoKW2BmaWx0ZXIoKWBdKGh0dHBzOi8vZHBseXIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2UvZmlsdGVyLmh0bWwpIHdpdGggQm9vbGVhbiBsb2dpYzoKCiogYD09YDogImVxdWFsIHRvIgoqIGAhPWA6ICJub3QgZXF1YWwgdG8iCiogYD5gOiAiZ3JlYXRlciB0aGFuIgoqIGA+PWA6ICJncmVhdGVyIHRoYW4gb3IgZXF1YWwgdG8iCiogYDxgOiAibGVzcyB0aGFuIgoqIGA8PWA6ICJsZXNzIHRoYW4gb3IgZXF1YWwgdG8iCiogYCZgOiAiYW5kIgoqIGB8YDogIm9yIgoKQm9vbGVhbiBsb2dpYyBpcyBhbnkgdGVzdCB0aGF0IHJldHVybnMgdHJ1ZSBvciBmYWxzZToKCmBgYHtyIGJvb2xlYW4gZXF1YWxzIHRvfQoyID09IDMKYGBgCgpgYGB7ciBib29sZWFuIG5vdCBlcXVhbHMgdG99CjIgIT0gMwpgYGAKCmBgYHtyIGJvb2xlYW4gbGVzcyB0aGFufQoyIDwgMwpgYGAKClNvbWUgZXhhbXBsZXM6CgpgYGB7ciBmaWx0ZXIgZXF1YWxzIHRvfQptcGcgJT4lIAogIGZpbHRlcih5ZWFyID09ICIxOTk5IikgJT4lICMgZmlsdGVyIGFsbCBjYXJzIG1hZGUgaW4gMTk5OQogIHNsaWNlX2hlYWQobj01KSAjIHZpZXcgdGhlIGZpcnN0IDUgcm93cwpgYGAKCmBgYHtyIGZpbHRlciBncmVhdGVyIHRoYW4gb3IgZXF1YWxzIHRvfQptcGcgJT4lIAogIGZpbHRlcihod3kgPj0gMjUpICU+JSAjIGZpbHRlciBhbGwgY2FycyB3aXRoIGF0IGxlYXN0IDI1IG1wZyBoaWdod2F5CiAgc2xpY2VfaGVhZChuPTUpICMgdmlldyB0aGUgZmlyc3QgNSByb3dzCmBgYAoKCmBgYHtyIGZpbHRlciBtYW55IGNvbmRpdGlvbnN9Cm1wZyAlPiUgCiAgZmlsdGVyKHllYXIgPT0gIjE5OTkiICYgbW9kZWwgIT0gImE0IiAmIGh3eSA+PSAyNSkgJT4lICMgZmlsdGVyIGNhcnMgbWFkZSBpbiAxOTk5LCB0aGF0IGFyZW4ndCBhNCdzLCBhbmQgaGF2ZSBhdCBsZWFzdCAyNSBtZ3AgaGlnaHdheQogIHNsaWNlX2hlYWQobj01KSAjIHZpZXcgdGhlIGZpcnN0IDUgcm93cwpgYGAKCgojIyBNdXRhdGluZwoKQ3JlYXRlIGFuZCBtb2RpZnkgdmFyaWFibGVzIChkYXRhIGZyYW1lIGNvbHVtbnMpIHdpdGggW2BtdXRhdGUoKWBdKGh0dHBzOi8vZHBseXIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2UvbXV0YXRlLmh0bWwpCgojIyMgQ3JlYXRlIGEgbmV3IHZhcmlhYmxlCgpGb3IgZXhhbXBsZSwgY3JlYXRlIGEgY29sdW1uIGNhbGxlZCBgbWVhbl9od3lgIHRoYXQgY2FsY3VsYXRlcyBhdmVyYWdlIGhpZ2h3YXkgbWlsZXMgcGVyIGdhbGxvbjoKCmBgYHtyIG11dGF0ZSBkb250IGFkZCBjb2x1bW59Cm1wZyAlPiUgCiAgbXV0YXRlKG1lYW5faHd5ID0gbWVhbihod3kpKSAlPiUgCiAgc2VsZWN0KG1hbnVmYWN0dXJlciwgbW9kZWwsIGh3eSwgbWVhbl9od3kpICU+JSAKICBzbGljZV9oZWFkKG49NSkKYGBgCgojIyMgQ3JlYXRlIGEgbmV3IHZhcmlhYmxlIGFuZCBzdG9yZSBpdCBhcyBhIGNvbHVtbgoKVG8gc2F2ZSB0aGUgbmV3IHZhcmlhYmxlIHlvdSBoYXZlIHRvIHJlLWFzc2lnbiB0aGUgZGF0YSBmcmFtZToKCmBgYHtyIG11dGF0ZSB5ZXMgYWRkIGNvbHVtbn0KbXBnID0gbXBnICU+JSAKICBtdXRhdGUobWVhbl9od3kgPSBtZWFuKGh3eSkpIApgYGAKCk5vdyBgbXBnYCBoYXMgYSBuZXcgY29sdW1uIGNhbGxlZCBgbWVhbl9od3lgLgoKIyMjIE11dGF0aW5nIHdoaWxlIGdyb3VwaW5nCgpXaGVuIHlvdSBjcmVhdGUgYSBuZXcgdmFyaWFibGUgYW5kIHNhdmUgaXQgdG8gdGhlIGRhdGEgeW91IHJlLWFzc2lnbiB0aGUgZGF0YS4gCgpXaGVuIGdyb3VwaW5nIHdpdGggYGdyb3VwX2J5KClgIHRvIGNyZWF0ZSBhIG5ldyBjb2x1bW4sIHRoZSByZS1hc3NpZ25lZCBkYXRhIHdpbGwgYmUgZ3JvdXBlZCwgd2hpY2ggY2FuIGFmZmVjdCB0aGUgYHNsaWNlXygpYCBmdW5jdGlvbnMuIAoKVGhlIHNvbHV0aW9uIGlzIHRvIGB1bmdyb3VwKClgIGFmdGVyIGBtdXRhdGUoKWAuIAoKRm9yIGluc3RhbmNlLCBhZGQgYSBjb2x1bW4gY2FsbGVkICJtZWFuX2h3eV9jbGFzcyIgdGhhdCBjYWxjdWxhdGVzIGF2ZXJhZ2UgaGlnaHdheSBtaWxlcyBwZXIgZ2FsbG9uIGJ5IGNsYXNzOgoKYGBge3IgZ3JvdXBfYnkgYW5kIG11dGF0ZSwgbWVzc2FnZT1GQUxTRX0KIyBmaXJzdCBjcmVhdGUgdGhlIHZhcmlhYmxlCm1wZyA9IG1wZyAlPiUgIyB0YWtlIHRoZSBkYXRhLCBUSEVOCiAgZ3JvdXBfYnkoY2xhc3MpICU+JSAjIGdyb3VwIGJ5IGNsYXNzLCBUSEVOCiAgbXV0YXRlKG1lYW5faHd5X2NsYXNzID0gbWVhbihod3kpKSAlPiUgIyBjcmVhdGUgdGhlIG5ldyB2YXJpYWJsZSwgVEhFTgogIHVuZ3JvdXAoKSAjIHVuZ3JvdXAgdGhlIGRhdGEKYGBgCgpXaHkgYHVuZ3JvdXAoKWA/IEJlY2F1c2Ugb3RoZXJ3aXNlIGBzbGljZV8oKWAgYW5kIG90aGVyIGZ1bmN0aW9ucyB3b24ndCByZXR1cm4gdGhlIG91dHB1dCB5b3UgZXhwZWN0LiBTbyBiZXR0ZXIgc2FmZSB0aGFuIHNvcnJ5LiBXaGVuIGdyb3VwaW5nICp0byBjcmVhdGUgYSB2YXJpYWJsZSogbWFrZSBzdXJlIHlvdSB1bmdyb3VwIGF0IHRoZSBlbmQuCgpOb3cgd2UgY2FuIHNsaWNlIGluIGdlbmVyYWw6CgpgYGB7ciB2aWV3IGdyb3VwX2J5IG11dGF0ZSBvdXRwdXR9Cm1wZyAlPiUgCiAgc2VsZWN0KG1hbnVmYWN0dXJlciwgbW9kZWwsIGh3eSwgbWVhbl9od3lfY2xhc3MpICU+JSAKICBzbGljZV9oZWFkKG49MikKYGBgCgoKIyMjIE11dGF0aW5nIGFuZCBmcmVxdWVuY3kgdGFibGVzCgpVc2UgYG4oKWAgdG8gY2FsY3VsYXRlIGZyZXF1ZW5jeSBhbmQgdGhlbiB1c2UgYG11dGF0ZSgpYCB0byBjYWxjdWxhdGUgcmVsYXRpdmUgZnJlcXVlbmN5OgoKYGBge3IgZnJlcXVlbmN5IGFuZCByZWxhdGl2ZSBmcmVxdWVuY3ksIG1lc3NhZ2U9RkFMU0V9Cm1wZyAlPiUgCiAgZ3JvdXBfYnkoY2xhc3MpICU+JSAKICBzdW1tYXJpc2UoZnJlcXVlbmN5ID0gbigpKSAlPiUgCiAgbXV0YXRlKHJlbGF0aXZlX2ZyZXF1ZW5jeSA9IGZyZXF1ZW5jeSAvIHN1bShmcmVxdWVuY3kpKQpgYGAKCiMgVmlzdWFsaXppbmcgZGF0YQoKIyMgUGxvdHRpbmcgZGlzdHJpYnV0aW9ucyAKCiMjIyBIaXN0b2dyYW1zCgpIaXN0b2dyYW1zIHdpdGggYGdncGxvdGAgYW5kIFtgZ2VvbV9oaXN0b2dyYW0oKWBdKGh0dHBzOi8vZ2dwbG90Mi50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9nZW9tX2hpc3RvZ3JhbS5odG1sKToKCmBgYHtyIGhpc3RvZ3JhbX0KbXBnICU+JSAKICBnZ3Bsb3QoYWVzKHggPSBjdHkpKSArICMgYmxhbmsgY2FudmFzOiBjaG9vc2UgdGhlIGRhdGEgYW5kIHRoZSB4LWF4aXMgdmFyaWFibGUKICBnZW9tX2hpc3RvZ3JhbSgpICMgYWRkIGdlb20gbGF5ZXI6IGRpc3RyaWJ1dGlvbgpgYGAKCkZhY2V0ZWQgaGlzdG9ncmFtcyB3aXRoIFtgZmFjZXRfd3JhcCgpYF0oaHR0cHM6Ly9nZ3Bsb3QyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL2ZhY2V0X3dyYXAuaHRtbCk6CgpgYGB7ciBmYWNldHRlZCBoaXN0b2dyYW19Cm1wZyAlPiUgCiAgZ2dwbG90KGFlcyh4ID0gY3R5KSkgKyAjIGJsYW5rIGNhbnZhczogY2hvb3NlIHRoZSBkYXRhIGFuZCB0aGUgeC1heGlzIHZhcmlhYmxlCiAgZ2VvbV9oaXN0b2dyYW0oKSArICMgYWRkIGdlb20gbGF5ZXI6ICBkaXN0cmlidXRpb24KICBmYWNldF93cmFwKH5jbGFzcykgIyBhZGQgZmFjZXR0aW5nIChub3RlIHRoZSAifiIgYmVmb3JlIHRoZSBjYXRlZ29yaWNhbCB2YXJpYWJsZSkKYGBgCgojIyMgQ3VtdWxhdGl2ZSBkaXN0cmlidXRpb25zCgpQZXJjZW50aWxlcyBhbmQgY3VtdWxhdGl2ZSBkaXN0cmlidXRpb25zIHdpdGggYGdncGxvdGAgYW5kIFtgc3RhdF9lY2RmKClgXShodHRwczovL2dncGxvdDIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2Uvc3RhdF9lY2RmLmh0bWwpOgoKYGBge3IgcGVyY2VudGlsZSAoY3VtdWxhdGl2ZSBkaXN0cmlidXRpb24pfQptcGcgJT4lIAogIGdncGxvdChhZXMoeD1jdHkpKSArICAjIGJsYW5rIGNhbnZhczogY2hvb3NlIHRoZSBkYXRhIGFuZCB0aGUgeC1heGlzIHZhcmlhYmxlCiAgc3RhdF9lY2RmKCkgIyBhZGQgZ2VvbSBsYXllcjogY3VtdWxhdGl2ZSBkaXN0cmlidXRpb24KYGBgCgpZb3UgY2FuIGFkZCBhIHZlcnRpY2FsIGxpbmUgd2l0aCBgZ2VvbV92bGluZSgpYCB0byBtYWtlIGl0IGVhc2llciB0byBzZWUgYSBwZXJjZW50aWxlLiBGb3IgaW5zdGFuY2UsIHZpZXcgcGVyY2VudCBvZiBjYXJzIHdpdGggbGVzcyB0aGFuIDE1IG1pbGVzIHBlciBnYWxsb246CgpgYGB7ciBwZXJjZW50aWxlIChjdW11bGF0aXZlIGRpc3RyaWJ1dGlvbikgd2l0aCB2bGluZX0KbXBnICU+JSAKICBnZ3Bsb3QoYWVzKHg9Y3R5KSkgKyAgIyBibGFuayBjYW52YXM6IGNob29zZSB0aGUgZGF0YSBhbmQgdGhlIHgtYXhpcyB2YXJpYWJsZQogIHN0YXRfZWNkZigpICsgIyBhZGQgZ2VvbSBsYXllcjogY3VtdWxhdGl2ZSBkaXN0cmlidXRpb24KICBnZW9tX3ZsaW5lKHhpbnRlcmNlcHQgPSAxNSwgY29sb3I9InJlZCIpICMgdmVydGljbGUgCmBgYAoKIyMjIEJveCBwbG90cwoKW2BnZW9tX2JveHBsb3QoKWBdKGh0dHBzOi8vZ2dwbG90Mi50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9nZW9tX2JveHBsb3QuaHRtbCkKCmBgYHtyIGJveCBwbG90IHggY29udGludW91c30KbXBnICU+JSAKICBnZ3Bsb3QoYWVzKHggPSBod3ksIHkgPSBjbGFzcykpICsgIyB4IGlzIGNvbnRpbnVvdXMsIHkgaXMgY2F0ZWdvcmljYWwKICBnZW9tX2JveHBsb3QoKSAKYGBgCgpvcjogCgpgYGB7ciBib3ggcGxvdCB4IGNhdGVnb3JpY2FsfQptcGcgJT4lIAogIGdncGxvdChhZXMoeCA9IGNsYXNzLCB5ID0gaHd5KSkgKyAjIHggaXMgY2F0ZWdvcmljYWwsIHkgaXMgY29udGludW91cwogIGdlb21fYm94cGxvdCgpIApgYGAKCgojIyBTY2F0dGVycGxvdAoKYGdlb21fcG9pbnQoKWA6CgpgYGB7ciBnZW9tX3BvaW50fQptcGcgJT4lIAogIGdncGxvdChhZXMoeCA9IGN0eSwgeSA9IGh3eSkpICsgCiAgZ2VvbV9wb2ludCgpIApgYGAKCiMjIyBTY2F0dGVycGxvdCB3aXRoIHJlZ3Jlc3Npb24gbGluZQoKW2BnZW9tX3Ntb290aChtZXRob2QgPSAibG0iKWBdKGh0dHBzOi8vZ2dwbG90Mi50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9nZW9tX3Ntb290aC5odG1sKToKCmBgYHtyIGdlb21fc21vb3RofQptcGcgJT4lIAogIGdncGxvdChhZXMoeCA9IGN0eSwgeSA9IGh3eSkpICsgCiAgZ2VvbV9wb2ludCgpICsgIyBzY2F0dGVyLXBsb3QKICBnZW9tX3Ntb290aChtZXRob2QgPSAibG0iKSAjIHJlZ3Jlc3Npb24gbGluZQpgYGAKCiMgQ29ycmVsYXRpb24gYW5kIHJlZ3Jlc3Npb24KCiMjIENvdmFyaWFuY2UKCmBjb3YoKWA6CgpgYGB7ciBjb3Z9Cm1wZyAlPiUgCiAgc3VtbWFyaXNlKGNvdih4PWN0eSwgeT1od3kpKQpgYGAKCiMjIENvcnJlbGF0aW9uCgpgY29yKClgOgoKYGBge3IgY29yfQptcGcgJT4lIAogIHN1bW1hcmlzZShjb3IoeD1jdHksIHk9aHd5KSkKYGBgCgoKIyMgUmVncmVzc2lvbgoKYGxtKClgCgpTaW1wbGUgbGluZWFyIHJlZ3Jlc3Npb24gKG9uZSAkeCQgdmFyaWFibGUpOgoKJCQKXGJlZ2lue2FsaWduZWR9CnkgJj0gZih4KSBcXAogICY9IFxiZXRhXzAgKyBcYmV0YV8xKHgpICsgXGVwc2lsb24KXGVuZHthbGlnbmVkfQokJApJbiBgbG0oKWAgdGhlICR5JCBhbmQgJHgkIHZhcmlhYmxlcyBhcmUgc2VwYXJhdGVkIGJ5IGB+YDoKCmBgYHtyIGxtMX0KbXBnICU+JSAKICBsbShmb3JtdWxhID0gY3R5IH4gaHd5LCBkYXRhID0gLikgIyB0aGUgIi4iIG1lYW5zICJ1c2UgdGhlIGRhdGEgZnJvbSB0aGUgcGlwZSAlPiUiCmBgYAoKTXVsdGlwbGUgbGluZWFyIHJlZ3Jlc3Npb24gKG11bHRpcGxlICR4JCB2YXJpYWJsZXMpOgoKJCQKXGJlZ2lue2FsaWduZWR9CnkgJj0gZihcbWF0aGJme1h9KSBcXAogICY9IGYoeF8xLCB4XzIsIFxkb3RzKSBcXAogICY9IFxiZXRhXzAgKyBcYmV0YV8xKHhfMSkgKyBcYmV0YV8yKHhfMikgKyBcZG90cyArIFxlcHNpbG9uClxlbmR7YWxpZ25lZH0KJCQKSW4gYGxtKClgIHRoZSAkeCQgdmFyaWFibGVzIGFyZSBzZXBhcmF0ZWQgYnkgYCtgOgoKYGBge3IgbG0yfQptcGcgJT4lIAogIGxtKGZvcm11bGEgPSBjdHkgfiBod3kgKyBjeWwgKyBkaXNwbCwgZGF0YSA9IC4pCmBgYAoKIyMgYHN1bW1hcnkoKWAKClZpZXcgaHlwb3RoZXNpcyB0ZXN0cyBhbmQgcmVncmVzc2lvbiBkaWFnbm9zdGljcyB3aXRoIGBzdW1tYXJ5KClgOgoKYGBge3Igc3VtbWFyeTJ9Cm1wZyAlPiUgCiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGN5bCArIGRpc3BsLCBkYXRhID0gLikgJT4lIAogIHN1bW1hcnkoKQpgYGAKCiMjIFBsb3R0aW5nIHJlZ3Jlc3Npb24gcmVzdWx0cwoKVXNlIHRoZSBwYWNrYWdlIGBzSnBsb3RgLiAoSWYgeW91IGZvcmdvdCBob3cgdG8gaW5zdGFsbCBwYWNrYWdlLCBzZWUgW2hlcmVdKGh0dHBzOi8vbHJkZWdlZXN0LmdpdGh1Yi5pby9zdGF0cy9yLmh0bWwjM19JbnN0YWxsX3BhY2thZ2VzKS4pCgpgYGB7ciBsaWJyYXJ5IHNqcGxvdCwgbWVzc2FnZT1GQUxTRX0KbGlicmFyeShzalBsb3QpCmBgYAoKVGhlIGZ1bmN0aW9uIHlvdSB3YW50IGlzIGBwbG90X21vZGVsYC4gVGhlIGJhc2VsaW5lIHBsb3Qgc2hvd3MgdGhlIGNvZWZmaWNpZW50cyBhbmQgc3RhbmRhcmQgZXJyb3JzOgoKYGBge3Igc2pQbG90IGRlbW8gY29lZmZpY2llbnRzfQptcGcgJT4lIAogIGxtKGZvcm11bGEgPSBjdHkgfiBod3kgKyBjbGFzcywgZGF0YSA9IC4pICU+JSAKICBwbG90X21vZGVsKG1vZGVsID0gLikKYGBgCgpUbyBwbG90IHByZWRpY3RlZCB2YWx1ZXMgeW91IGNhbiBzZXQgYHR5cGUgPSAicHJlZCJgIGFuZCB0aGVuIGNob29zZSB3aGljaCBjb2VmZmljaWVudCB0byBwbG90IGJ5IHNldHRpbmcgYHRlcm1zYDoKCmBgYHtyIHNqUGxvdCBkZW1vIHByZWRpY3RlZCB2YWx1ZXN9Cm1wZyAlPiUgCiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzLCBkYXRhID0gLikgJT4lIAogIHBsb3RfbW9kZWwobW9kZWwgPSAuLCB0eXBlID0gInByZWQiLCB0ZXJtcyA9IGMoImh3eSIpKQpgYGAKClRoZSBgdGVybXNgIGFyZ3VtZW50IGFjY2VwdHMgbXVsdGlwbGUgdGVybXM6CgpgYGB7ciBzalBsb3QgZGVtbyBwcmVkaWN0ZWQgdmFsdWVzIG11bHRpcGxlIHRlcm1zfQptcGcgJT4lIAogIGxtKGZvcm11bGEgPSBjdHkgfiBod3kgKyBjbGFzcywgZGF0YSA9IC4pICU+JSAKICBwbG90X21vZGVsKG1vZGVsID0gLiwgdHlwZSA9ICJwcmVkIiwgdGVybXMgPSBjKCJod3kiLCAiY2xhc3MiKSkKYGBgCgpUaGlzIGlzIHVzZWZ1bCB3aGVuIHlvdSBoYXZlIGFuIGludGVyYWN0aW9uIGVmZmVjdCAoZS5nLiwgYGh3eSpjbGFzc2ApOgoKYGBge3Igc2pQbG90IGRlbW8gcHJlZGljdGVkIHZhbHVlcyBpbnRlcmFjdGlvbn0KbXBnICU+JSAKICBsbShmb3JtdWxhID0gY3R5IH4gaHd5ICsgY2xhc3MgKyBod3kqY2xhc3MsIGRhdGEgPSAuKSAlPiUgCiAgcGxvdF9tb2RlbChtb2RlbCA9IC4sIHR5cGUgPSAicHJlZCIsIHRlcm1zID0gYygiaHd5IiwgImNsYXNzIikpCmBgYAoKYHNKcGxvdGAgdXNlcyBgZ2dwbG90YCBzbyB5b3UgY2FuIGFkZCBgZ2dwbG90YCBzdHVmZiB0byBpdCwgbGlrZSBhIGRpZmZlcmVudCB0aGVtZSBhbmQgdGl0bGVzOgoKYGBge3Igc2pQbG90IGRlbW8gcHJlZGljdGVkIHZhbHVlcyBpbnRlcmFjdGlvbiBzcGlmZnl9Cm1wZyAlPiUgCiAgbG0oZm9ybXVsYSA9IGN0eSB+IGh3eSArIGNsYXNzICsgaHd5KmNsYXNzLCBkYXRhID0gLikgJT4lIAogIHBsb3RfbW9kZWwobW9kZWwgPSAuLCB0eXBlID0gInByZWQiLCB0ZXJtcyA9IGMoImh3eSIsICJjbGFzcyIpKSArIAogIGxhYnMoeCA9ICJIaWdod2F5IG1pbGVzIHBlciBnYWxsb24iLCB5ID0gIlByZWRpY3RlZCBjaXR5IG1pbGVzIHBlciBnYWxsb24iLAogICAgICAgdGl0bGUgPSAiQSB2ZXJ5IGludGVyZXN0aW5nIGxpbmVhciBtb2RlbCIsIHN1YnRpdGxlID0gIlNvIGludGVyZXN0aW5nIikgKyAKICB0aGVtZV9taW5pbWFsKCkKYGBgCgpUaGUgcGFja2FnZSBoYXMgdG9ucyBvZiBncmVhdCBmZWF0dXJlcy4gQ2hlY2sgb3V0IHRoZSBbd2Vic2l0ZSFdKGh0dHBzOi8vc3RyZW5nZWphY2tlLmdpdGh1Yi5pby9zalBsb3QvKQoKIyBRdWljayB0YWJsZXMgeyN0YWJsZSAudGFic2V0fQoKIyMgUgoKKipGdW5jdGlvbioqfCoqRGVzY3JpcHRpb24qKgotLS0tLXwtLS0tLQpbPGNvZGU+JT4lPC9jb2RlPl0oaHR0cHM6Ly9tYWdyaXR0ci50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9waXBlLmh0bWwpfFBpcGUgb3BlcmF0b3IgKCJhbmQgdGhlbiIpCls8Y29kZT5zdW1tYXJpc2UoKTwvY29kZT5dKGh0dHBzOi8vZHBseXIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2Uvc3VtbWFyaXNlLmh0bWwpfFN1bW1hcml6ZSBhIHZlY3RvciBvciBtdWx0aXBsZSB2ZWN0b3JzIGZyb20gYSBkYXRhIGZyYW1lCls8Y29kZT5tZWFuKCk8L2NvZGU+XShodHRwczovL3d3dy5yZG9jdW1lbnRhdGlvbi5vcmcvcGFja2FnZXMvYmFzZS92ZXJzaW9ucy8zLjYuMi90b3BpY3MvbWVhbil8Q2FsY3VsYXRlIHRoZSBtZWFuIG9mIGEgdmVjdG9yCls8Y29kZT5tZWRpYW4oKTwvY29kZT5dKGh0dHBzOi8vd3d3LnJkb2N1bWVudGF0aW9uLm9yZy9wYWNrYWdlcy9zdGF0cy92ZXJzaW9ucy8zLjYuMi90b3BpY3MvbWVkaWFuKXxDYWxjdWxhdGUgdGhlIG1lZGlhbiBvZiBhIHZlY3RvcgpbPGNvZGU+c2QoKTwvY29kZT5dKGh0dHBzOi8vd3d3LnJkb2N1bWVudGF0aW9uLm9yZy9wYWNrYWdlcy9zdGF0cy92ZXJzaW9ucy8zLjYuMi90b3BpY3Mvc2QpfENhbGN1bGF0ZSB0aGUgc3RhbmRhcmQgZGV2aWF0aW9uIG9mIGEgdmVjdG9yCls8Y29kZT5uKCk8L2NvZGU+XShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL24uaHRtbCl8Q291bnQgdGhlIG51bWJlciBvZiBvYnNlcnZhdGlvbnMuIFRha2VzIG5vIGFyZ3VtZW50LgpbPGNvZGU+Z3JvdXBcX2J5KCk8L2NvZGU+XShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL2dyb3VwXF9ieS5odG1sKXxHcm91cCBvYnNlcnZhdGlvbnMgYnkgYSBjYXRlZ29yaWNhbCB2YXJpYWJsZQpbPGNvZGU+c2VsZWN0KCk8L2NvZGU+XShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL3NlbGVjdC5odG1sKXxTZWxlY3QgY2VydGFpbiBjb2x1bW5zCls8Y29kZT5zbGljZVxfKCk8L2NvZGU+XShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL3NsaWNlLmh0bWwpfFNsaWNlIHJvd3MgZnJvbSB0aGUgZGF0YQo8Y29kZT5zbGljZVxfaGVhZChuPTUpPC9jb2RlPnxWaWV3IHRoZSBoZWFkIChmaXJzdCBmaXZlIHJvd3MpIG9mIHRoZSBkYXRhLiA8Y29kZT5uID0gPC9jb2RlPiBjYW4gYmUgYW55IG51bWJlci4KPGNvZGU+c2xpY2VcX21heCh2YXIsIG49NSk8L2NvZGU+fFZpZXcgdGhlIHJvd3Mgd2l0aCB0aGUgNSBoaWdoZXN0IHZhbHVlcyBvZiBjb2x1bW4gInZhciIKPGNvZGU+c2xpY2VcX21pbih2YXIsIG49NSk8L2NvZGU+fFZpZXcgdGhlIHJvd3Mgd2l0aCB0aGUgNSBsb3dlc3QgdmFsdWVzIG9mIGNvbHVtbiAidmFyIgo8Y29kZT5zbGljZVxfc2FtcGxlKG49NSk8L2NvZGU+fERyYXcgNSByb3dzIGF0IHJhbmRvbQpbPGNvZGU+ZmlsdGVyKCk8L2NvZGU+XShodHRwczovL2RwbHlyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL2ZpbHRlci5odG1sKXxGaWx0ZXIgb2JzZXJ2YXRpb25zCls8Y29kZT5tdXRhdGUoKTwvY29kZT5dKGh0dHBzOi8vZHBseXIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2UvbXV0YXRlLmh0bWwpfENyZWF0ZSBhIG5ldyB2ZWN0b3IKWzxjb2RlPmNvdigpPC9jb2RlPl0oaHR0cHM6Ly93d3cucmRvY3VtZW50YXRpb24ub3JnL3BhY2thZ2VzL3BiZERNQVQvdmVyc2lvbnMvMC41LTEvdG9waWNzL2NvdmFyaWFuY2UpfENhbGN1bGF0ZSB0aGUgY292YXJpYXRpb24gYmV0d2VlbiB0d28gdmFyaWFibGVzCls8Y29kZT5jb3IoKTwvY29kZT5dKGh0dHBzOi8vd3d3LnJkb2N1bWVudGF0aW9uLm9yZy9wYWNrYWdlcy9zdGF0cy92ZXJzaW9ucy8zLjYuMi90b3BpY3MvY29yKXxDYWxjdWxhdGUgdGhlIGNvcnJlbGF0aW9uIGJldHdlZW4gdHdvIHZhcmlhYmxlcwpbPGNvZGU+bG0oKTwvY29kZT5dKGh0dHBzOi8vd3d3LnJkb2N1bWVudGF0aW9uLm9yZy9wYWNrYWdlcy9zdGF0cy92ZXJzaW9ucy8zLjYuMi90b3BpY3MvbG0pfEVzdGltYXRlIGEgbGluZWFyIHJlZ3Jlc3Npb24KWzxjb2RlPmlmZWxzZSgpPC9jb2RlPl0oaHR0cHM6Ly93d3cucmRvY3VtZW50YXRpb24ub3JnL3BhY2thZ2VzL2Jhc2UvdmVyc2lvbnMvMy42LjIvdG9waWNzL2lmZWxzZSl8Q3JlYXRlIGEgdmVjdG9yIGJhc2VkIG9uIGEgIlRydWUvRmFsc2UiIHRlc3QKWzxjb2RlPmdncGxvdCgpPC9jb2RlPl0oaHR0cHM6Ly9nZ3Bsb3QyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL2dncGxvdC5odG1sKXxDcmVhdGUgYSBiYXNlIHBsb3QKWzxjb2RlPmdlb21cX2hpc3RvZ3JhbSgpPC9jb2RlPl0oaHR0cHM6Ly9nZ3Bsb3QyLnRpZHl2ZXJzZS5vcmcvcmVmZXJlbmNlL2dlb21cX2hpc3RvZ3JhbS5odG1sKXxIaXN0b2dyYW0KWzxjb2RlPnN0YXRcX2VjZGYoKTwvY29kZT5dKGh0dHBzOi8vZ2dwbG90Mi50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9zdGF0XF9lY2RmLmh0bWwpfEN1bXVsYXRpdmUgZGlzdHJpYnV0aW9uIHBsb3QKWzxjb2RlPmdlb21cX2JveHBsb3QoKTwvY29kZT5dKGh0dHBzOi8vZ2dwbG90Mi50aWR5dmVyc2Uub3JnL3JlZmVyZW5jZS9nZW9tXF9ib3hwbG90Lmh0bWwpfEJveHBsb3QKWzxjb2RlPmdlb21cX3BvaW50KCk8L2NvZGU+XShodHRwczovL2dncGxvdDIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2UvZ2VvbVxfcG9pbnQuaHRtbCl8U2NhdHRlciBwbG90Cls8Y29kZT5nZW9tXF9zbW9vdGgobWV0aG9kID0gImxtIik8L2NvZGU+XShodHRwczovL2dncGxvdDIudGlkeXZlcnNlLm9yZy9yZWZlcmVuY2UvZ2VvbVxfc21vb3RoLmh0bWwpfFJlZ3Jlc3Npb24gbGluZQoKIyMgTWF0aAoKKipUZXJtKip8KipNZWFuaW5nKip8KipQcm9udW5jaWF0aW9uKip8KipGb3JtdWxhL0V4YW1wbGUqKgo6LS0tLS06fC0tLS0tfDotLS0tLTp8Oi0tLS0tOgokeF9pJHxkYXRhIHBvaW50ICRpJHwieCBpIiB8IAokbiR8c2FtcGxlIHNpemV8IHwgCiROJHxwb3B1bGF0aW9uIHNpemV8IHwgCiRcYmFye3h9JHx0aGUgc2FtcGxlIG1lYW58InggYmFyInwkXGZyYWN7XHN1bV97aT0xfV5uIHhfaX17bn0kCiRcbXUkfHRoZSBwb3B1bGF0aW9uIG1lYW58Im11InwgCiRzXjIkfHRoZSBzYW1wbGUgdmFyaWFuY2V8IHwkXGZyYWN7XHN1bSAoeF9pIC0gXGJhcnt4fSleMn17bi0xfSQKJFxzaWdtYV4yJHx0aGUgcG9wdWxhdGlvbiB2YXJpYW5jZXwgfCAKJHMkfHRoZSBzYW1wbGUgc3RhbmRhcmQgZGV2aWF0aW9ufCB8JFxzcXJ0e3NeMn0kCiRcc2lnbWEkfHRoZSBwb3B1bGF0aW9uIHN0YW5kYXJkIGRldmlhdGlvbnwic2lnbWEifCAKJHpfaSR8ei1zY29yZSBmb3Igb2JzZXJ2YXRpb24gJGkkfCB8JHpfaSA9IFxmcmFje3hfaSAtIFxiYXJ7eH19e3N9JAokXGJldGEkfHJlZ3Jlc3Npb24gY29lZmZpY2llbnR8ImJldGEifCR5ID0gXGJldGFfMCArIFxiZXRhXzEgeCArIFxlcHNpbG9uJAokXGhhdHtcYmV0YX0kfGVzdGltYXRlZCB2YWx1ZSBvZiByZWdyZXNzaW9uIGNvZWZmaWNpZW50fCJiZXRhIGhhdCJ8IAokXGVwc2lsb24kfHJlZ3Jlc3Npb24gZXJyb3J8ImVwc2lsb24ifCAKJFxzdW0kfHN1bW1hdGlvbiBvcGVyYXRvcnwic3VtInwkXHN1bV97aT0xfV4yIHhfaSAgPSB4XzEgKyB4XzIkCiRzX3t4eX0kfGNvdmFyaWF0aW9uIGJldHdlZW4gdHdvIHZhcmlhYmxlcyAkeCQgYW5kICR5JHwgfCRcZnJhY3tcc3VtICh4X2kgLSBcYmFye3h9KSh5X2kgLSBcYmFye3l9KX17bi0xfSBcaW4gWy1caW5mdHksXGluZnR5XSQKJHJfe3h5fSR8Y29ycmVsYXRpb24gYmV0d2VlbiB0d28gdmFyaWFibGVzICR4JCBhbmQgJHkkfCB8JFxmcmFje3Nfe3h5fX17c194IHNfeX0gXGluIFstMSwxXSQ=</div>
 
 
 </div>

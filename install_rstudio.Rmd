@@ -44,3 +44,19 @@ output:
 
 
 # Navigating R Studio
+
+Open R Studio and any file and you will see are four panels:
+
+1. The editor (where you write and edit files)
+2. The console (where code is executed)
+3. The environment (R's memory: data sets, functions, objects, and more)
+4. The rest (file manager, plots, packages, viewer)
+
+<br>
+<center>
+![](r-studio-navigate.png){width=95%}
+</center>
+<br>
+
+
+You can customize pretty much everything in R Studio, including the appearance (Monokai forever!). More details [here](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio). 

@@ -17,7 +17,7 @@ navbar:
   title: "SuffolkEcon"
   right:
     - icon: fa-github
-      href: https://github.com/lrdegeest/stats
+      href: https://github.com/SuffolkEcon/suffolkecon.github.io/
     - icon: fa-university
       href: https://www.suffolk.edu/cas/degrees-programs/economics
   left:

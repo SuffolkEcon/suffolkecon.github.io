@@ -10,7 +10,7 @@ output:
 
 # What are packages?
 
-Packages are plug-ins that make R easier to use. Think of R as a smartphone, a package as an app you download from CRAN, the app store.
+Packages are plug-ins that make R easier to use. Think of R as a smartphone, and a package as an app you download from CRAN, the app store.
 
 <div class="alert alert-danger" role="alert">
   <strong>⚠️ Install Local</strong>

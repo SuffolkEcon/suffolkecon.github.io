@@ -26,7 +26,7 @@ If so, start off by going through these short online tutorials. The tutorials wi
 
 # Installation
 
-After you've done the tutorials, install R (the language) and R Studio (the app to use the language). Then install the [`tidyverse`](https://www.tidyverse.org/) -- a universe of packages that make R easier to use. `dplyr` and `ggplot2` are part of the tidyverse. Get started [here]() and work your way down.
+After you've done the tutorials, install R (the language) and R Studio (the app to use the language). Then install the [`tidyverse`](https://www.tidyverse.org/) -- a universe of packages that make R easier to use. `dplyr` and `ggplot2` are part of the tidyverse. Get started [here](https://suffolkecon.github.io/install_r.html) and work your way down.
 
 Why do we use the `tidyverse`? Two reasons.
 
@@ -36,7 +36,7 @@ Second, and related to the first, the tidyverse is the future of R. About [50% o
 
 ## The `SuffolkEcon` package
 
-We also built a small package to help teach stats and econometrics. You can download it here and read demos here. 
+We also built a small package to help teach stats and econometrics. Learn more [here!](https://suffolkecon.github.io/suffolkecon_package.html) 
 
 # Acknowledgements
 

@@ -49,12 +49,12 @@ output: html_notebook
 ---
 ```
 
-and that suffices for a basic notebook. For more options see [the Markdown checkpoint](link to markdown cheatsheet).
+and that suffices for a basic notebook. For more options see [the Markdown checkpoint](https://suffolkecon.github.io/markdown.nb.html#2_YAML).
 
 
 ### Text
 
-Just write plain text in [Markdown](link to markdown cheatsheet)
+Write plain text in [Markdown](https://suffolkecon.github.io/markdown.nb.html).
 
 [VIDEO where you write a section and then some text]
 

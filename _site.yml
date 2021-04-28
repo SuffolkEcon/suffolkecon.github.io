@@ -11,7 +11,7 @@ name: "SuffolkEcon"
 output_dir: "." # need this for github hosting: https://garrettgman.github.io/rmarkdown/rmarkdown_websites.html
 output:
   html_document:
-    theme: flatly
+    theme: journal
     css: 'style.css'
 navbar:
   title: "SuffolkEcon"

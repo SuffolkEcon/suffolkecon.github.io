@@ -37,6 +37,8 @@ navbar:
           href: install_rstudio.html
         - text: "1.3 Install Packages"
           href: install_packages.html  
+        - text: "1.4 Other ways to use R/R Studio"
+          href: other_r.html
         - text: "---------"
         - text: "2. Documents"
         - text: "2.1 R Scripts"

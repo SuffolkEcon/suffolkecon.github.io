@@ -1,5 +1,0 @@
----
-title: "Title"
----
-
-More about this website.

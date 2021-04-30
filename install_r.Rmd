@@ -10,21 +10,27 @@ output:
 
 # Instructions
 
-1. Go to the [CRAN mirror](https://www.r-project.org/) -- the worldwide server on which R is stored -- and click "download R".
-2. "CRAN" means "Comprehensive R Archive Network". It's a network of servers around the world connected together to store the language. You need to choose a "mirror" or a server near you. We're in Boston, so we'll scroll down to "USA" and choose the page for "Statlib, Carnegie Mellon University, Pittsburgh, PA": http://lib.stat.cmu.edu/R/CRAN/.
-3. At the top of that page choose your operating system: Linux, Mac OS X, or Windows. Follow the download instructions. 
+## Installation tips
 
 <div class="alert alert-danger" role="alert">
   <strong>⚠️ Install Local</strong>
   <hr>
-  Do not install software like R on your Suffolk One Drive account or any other cloud service. Make sure you install on your computer's hard drive. 
+  Do not install R software (R, R Studio or packages) on your Suffolk One Drive account or any other cloud service. Make sure you install on your computer's hard drive. 
 </div>
 
 <div class="alert alert-info" role="alert">
   <strong> ℹ️ Stay up to date</strong>
   <hr>
-  We recommend that you update your operating system to its latest version. Otherwise you may run into problems installing R or packages for R. 
+  We recommend that you update your operating system to its latest version. Otherwise you may run into problems installing R software. 
 </div>
+
+## Do this first
+
+1. Go to the [CRAN mirror](https://www.r-project.org/) -- the worldwide server on which R is stored -- and click "download R".
+2. "CRAN" means "Comprehensive R Archive Network". It's a network of servers around the world connected together to store the language. You need to choose a "mirror" or a server near you. We're in Boston, so we'll scroll down to "USA" and choose the page for "Statlib, Carnegie Mellon University, Pittsburgh, PA": http://lib.stat.cmu.edu/R/CRAN/.
+3. At the top of that page choose your operating system: Linux, Mac OS X, or Windows. Follow the download instructions. 
+
+The next steps depend on your operating system.
 
 ## Mac OS X
 
@@ -56,9 +62,6 @@ That will take you to the download page:
 </center>
 <br>
 
+# Do you need to open R?
 
-
-## Video instructions
-
-Here are video instructions for Windows. The process is very similar for Mac. 
-
+No. You just need to download it so you can [download and use R Studio](https://suffolkecon.github.io/install_rstudio.html). 

@@ -12,16 +12,19 @@ output:
 
 Packages are plug-ins that make R easier to use. Think of R as a smartphone, and a package as an app you download from CRAN, the app store.
 
+
+## Installation tips
+
 <div class="alert alert-danger" role="alert">
   <strong>⚠️ Install Local</strong>
   <hr>
-  Do not install packages on your Suffolk One Drive account or any other cloud service. Make sure you install on your computer's hard drive. 
+  Do not install R software (R, R Studio or packages) on your Suffolk One Drive account or any other cloud service. Make sure you install on your computer's hard drive. 
 </div>
 
 <div class="alert alert-info" role="alert">
   <strong> ℹ️ Stay up to date</strong>
   <hr>
-  We recommend that you update your operating system to its latest version. Otherwise you may run into problems installing R or packages for R. 
+  We recommend that you update your operating system to its latest version. Otherwise you may run into problems installing R software. 
 </div>
 
 # Instructions
@@ -32,7 +35,11 @@ There are two main ways you can download a package inside R Studio.
 
 Run the code `install.packages("packagename")` at the console. For instance, to install the tidyverse, do `install.packages("tidyverse")`. 
 
-[VIDEO HERE]
+<br>
+<center>
+<iframe src="https://suffolku.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=adfd91e7-8b01-42b9-8afe-ad19010feeb1&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&start=0&interactivity=all" height="405" width="80%" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+</center>
+<br>
 
 ## From the dropdown menu
 

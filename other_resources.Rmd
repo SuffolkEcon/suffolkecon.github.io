@@ -14,6 +14,7 @@ The internet is filled with R resources. (Case in point, this website!) Here are
 
 * [CRAN Task View: Econometrics](https://cran.r-project.org/web/views/Econometrics.html). An encyclopedia of R functions and packages for econometrics.
 * [Stack Overflow](https://stackoverflow.com/questions/tagged/r). A free Q&A website for coding questions. Possibly one of the most valuable public goods on the internet. 
+* [TidyTuesday](https://github.com/rfordatascience/tidytuesday). New and interesting data sets released every week by the people who made the tidyverse. 
 
 # Books
 

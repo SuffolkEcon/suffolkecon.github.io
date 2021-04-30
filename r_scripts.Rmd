@@ -14,9 +14,15 @@ A file just with R code. You can write code, and you can write comments (they st
 
 # Creating a script
 
-Do"File -> New File -> R Script".
+"File -> New File -> R Script".
 
-[video showing HOW TO CREATE A NEW FILE]
+## Video
+
+<br>
+<center>
+<iframe src="https://suffolku.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=721574bf-6e31-423a-867c-ad1901101660&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&start=0&interactivity=all" height="405" width="80%" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+</center>
+<br>
 
 # Running a script
 
@@ -24,5 +30,15 @@ You can execute each line of code standalone. Put your cursor on the line and cl
 
 To run the entire script -- every single line of code -- click "Source". 
 
-[VIDEO demo]
+## Video
+
+<br>
+<center>
+<iframe src="https://suffolku.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=99dabbe8-3afb-468a-8e3d-ad180160682a&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&start=0&interactivity=all" height="405" width="80%" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+</center>
+<br>
+
+
+
+
 

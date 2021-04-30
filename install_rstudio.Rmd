@@ -12,10 +12,24 @@ output:
 
 [R Studio](https://www.rstudio.com/) is an integrated development environment (IDE) that makes it a lot easier to use and manage R. You can write code to do everything from analyzing data to building apps and websites. (This website was built entirely in R Studio.) After you download the app, scroll down to see a demo. 
 
+## Installation tips
+
 <div class="alert alert-danger" role="alert">
   <strong>⚠️ Is R installed?</strong>
   <hr>
-  Before installing R Studio, you first need to install R.  
+  Before installing R Studio, you first need to <a href="https://suffolkecon.github.io/install_r.html">install R</a>.  
+</div>
+
+<div class="alert alert-danger" role="alert">
+  <strong>⚠️ Install Local</strong>
+  <hr>
+  Do not install R software (R, R Studio or packages) on your Suffolk One Drive account or any other cloud service. Make sure you install on your computer's hard drive. 
+</div>
+
+<div class="alert alert-info" role="alert">
+  <strong> ℹ️ Stay up to date</strong>
+  <hr>
+  We recommend that you update your operating system to its latest version. Otherwise you may run into problems installing R software. 
 </div>
 
 # Instructions
@@ -54,9 +68,17 @@ Open R Studio and any file and you will see are four panels:
 
 <br>
 <center>
-![](r-studio-navigate.png){width=95%}
+![](r-studio-navigate.png){width=80%}
 </center>
 <br>
 
 
-You can customize pretty much everything in R Studio, including the appearance (Monokai forever!). More details [here](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio). 
+You can customize pretty much everything in R Studio, including the appearance. More details [here](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio). 
+
+## Video
+
+<br>
+<center>
+<iframe src="https://suffolku.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=44eebd6c-fedc-4c75-b0ac-ad18015fd3ca&autoplay=false&offerviewer=true&showtitle=false&showbrand=true&start=0&interactivity=all" height="405" width="80%" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+</center>
+<br>

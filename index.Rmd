@@ -8,7 +8,7 @@ output:
       collapsed: yes
 ---
 
-# The R Programming Language
+# Economics with R
 
 This is the Economics Department's informal website for [R, a popular and free statistical programming language](https://en.wikipedia.org/wiki/R_(programming_language)). Many of our statistics and econometrics classes use R. This site will help you get started installing and using this software. 
 

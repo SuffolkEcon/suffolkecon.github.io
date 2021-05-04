@@ -3,7 +3,7 @@ title: "The SuffolkEcon Package"
 output:
   html_document:
     number_sections: false
-    toc: false
+    toc: true
     toc_float: 
       collapsed: no
 ---

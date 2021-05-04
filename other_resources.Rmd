@@ -15,6 +15,41 @@ The internet is filled with R resources. (Case in point, this website!) Here are
 * [CRAN Task View: Econometrics](https://cran.r-project.org/web/views/Econometrics.html). An encyclopedia of R functions and packages for econometrics.
 * [Stack Overflow](https://stackoverflow.com/questions/tagged/r). A free Q&A website for coding questions. Possibly one of the most valuable public goods on the internet. 
 * [TidyTuesday](https://github.com/rfordatascience/tidytuesday). New and interesting data sets released every week by the people who made the tidyverse. 
+* Follow the latest R developments on Twitter using the hashtag [#rstats](https://twitter.com/hashtag/rstats?lang=en) 
+
+# Packages
+
+There are over [17,000 packages and counting](https://lrdegeest.github.io/blog/totalverse) on the CRAN network. Fortunately you can get by with just a few. 
+
+## Analysis
+
+Alongside the tidyverse, here are some useful packages for econometrics. 
+
+* [`sJplot`](https://strengejacke.github.io/sjPlot/) for regression tables and regression plots. If you just want to generate predictions from regression models check out [`ggeffects`](https://strengejacke.github.io/ggeffects/) (an input to `sJplot`).
+* Another great package for model visualization is [`modelsummary`](https://vincentarelbundock.github.io/modelsummary/index.html)
+* [`broom`](https://broom.tidymodels.org/) is a great package for "tidying" model results into data frames.
+* [`patchwork`](https://patchwork.data-imaginist.com/) for combining multiple `ggplot` objects into one figure.
+* [`plm`](https://cran.r-project.org/web/packages/plm/plm.pdf) for panel data econometrics.
+* [`lmtest`](https://cran.r-project.org/web/packages/lmtest/index.html) for coefficient tests on linear models. You can combine this with [`sandwhich`](https://cran.r-project.org/web/packages/sandwich/sandwich.pdf) to cluster standard errors.
+* [`forecast`](https://cran.r-project.org/web/packages/forecast/index.html) for time series econometrics.
+* [`fixest`](https://cran.r-project.org/web/packages/fixest/vignettes/fixest_walkthrough.html) for linear models with fixed effects and clustering.
+
+There is also [`tidymodels`](https://www.tidymodels.org/) a collection of packages for econometrics and machine learning.
+
+## Data
+
+* [`fabricatr`](https://declaredesign.org/r/fabricatr/) for simulating fake data.
+* [`fredr`](https://cran.r-project.org/web/packages/fredr/index.html) gives you access to the FRED (Federal Reserve Bank of St. Louis) database. [`tidyquant`](https://business-science.github.io/tidyquant/) provides access to Yahoo Finance and other financial data sources. 
+* [`fivethirtyeight`](https://cran.r-project.org/web/packages/fivethirtyeight/vignettes/fivethirtyeight.html) provides over 100 data sets featured on the sports/politics/etc. blog [fivethirtyeight](https://fivethirtyeight.com/).
+* [`wbstats`](https://cran.r-project.org/web/packages/wbstats/wbstats.pdf) for World Bank data.
+* [`ipumsr`](http://tech.popdata.org/ipumsr/articles/ipums.html) for [IPUMS](https://ipums.org/) census and survey data. 
+* [`Lahman`](https://cran.r-project.org/web/packages/Lahman/) provides access to a wide variety of baseball data.
+* Access Twitter data (tweets, etc.) with [`rtweet`](https://cran.r-project.org/web/packages/rtweet/index.html).
+* [`tidycensus`](https://walker-data.com/tidycensus/) for U.S. Census data.
+* [`nhanesA`](https://cran.r-project.org/web/packages/nhanesA/vignettes/Introducing_nhanesA.html) provides access to National Health and Nutrition Examination Survey (NHANES).
+* [`Ecdat`](https://cran.r-project.org/web/packages/Ecdat/Ecdat.pdf) for a bunch of other econometrics data sets. 
+
+Check out [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets) for other datasets on economics and much more. 
 
 # Books
 

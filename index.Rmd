@@ -42,7 +42,7 @@ We also built a small package to help teach stats and econometrics. Learn more [
 
 # Acknowledgements
 
-This website is part of a grant funded by the [Center for Teaching and Scholarly Excellence](https://www.suffolk.edu/academics/research-at-suffolk/center-for-teaching-scholarly-excellence) at Suffolk University.
+This website was funded by a grant from the [Center for Teaching and Scholarly Excellence](https://www.suffolk.edu/academics/research-at-suffolk/center-for-teaching-scholarly-excellence) at Suffolk University.
 
 # Version
 

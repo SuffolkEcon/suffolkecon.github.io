@@ -399,7 +399,42 @@ $(document).ready(function () {
 </div>
 
 
-<p>Coming soon!</p>
+<div id="suffolkecon" class="section level1">
+<h1><code>SuffolkEcon</code></h1>
+<p><code>SuffolkEcon</code> is an experimental R package for the Department of Economics at Suffolk University to help teach introductory concepts in statistics, econometrics and optimization. Learn more <a href="https://suffolkecon.github.io/SuffolkEcon/reference/index.html">here</a>.</p>
+</div>
+<div id="installation" class="section level1">
+<h1>Installation</h1>
+<p>Currently the package is only available on GitHub. To install it, first install the <code>remotes</code> package:</p>
+<pre class="r"><code>install.packages(&#39;remotes&#39;)</code></pre>
+<p>Then you can install <code>SuffolkEcon</code>:</p>
+<pre class="r"><code>remotes::install_github(&#39;SuffolkEcon/SuffolkEcon&#39;)</code></pre>
+<p>and load it in an R script or an R notebook in the usual way:</p>
+<pre class="r"><code>library(SuffolkEcon)</code></pre>
+</div>
+<div id="why-this-package" class="section level1">
+<h1>Why this package?</h1>
+<p>The package is not meant to substitute for other packages in the R ecosystem that students will learn and use inside and outside of introductory courses.</p>
+<p>Instead, <code>SuffolkEcon</code> aims to make a more marginal contribution to teaching basic concepts and reducing handoff frictions between classes by providing some one-line routines to do things like:</p>
+<ul>
+<li>run “what-if” experiments using real data (e.g., bootstrapping sample statistics or linear models)</li>
+<li>plotting distributions and probabilities, and</li>
+<li>plotting user-defined functions and their derivatives, roots and optima.</li>
+</ul>
+<p>In the spirit of fitting into the greater package network, <code>SuffolkEcon</code> is built with <a href="https://www.tidyverse.org/">tidyverse</a> principles and is meant to be loaded alongside the <code>tidyverse</code> (<code>SuffolkEcon</code> imports <code>dplyr</code>, <code>ggplot</code>, <code>stringr</code> and <code>rlang</code>). All <code>SuffolkEcon</code> functions return either <code>data.frame</code> or <code>ggplot</code> objects.</p>
+</div>
+<div id="contributing" class="section level1">
+<h1>Contributing</h1>
+<p>This package is very much a work in progress, so contributions and bug reports are welcome. Drop us a line at ldegeest [at] suffolk [dot] edu.</p>
+</div>
+<div id="acknowledgements" class="section level1">
+<h1>Acknowledgements</h1>
+<p>This package was funded by a grant from the <a href="https://www.suffolk.edu/academics/research-at-suffolk/center-for-teaching-scholarly-excellence">Center for Teaching and Scholarly Excellence</a> at Suffolk University.</p>
+</div>
+<div id="license" class="section level1">
+<h1>License</h1>
+<p>The source code of this package is licensed under the MIT License.</p>
+</div>
 
 
 

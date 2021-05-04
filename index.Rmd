@@ -34,10 +34,14 @@ First, it makes it easier to work with data -- cleaning it, manipulating it, vis
 
 Second, and related to the first, the tidyverse is the future of R. About [50% of new developments](https://lrdegeest.github.io/blog/totalverse) in the R language are built on the tidyverse. It's ease of use and it's popularity is why the tidyverse is lingua franca in many industry roles like business analytics and data science. 
 
-## The `SuffolkEcon` package
+# The `SuffolkEcon` package
 
 We also built a small package to help teach stats and econometrics. Learn more [here!](https://suffolkecon.github.io/suffolkecon_package.html) 
 
 # Acknowledgements
 
 This website is part of a grant funded by the [Center for Teaching and Scholarly Excellence](https://www.suffolk.edu/academics/research-at-suffolk/center-for-teaching-scholarly-excellence) at Suffolk University.
+
+# Version
+
+This site was last updated `r Sys.time()` EST.

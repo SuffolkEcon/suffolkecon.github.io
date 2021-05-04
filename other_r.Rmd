@@ -15,6 +15,6 @@ Suffolk students can use R and R Studio by logging into their virtual desktop. M
 
 # R Studio Cloud 
 
-R Studio offers accounts on their cloud servers that let you [use R and R Studio in the browser](https://rstudio.cloud/). The downside is that the free account only gives you 15 computing hours each month (a computing hour is charged when your account is active in-use). After that you pay for the marginal hour. For $5 a month you can get 50 computing hours. More dtails on the pricing plans are [here](https://rstudio.cloud/plans/free).
+R Studio offers accounts on their cloud servers that let you [use R and R Studio in the browser](https://rstudio.cloud/). The downside is that the free account only gives you 15 computing hours each month (a computing hour is charged when your account is active in-use). After that you pay for the marginal hour. For $5 a month you can get 50 computing hours. More details on the pricing plans are [here](https://rstudio.cloud/plans/free).
 
 In general we only recommend R Studio Cloud if you absotutely cannot install R/R Studio (or certain packages) on your computer, and you cannot use the Suffolk VDI. 

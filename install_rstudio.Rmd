@@ -44,19 +44,6 @@ output:
 <br>
 
 
-<div class="alert alert-danger" role="alert">
-  <strong>⚠️ Install Local</strong>
-  <hr>
-  Do not install software like R on your Suffolk One Drive account or any other cloud service. Make sure you install on your computer's hard drive. 
-</div>
-
-<div class="alert alert-info" role="alert">
-  <strong> ℹ️ Stay up to date</strong>
-  <hr>
-  We recommend that you update your operating system to its latest version. Otherwise you may run into problems installing R or packages for R. 
-</div>
-
-
 # Navigating R Studio
 
 Open R Studio and any file and you will see are four panels:

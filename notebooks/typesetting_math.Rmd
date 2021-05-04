@@ -239,7 +239,7 @@ Then optimize it:
 optimize(f = f, lower = -100, upper = 100, maximum = TRUE)
 ```
 
-Verify the solution:
+Verify the solution (the objective function should equal 5 at the optimum):
 
 ```{r}
 f(x = 1)

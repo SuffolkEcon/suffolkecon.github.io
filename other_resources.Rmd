@@ -15,11 +15,11 @@ The internet is filled with R resources. (Case in point, this website!) Here are
 * [CRAN Task View: Econometrics](https://cran.r-project.org/web/views/Econometrics.html). An encyclopedia of R functions and packages for econometrics.
 * [Stack Overflow](https://stackoverflow.com/questions/tagged/r). A free Q&A website for coding questions. Possibly one of the most valuable public goods on the internet. 
 * [TidyTuesday](https://github.com/rfordatascience/tidytuesday). New and interesting data sets released every week by the people who made the tidyverse. 
-* Follow the latest R developments on Twitter using the hashtag [#rstats](https://twitter.com/hashtag/rstats?lang=en) 
+* Follow the latest R developments on Twitter using the hashtag [#rstats](https://twitter.com/hashtag/rstats?lang=en). 
 
 # Packages
 
-There are over [17,000 packages and counting](https://lrdegeest.github.io/blog/totalverse) on the CRAN network. Fortunately you can get by with just a few. Here are some to consider. 
+There are over [17,000 packages and counting](https://lrdegeest.github.io/blog/totalverse) on the CRAN network. Fortunately you can get by with just a few. Here are some to consider. Each package is installed by typing `install.packages("packagename")` in the console (more instructions [here](https://suffolkecon.github.io/install_packages.html)).
 
 ## Analysis
 

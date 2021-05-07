@@ -20,9 +20,9 @@ Is this your first exposure to R?
 
 If so, before downloading or installing anything, start by going through these short online tutorials, in order:
 
-1. [A Quick Introduction to R](https://lrdegeest.shinyapps.io/intro-r/)
-2. [Data with `dplyr`](https://lrdegeest.shinyapps.io/dplyr/)
-3. [Visualization with `ggplot2`](https://lrdegeest.shinyapps.io/ggplot2/)
+1. [A Quick Introduction to R](https://econ.suffolk.edu/quick-intro-to-r/)
+2. [Data with `dplyr`](https://econ.suffolk.edu/dplyr/)
+3. [Visualization with `ggplot2`](https://econ.suffolk.edu/ggplot2/)
 
 The tutorials will give you a sense of how R works, and they will introduce to two key plug-ins or packages: [`dplyr`](https://dplyr.tidyverse.org/) for manipulating data, and [`ggplot2`](https://ggplot2.tidyverse.org/) for visualizing data. The tutorials run in the browser and require no installation. 
 

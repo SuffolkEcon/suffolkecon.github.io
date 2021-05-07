@@ -44,6 +44,8 @@ We also built a small package to help teach stats and econometrics. Learn more [
 
 This website was funded by a grant from the [Center for Teaching and Scholarly Excellence](https://www.suffolk.edu/academics/research-at-suffolk/center-for-teaching-scholarly-excellence) at Suffolk University.
 
+We would also like to thank the team at Suffolk University's [Information Technology Services](https://www.suffolk.edu/about/directory/information-technology-services) for setting up our [tutorial server](https://econ.suffolk.edu/).
+
 # Version
 
 This site was last updated `r Sys.time()` EST.

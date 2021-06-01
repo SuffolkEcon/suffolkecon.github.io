@@ -63,7 +63,7 @@ Check out [Awesome Public Datasets](https://github.com/awesomedata/awesome-publi
 
 * [R Markdown](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 * [`dplyr`](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
-* [`ggplot2`](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+* [`ggplot2`](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
 * [More cheatsheets!](https://www.rstudio.com/resources/cheatsheets/)
 
 # Job Market Signaling
